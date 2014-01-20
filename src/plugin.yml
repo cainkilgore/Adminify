@@ -15,3 +15,6 @@ commands:
    mute:
        description: 'Mute players from using chat'
        usage: /<command> <player>
+   fly:
+       description: 'Set yours/others ability to fly'
+       usage: /<command> <player>

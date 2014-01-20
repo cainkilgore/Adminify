@@ -2,6 +2,7 @@ package com.cainkilgore.adminify;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.cainkilgore.adminify.commands.Fly;
 import com.cainkilgore.adminify.commands.Freeze;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Spawn;
@@ -22,6 +23,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("tp", new Tp());
 		Util.registerCommand("spawn", new Spawn());
 		Util.registerCommand("mute", new Mute());
+		Util.registerCommand("fly", new Fly());
 		Util.print("Adminify has been enabled.");
 	}
 	

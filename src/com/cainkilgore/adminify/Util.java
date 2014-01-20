@@ -75,5 +75,24 @@ public class Util {
 			HashMaps.mutedPlayers.remove(player.getName());
 		}
 	}
+	
+	// Fly Usage
+	
+	public static boolean canFly(Player player) {
+		if(player.isFlying()) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static void setFlying(Player player, boolean flying) {
+		if(flying) {
+			player.setAllowFlight(true);
+			player.setFlying(true);
+		} else {
+			player.setAllowFlight(false);
+			player.setFlying(false);
+		}
+	}
 
 }
