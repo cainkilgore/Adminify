@@ -58,6 +58,11 @@ public class Messages {
 	public static String adminGod = messagePrefix + "{A} has given you god-mode.";
 	public static String adminNotGod = messagePrefix + "{A} has removed your god-mode.";
 	
+	// Adminify Command
+	public static String coderOnline = messagePrefix + "The creator of Adminify is currently on your server.";
+	public static String author = messagePrefix + "Author: ThatJavaGuy / CainFoool";
+	public static String version = messagePrefix + "Version: v";
+	public static String url = messagePrefix + "URL: http://dev.bukkit.org/bukkit-plugins/Adminify";
 	
 	
 }

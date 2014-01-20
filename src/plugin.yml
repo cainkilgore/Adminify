@@ -1,5 +1,5 @@
 name: 'Adminify'
-author: CainFool
+author: [ThatJavaGuy, CainFoool]
 version: 1.0
 main: com.cainkilgore.adminify.Adminify
 commands:
@@ -21,3 +21,6 @@ commands:
    god:
        description: 'Enable yours/others god mode'
        usage: /<command> <player>
+   adminify:
+       description: 'Basic Information'
+       usage: /<command>

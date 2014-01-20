@@ -8,6 +8,7 @@ import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Tp;
+import com.cainkilgore.adminify.commands.cmdAdminify;
 import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
 import com.cainkilgore.adminify.events.evtMute;
@@ -28,6 +29,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("mute", new Mute());
 		Util.registerCommand("fly", new Fly());
 		Util.registerCommand("god", new God());
+		Util.registerCommand("adminify", new cmdAdminify());
 		Util.print("Adminify has been enabled.");
 	}
 	
