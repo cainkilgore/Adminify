@@ -94,5 +94,20 @@ public class Util {
 			player.setFlying(false);
 		}
 	}
+	
+	public static boolean hasGod(Player player) {
+		if(HashMaps.godPlayers.contains(player.getName())) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static void setGod(Player player, boolean god) {
+		if(god) {
+			HashMaps.godPlayers.add(player.getName());
+		} else {
+			HashMaps.godPlayers.remove(player.getName());
+		}
+	}
 
 }

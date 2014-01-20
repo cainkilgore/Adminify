@@ -8,7 +8,7 @@ public class Messages {
 	public static String errorPrefix = ChatColor.RED + "Error> " + ChatColor.WHITE;
 	
 	// Console Messages
-	public static String noConsole = "There is no added console support for this command.";
+	public static String noConsole = "No commands work in console right now. They will in future versions.";
 	
 	// Player Messages
 	public static String invalidPlayer = errorPrefix + "The player you specified does not exist.";
@@ -49,5 +49,15 @@ public class Messages {
 	public static String playerIsFlying = messagePrefix + "{A} gave you the ability to fly.";
 	public static String playerNotFlying = messagePrefix + "{A} took away your ability to fly.";
 	public static String needFlyEnabled = errorPrefix + "Please set allow-flight=true in your server.properties.";
+	
+	// God Command
+	public static String isGod = messagePrefix + "You now have god-mode enabled. Go nuts.";
+	public static String notGod = messagePrefix + "You no longer have god-mode.";
+	public static String playerGod = messagePrefix + "{P} now has god-mode enabled.";
+	public static String playerNotGod = messagePrefix + "{P} no longer has god-mode enabled.";
+	public static String adminGod = messagePrefix + "{A} has given you god-mode.";
+	public static String adminNotGod = messagePrefix + "{A} has removed your god-mode.";
+	
+	
 	
 }

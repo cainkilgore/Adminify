@@ -9,6 +9,8 @@ public class HashMaps {
 	
 	public static HashMap<String, Location> frozenPlayers = new HashMap<String, Location>();
 	public static HashSet<String>			mutedPlayers = new HashSet<String>();
+	public static HashSet<String>			godPlayers = new HashSet<String>();
+	
 	
 	
 }
