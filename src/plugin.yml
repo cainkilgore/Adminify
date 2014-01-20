@@ -6,3 +6,6 @@ commands:
    freeze:
        description: 'Freeze/Unfreeze a player in their spot'
        usage: /<command> <player>
+   tp:
+       description: 'Teleport you/another player to another'
+       usage: /<command> [player] <player>

@@ -18,4 +18,12 @@ public class Messages {
 	public static String selfFroze = messagePrefix + "{A} has frozen you.";
 	public static String unFrozen = messagePrefix + "{U} has now been freed.";
 	public static String selfUnfrozen = messagePrefix + "{A} has freed you.";
+	
+	// Teleport Command
+	public static String playerToArg = messagePrefix + "You teleported to {P}.";
+	public static String argToPlayer = messagePrefix + "{P} teleported you to them.";
+	
+	public static String player1to2 = messagePrefix + "You have teleported {P1} to {P2}.";
+	public static String adminTele1to2 = messagePrefix + "{A} teleported you to {P2}.";
+	public static String adminTele2to1 = messagePrefix + "{A} teleported {P1} to you.";
 }

@@ -3,6 +3,7 @@ package com.cainkilgore.adminify;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.cainkilgore.adminify.commands.Freeze;
+import com.cainkilgore.adminify.commands.Tp;
 import com.cainkilgore.adminify.events.evtFreeze;
 
 
@@ -14,6 +15,7 @@ public class Adminify extends JavaPlugin {
 		mainClass = this;
 		Util.registerEvent(new evtFreeze());
 		Util.registerCommand("freeze", new Freeze());
+		Util.registerCommand("tp", new Tp());
 		Util.print("Adminify has been enabled.");
 	}
 	
