@@ -1,13 +1,15 @@
 package com.cainkilgore.adminify;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 public class Adminify extends JavaPlugin {
 	
 	public void onEnable() {
-		// Begin Adminify
+		Util.print("Adminify has been enabled.");
 	}
 	
 	public void onDisable() {
-		// Stop Adminify
+		Util.print("Adminify has been disabled.");
 	}
 
 }
