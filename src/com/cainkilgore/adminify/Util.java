@@ -31,10 +31,10 @@ public class Util {
 	}
 	
 	public static String getCommandUsage(String command) {
-		return Messages.errorPrefix + Adminify.mainClass.getServer().getPluginCommand(command).getUsage().replace("<command>", command);
+		return Messages.errorPrefix + "Usage: " + Adminify.mainClass.getServer().getPluginCommand(command).getUsage().replace("<command>", command);
 	}
 	
-	// Command Usage
+	// Frozen Usage
 	
 	public static boolean isFrozen(Player player) {
 		if(HashMaps.frozenPlayers.containsKey(player.getName())) {
@@ -57,6 +57,23 @@ public class Util {
 	
 	public static void teleportPlayer(Player player, Location location) {
 		player.teleport(location);
+	}
+	
+	// Mute Usage
+	
+	public static boolean isMuted(Player player) {
+		if(HashMaps.mutedPlayers.contains(player.getName())) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static void setMuted(Player player, boolean muted) {
+		if(muted) {
+			HashMaps.mutedPlayers.add(player.getName());
+		} else {
+			HashMaps.mutedPlayers.remove(player.getName());
+		}
 	}
 
 }

@@ -26,4 +26,16 @@ public class Messages {
 	public static String player1to2 = messagePrefix + "You have teleported {P1} to {P2}.";
 	public static String adminTele1to2 = messagePrefix + "{A} teleported you to {P2}.";
 	public static String adminTele2to1 = messagePrefix + "{A} teleported {P1} to you.";
+	
+	// Spawn Command
+	public static String teleportSpawn = messagePrefix + "You have teleported to spawn.";
+	public static String adminTeleportSpawn = messagePrefix + "You have teleported {P} to their spawn.";
+	public static String playerTeleportSpawn = messagePrefix + "{A} teleported you to your spawn.";
+	
+	// Muted Command
+	public static String mutedPlayer = messagePrefix  + "{P} has been muted in chat.";
+	public static String adminMute = messagePrefix + "{A} has muted you. You can no longer chat.";
+	public static String cantChat = errorPrefix + "You are currently muted from chat.";
+	public static String unmutedPlayer = messagePrefix + "{P} may now talk in chat again.";
+	public static String adminUnmute = messagePrefix + "{A} has unmuted you. You can now chat.";
 }

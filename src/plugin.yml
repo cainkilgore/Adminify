@@ -9,3 +9,9 @@ commands:
    tp:
        description: 'Teleport you/another player to another'
        usage: /<command> [player] <player>
+   spawn:
+       description: 'Teleport you/another player to world spawn'
+       usage: /<command> <player>
+   mute:
+       description: 'Mute players from using chat'
+       usage: /<command> <player>

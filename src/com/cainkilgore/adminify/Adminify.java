@@ -3,8 +3,11 @@ package com.cainkilgore.adminify;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.cainkilgore.adminify.commands.Freeze;
+import com.cainkilgore.adminify.commands.Mute;
+import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Tp;
 import com.cainkilgore.adminify.events.evtFreeze;
+import com.cainkilgore.adminify.events.evtMute;
 
 
 public class Adminify extends JavaPlugin {
@@ -14,8 +17,11 @@ public class Adminify extends JavaPlugin {
 	public void onEnable() {
 		mainClass = this;
 		Util.registerEvent(new evtFreeze());
+		Util.registerEvent(new evtMute());
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
+		Util.registerCommand("spawn", new Spawn());
+		Util.registerCommand("mute", new Mute());
 		Util.print("Adminify has been enabled.");
 	}
 	

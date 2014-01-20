@@ -1,0 +1,61 @@
+package com.cainkilgore.adminify.commands;
+
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+import com.cainkilgore.adminify.Adminify;
+import com.cainkilgore.adminify.Messages;
+import com.cainkilgore.adminify.Util;
+
+public class Spawn implements CommandExecutor {
+	
+	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
+		if(l.equalsIgnoreCase("spawn")) {
+			if(!(s instanceof Player)) {
+				Util.print(Messages.noConsole);
+				return true;
+			}
+			
+			Player player = (Player) s;
+			
+			if(!Util.hasPermission(player, "spawn")) {
+				Util.sendMessage(player, Messages.noPermission);
+				return true;
+			}
+			
+			if(args.length < 1) {
+				Util.teleportPlayer(player, player.getWorld().getSpawnLocation());
+				Util.sendMessage(player, Messages.teleportSpawn);
+				return true;
+			}
+			
+			if(args.length == 1) {
+				
+				if(args[0].equalsIgnoreCase("?")) {
+					Util.sendMessage(player, Util.getCommandUsage(l));
+					return true;
+				}
+				
+				if(!Util.hasPermission(player, "spawn.others")) {
+					Util.sendMessage(player, Messages.noPermission);
+					return true;
+				}
+				
+				Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
+				if(argPlayer == null) {
+					Util.sendMessage(player, Messages.invalidPlayer);
+					return true;
+				}
+				
+				Util.teleportPlayer(argPlayer, argPlayer.getWorld().getSpawnLocation());
+				Util.sendMessage(player, Messages.adminTeleportSpawn.replace("{P}", argPlayer.getName()));
+				Util.sendMessage(argPlayer, Messages.playerTeleportSpawn.replace("{A}", player.getName()));
+				return true;
+			}
+		}
+		return true;
+	}
+
+}
