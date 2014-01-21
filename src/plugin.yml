@@ -33,3 +33,6 @@ commands:
    hit:
        description: 'Damage a player with a random value'
        usage: /<command> [player]
+   clear:
+       description: 'Clear yours/anothers inventory'
+       usage: /<command> <player>

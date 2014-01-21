@@ -21,6 +21,13 @@ public class Messages {
 	public static String unFrozen = messagePrefix + "{U} has now been freed.";
 	public static String selfUnfrozen = messagePrefix + "{A} has freed you.";
 	
+	public static String breakBlocks = errorPrefix + "You can not break blocks whilst frozen.";
+	public static String placeBlocks = errorPrefix + "You can not place blocks whilst frozen.";
+	public static String interactBlocks = errorPrefix + "You can not interact with {B} whilst frozen.";
+	
+	
+	public static String joinFrozen = messagePrefix + "You are still frozen from your previous session.";
+	
 	// Teleport Command
 	public static String playerToArg = messagePrefix + "You teleported to {P}.";
 	public static String argToPlayer = messagePrefix + "{P} teleported you to them.";
@@ -43,6 +50,8 @@ public class Messages {
 	public static String cantChat = errorPrefix + "You are currently muted from chat.";
 	public static String unmutedPlayer = messagePrefix + "{P} may now talk in chat again.";
 	public static String adminUnmute = messagePrefix + "{A} has unmuted you. You can now chat.";
+	
+	public static String joinMuted = messagePrefix + "You are still muted from your previous session.";
 	
 	// Fly Command
 	public static String isFlying = messagePrefix + "You now have the ability to fly.";
@@ -79,4 +88,9 @@ public class Messages {
 	// Hit Command
 	public static String hitPlayer = messagePrefix + "You smacked {P}.";
 	public static String adminHit = messagePrefix + "{A} smacked you.";
+	
+	// Clear Command
+	public static String clearInv = messagePrefix + "Your inventory has been wiped.";
+	public static String adminClear = messagePrefix + "{A} has wiped your inventory.";
+	public static String playerClear = messagePrefix + "You have wiped {P}'s inventory.";
 }

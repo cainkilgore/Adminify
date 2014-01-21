@@ -148,5 +148,9 @@ public class Util {
 		}
 		player.damage(random);
 	}
+	
+	public static void clearInventory(Player player) {
+		player.getInventory().clear();
+	}
 
 }
