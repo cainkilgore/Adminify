@@ -1,5 +1,6 @@
 package com.cainkilgore.adminify.commands;
 
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -60,6 +61,26 @@ public class Tp implements CommandExecutor {
 				Util.sendMessage(player, Messages.player1to2.replace("{P1}", oneArg.getName()).replace("{P2}", twoArg.getName()));
 				Util.sendMessage(oneArg, Messages.adminTele1to2.replace("{A}", player.getName()).replace("{P2}", twoArg.getName()));
 				Util.sendMessage(twoArg, Messages.adminTele2to1.replace("{A}", player.getName()).replace("{P1}", oneArg.getName()));
+			}
+			
+			if(args.length == 3) {
+				if(!Util.hasPermission(player, "tp.xyz")) {
+					Util.sendMessage(player, Messages.noPermission);
+					return true;
+				}
+				
+				try {
+					int x = Integer.parseInt(args[0]);
+					int y = Integer.parseInt(args[1]);
+					int z = Integer.parseInt(args[2]);
+					
+					Location loc = new Location(player.getWorld(), x, y, z);
+					Util.teleportPlayer(player, loc);
+					
+					Util.sendMessage(player, Messages.TeleXyz.replace("{X}", Integer.toString(x)).replace("{Y}", Integer.toString(y)).replace("{Z}", Integer.toString(z)));
+				} catch (NumberFormatException e) {
+					Util.sendMessage(player, Messages.badXyz);
+				}
 			}
 		}
 		

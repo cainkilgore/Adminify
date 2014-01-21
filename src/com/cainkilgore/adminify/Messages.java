@@ -29,6 +29,9 @@ public class Messages {
 	public static String adminTele1to2 = messagePrefix + "{A} teleported you to {P2}.";
 	public static String adminTele2to1 = messagePrefix + "{A} teleported {P1} to you.";
 	
+	public static String TeleXyz = messagePrefix + "You teleported to {X}, {Y}, {Z}";
+	public static String badXyz = errorPrefix + "The co-ordinates you entered were invalid.";
+	
 	// Spawn Command
 	public static String teleportSpawn = messagePrefix + "You have teleported to spawn.";
 	public static String adminTeleportSpawn = messagePrefix + "You have teleported {P} to their spawn.";

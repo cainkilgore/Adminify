@@ -8,7 +8,7 @@ commands:
        usage: /<command> <player>
    tp:
        description: 'Teleport you/another player to another'
-       usage: /<command> [player] <player>
+       usage: /<command> <[player] <player>> <[x] [y] [z]>
    spawn:
        description: 'Teleport you/another player to world spawn'
        usage: /<command> <player>
