@@ -93,4 +93,13 @@ public class Messages {
 	public static String clearInv = messagePrefix + "Your inventory has been wiped.";
 	public static String adminClear = messagePrefix + "{A} has wiped your inventory.";
 	public static String playerClear = messagePrefix + "You have wiped {P}'s inventory.";
+	
+	// Kill Command
+	public static String killSelf = messagePrefix + "You have killed yourself.";
+	public static String adminKill = messagePrefix + "You killed {P}.";
+	public static String playerKill = messagePrefix + "{A} killed you.";
+	
+	// Vanish Command
+	public static String nowVanished = messagePrefix + "You are now vanished from all players.";
+	public static String noVanished = messagePrefix + "You are no longer vanished from all players.";
 }

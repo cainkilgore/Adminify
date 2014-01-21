@@ -152,5 +152,28 @@ public class Util {
 	public static void clearInventory(Player player) {
 		player.getInventory().clear();
 	}
+	
+	public static void killPlayer(Player player, Player damager) {
+		player.damage(player.getMaxHealth(), damager);
+	}
+	
+	public static void killPlayer(Player player) {
+		player.damage(player.getMaxHealth());
+	}
+	
+	public static boolean isVanished(Player player) {
+		if(HashMaps.vanishPlayers.contains(player.getName())) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static void setVanished(Player player, boolean vanished) {
+		if(vanished) {
+			HashMaps.vanishPlayers.add(player.getName());
+		} else {
+			HashMaps.vanishPlayers.remove(player.getName());
+		}
+	}
 
 }

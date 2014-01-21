@@ -8,10 +8,12 @@ import com.cainkilgore.adminify.commands.Freeze;
 import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Heal;
 import com.cainkilgore.adminify.commands.Hit;
+import com.cainkilgore.adminify.commands.Kill;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Time;
 import com.cainkilgore.adminify.commands.Tp;
+import com.cainkilgore.adminify.commands.Vanish;
 import com.cainkilgore.adminify.commands.cmdAdminify;
 import com.cainkilgore.adminify.events.evtEnabled;
 import com.cainkilgore.adminify.events.evtFreeze;
@@ -42,6 +44,11 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("heal", new Heal());
 		Util.registerCommand("hit", new Hit());
 		Util.registerCommand("clear", new Clear());
+		Util.registerCommand("kill", new Kill());
+		Util.registerCommand("vanish", new Vanish());
+		
+		Timers.vanishTimer();
+		
 		Util.print("Adminify has been enabled.");
 	}
 	
