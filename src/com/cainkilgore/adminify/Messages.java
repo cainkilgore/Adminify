@@ -64,5 +64,16 @@ public class Messages {
 	public static String version = messagePrefix + "Version: v";
 	public static String url = messagePrefix + "URL: http://dev.bukkit.org/bukkit-plugins/Adminify";
 	
+	// Time Command
+	public static String timeInvalid = errorPrefix + "The time you specified was invalid.";
+	public static String timeUpdate = messagePrefix + "The time of the world you're in changed to {T}.";
 	
+	// Heal Command
+	public static String healthMax = messagePrefix + "Your health has been restored.";
+	public static String adminHealth = messagePrefix + "{P}'s health has been restored.";
+	public static String playerHealth = messagePrefix + "{A} has restored your health.";
+	
+	// Hit Command
+	public static String hitPlayer = messagePrefix + "You smacked {P}.";
+	public static String adminHit = messagePrefix + "{A} smacked you.";
 }

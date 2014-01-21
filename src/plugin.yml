@@ -24,3 +24,12 @@ commands:
    adminify:
        description: 'Basic Information'
        usage: /<command>
+   time:
+       description: 'Change the time of the world'
+       usage: /<command> <day/night>
+   heal:
+       description: 'Heal yourself/another player to max health'
+       usage: /<command> <player>
+   hit:
+       description: 'Damage a player with a random value'
+       usage: /<command> [player]

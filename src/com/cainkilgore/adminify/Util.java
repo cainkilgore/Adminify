@@ -1,5 +1,7 @@
 package com.cainkilgore.adminify;
 
+import java.util.Random;
+
 import org.bukkit.Location;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
@@ -108,6 +110,43 @@ public class Util {
 		} else {
 			HashMaps.godPlayers.remove(player.getName());
 		}
+	}
+	
+	public static boolean isTimeValid(String time) {
+		if(time.equalsIgnoreCase("day")) {
+			return true;
+		}
+		if(time.equalsIgnoreCase("night")) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static int getTimeFromString(String time) {
+		if(time.equalsIgnoreCase("day")) {
+			return 0;
+		}
+		if(time.equalsIgnoreCase("night")) {
+			return 12200;
+		}
+		return 0;
+	}
+	
+	public static void setWorldTime(Player player, int time) {
+		player.getWorld().setTime(time);
+	}
+	
+	public static void setPlayerHealth(Player player, double health) {
+		player.setHealth(health);
+	}
+	
+	public static void hitPlayer(Player player) {
+		Random r = new Random();
+		int random = r.nextInt(5);
+		if(random < 1) {
+			random = r.nextInt(5);
+		}
+		player.damage(random);
 	}
 
 }
