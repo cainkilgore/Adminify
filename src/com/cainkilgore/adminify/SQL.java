@@ -38,7 +38,7 @@ public class SQL {
 //		}
 		
 		// result.close();
-		conn.close();
+		// conn.close();
 	}
 	
 	public static void closeConnection() {

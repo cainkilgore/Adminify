@@ -1,5 +1,11 @@
 package com.cainkilgore.adminify;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Random;
 
 import org.bukkit.Location;
@@ -99,6 +105,8 @@ public class Util {
 		}
 	}
 	
+	// God Usage
+	
 	public static boolean hasGod(Player player) {
 		if(HashMaps.godPlayers.contains(player.getName())) {
 			return true;
@@ -113,6 +121,8 @@ public class Util {
 			HashMaps.godPlayers.remove(player.getName());
 		}
 	}
+	
+	//  Time Usage
 	
 	public static boolean isTimeValid(String time) {
 		if(time.equalsIgnoreCase("day")) {
@@ -142,6 +152,8 @@ public class Util {
 		player.setHealth(health);
 	}
 	
+	//Hit Usage
+	
 	public static void hitPlayer(Player player) {
 		Random r = new Random();
 		int random = r.nextInt(5);
@@ -151,9 +163,14 @@ public class Util {
 		player.damage(random);
 	}
 	
+	
+	// Clear Usage
 	public static void clearInventory(Player player) {
 		player.getInventory().clear();
 	}
+	
+	
+	// Kill Usage 
 	
 	public static void killPlayer(Player player, Player damager) {
 		player.damage(player.getMaxHealth(), damager);
@@ -162,6 +179,8 @@ public class Util {
 	public static void killPlayer(Player player) {
 		player.damage(player.getMaxHealth());
 	}
+	
+	// Vanish Usage
 	
 	public static boolean isVanished(Player player) {
 		if(HashMaps.vanishPlayers.contains(player.getName())) {
@@ -188,8 +207,59 @@ public class Util {
 		}
 	}
 	
+	// /alert usage
 	public static void broadcastUnformatted(String message) {
 		Adminify.mainClass.getServer().broadcastMessage(message);
+	}
+	
+	public static void addLastPos(Player player) throws Exception {
+		boolean alreadyExists = false;
+		Class.forName("org.sqlite.JDBC");
+		ResultSet r = null;
+		Connection conn = DriverManager.getConnection("jdbc:sqlite:plugins/Adminify/adminify.db");
+		PreparedStatement stat = null;
+		Statement insert = null;
+		try {
+			stat = conn.prepareStatement("select * from lastpos where player = '" + player.getName() + "';");
+			insert = conn.createStatement();
+			r = stat.executeQuery();
+			Util.print("Players: " + r.next());
+			alreadyExists = r.next();
+			r.close();
+			stat.close();
+		} catch (Exception e) {
+			Util.print("Error whilst looking through database.");
+			Util.print(e.getMessage());
+		}
+		
+		if(alreadyExists == true) {
+			Util.print("Player already in database.. update code.");
+			try {
+			insert.executeUpdate("update lastpos set x = '" + player.getLocation().getX() + "' where player = '" + player.getName() + "';");
+			stat.close();
+			conn.close();
+			} catch (SQLException e) {
+				Util.print(e.getMessage());
+			}
+		} else {
+		Util.print("Player not in database.. create code.");
+		alreadyExists = true;
+		try {
+			insert.executeUpdate("insert into lastpos(player, x, y, z, world) values"
+								+ "('" + player.getName() + "', '" + player.getLocation().getX() + "', "
+								+ "'" + player.getLocation().getY() + "', "
+								+ "'" + player.getLocation().getZ() + "', "
+								+ "'" + player.getWorld().getName() + "');");
+			stat.close();
+			conn.close();
+			
+		} catch (SQLException e) {
+			Util.print(e.getMessage());
+		}
+		}
+		
+		r.close();
+		conn.close();
 	}
 	
 	public static void delayChat(int seconds) {

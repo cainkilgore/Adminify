@@ -20,6 +20,7 @@ import com.cainkilgore.adminify.events.evtAlert;
 import com.cainkilgore.adminify.events.evtEnabled;
 import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
+import com.cainkilgore.adminify.events.evtLastpos;
 import com.cainkilgore.adminify.events.evtMute;
 
 
@@ -35,6 +36,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtGod());
 		Util.registerEvent(new evtEnabled());
 		Util.registerEvent(new evtAlert());
+		Util.registerEvent(new evtLastpos());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
