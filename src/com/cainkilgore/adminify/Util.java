@@ -7,6 +7,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
+import com.cainkilgore.adminify.events.evtAlert;
+
 public class Util {
 	
 	public static void print(String message) {
@@ -184,6 +186,18 @@ public class Util {
 				players.showPlayer(players);
 			}
 		}
+	}
+	
+	public static void broadcastUnformatted(String message) {
+		Adminify.mainClass.getServer().broadcastMessage(message);
+	}
+	
+	public static void delayChat(int seconds) {
+		evtAlert.r = Adminify.mainClass.getServer().getScheduler().runTaskLater(Adminify.mainClass, new Runnable() {
+			public void run() {
+				evtAlert.r = null;
+			}	
+		}, seconds * 20);
 	}
 
 }

@@ -2,6 +2,7 @@ package com.cainkilgore.adminify;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.cainkilgore.adminify.commands.Alert;
 import com.cainkilgore.adminify.commands.Clear;
 import com.cainkilgore.adminify.commands.Fly;
 import com.cainkilgore.adminify.commands.Freeze;
@@ -15,6 +16,7 @@ import com.cainkilgore.adminify.commands.Time;
 import com.cainkilgore.adminify.commands.Tp;
 import com.cainkilgore.adminify.commands.Vanish;
 import com.cainkilgore.adminify.commands.cmdAdminify;
+import com.cainkilgore.adminify.events.evtAlert;
 import com.cainkilgore.adminify.events.evtEnabled;
 import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
@@ -32,6 +34,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtMute());
 		Util.registerEvent(new evtGod());
 		Util.registerEvent(new evtEnabled());
+		Util.registerEvent(new evtAlert());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
@@ -46,6 +49,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("clear", new Clear());
 		Util.registerCommand("kill", new Kill());
 		Util.registerCommand("vanish", new Vanish());
+		Util.registerCommand("alert", new Alert());
 		
 		Timers.vanishTimer();
 		

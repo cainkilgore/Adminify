@@ -42,3 +42,6 @@ commands:
    vanish:
        description: 'Hide/show yourself to all players'
        usage: /<command>
+   alert:
+       description: 'Send a Chat Alert'
+       usage: /<command> <alert>
