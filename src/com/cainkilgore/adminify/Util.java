@@ -302,9 +302,9 @@ public class Util {
 			Util.print("Error whilst looking through database.");
 			Util.print(e.getMessage());
 		} finally {
-		r.close();
-		stat.close();
-		conn.close();
+			r.close();
+			stat.close();
+			conn.close();
 		}
 		
 		return new Location(Adminify.mainClass.getServer().getWorld(world), x, y, z);

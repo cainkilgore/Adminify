@@ -42,14 +42,14 @@ public class Lastpos implements CommandExecutor {
 					return true;
 				}
 				
-				OfflinePlayer argPlayer = Adminify.mainClass.getServer().getOfflinePlayer(args[0]);
+				Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
 				if(argPlayer == null) {
 					Util.sendMessage(player, Messages.invalidPlayer);
 					return true;
 				}
 				
 				try {
-					Util.teleportPlayer(player, Util.getLastPos((Player) argPlayer));
+					Util.teleportPlayer(player, Util.getLastPos(argPlayer));
 					Util.sendMessage(player, Messages.playerLast.replace("{P}", argPlayer.getName()));
 				} catch (Exception e) {
 					Util.sendMessage(player, Messages.playerError.replace("{P}", argPlayer.getName()));
