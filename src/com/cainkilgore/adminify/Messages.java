@@ -105,8 +105,17 @@ public class Messages {
 	
 	// Lastpos Command
 	public static String teleLast = messagePrefix + "You teleported to your previous location.";
-	public static String teleError = messagePrefix + "There was an error getting your last location.";
-	
+	public static String teleError = errorPrefix + "There was an error getting your last location.";
 	public static String playerLast = messagePrefix + "You teleported to {P}'s previous location.";
-	public static String playerError = messagePrefix + "There was an error getting {P}'s previous location.";
+	public static String playerError = errorPrefix + "There was an error getting {P}'s previous location.";
+	
+	// Strike Command
+	public static String strikePlayer = messagePrefix + "You have striked {P} with lightning.";
+	public static String adminStrike = messagePrefix + "{A} has striked you with lightning.";
+	
+	// Sethome and Home Command
+	public static String homeError = errorPrefix + "There was an error saving your home location.";
+	public static String homeSaved = messagePrefix + "Your home location has been saved.";
+	public static String teleHome = messagePrefix + "You have teleported to your home.";
+	public static String noHome = errorPrefix + "You do not have a home. /sethome now.";
 }

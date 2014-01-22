@@ -9,10 +9,13 @@ import com.cainkilgore.adminify.commands.Freeze;
 import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Heal;
 import com.cainkilgore.adminify.commands.Hit;
+import com.cainkilgore.adminify.commands.Home;
 import com.cainkilgore.adminify.commands.Kill;
 import com.cainkilgore.adminify.commands.Lastpos;
 import com.cainkilgore.adminify.commands.Mute;
+import com.cainkilgore.adminify.commands.Sethome;
 import com.cainkilgore.adminify.commands.Spawn;
+import com.cainkilgore.adminify.commands.Strike;
 import com.cainkilgore.adminify.commands.Time;
 import com.cainkilgore.adminify.commands.Tp;
 import com.cainkilgore.adminify.commands.Vanish;
@@ -54,6 +57,9 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("vanish", new Vanish());
 		Util.registerCommand("alert", new Alert());
 		Util.registerCommand("lastpos", new Lastpos());
+		Util.registerCommand("strike", new Strike());
+		Util.registerCommand("home", new Home());
+		Util.registerCommand("sethome", new Sethome());
 		
 		Timers.vanishTimer();
 		

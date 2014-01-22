@@ -48,3 +48,12 @@ commands:
    lastpos:
        description: 'Teleport to yours/another players last location'
        usage: /<command> <player>
+   strike:
+       description: 'Strike a player with lightning'
+       usage: /<command> [player]
+   home:
+       description: 'Teleport to your home'
+       usage: /<command>
+   sethome:
+       description: 'Set your home destination'
+       usage: /<command>

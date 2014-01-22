@@ -220,6 +220,10 @@ public class Util {
 		}, seconds * 20);
 	}
 	
+	public static void strikePlayer(Player player) {
+		player.getWorld().strikeLightning(player.getLocation());
+	}
+	
 	/*
 	 * ANY CODES BELOW THIS ARE ENTIRELY FOR DATABASE PURPOSES. 
 	 */
@@ -308,7 +312,92 @@ public class Util {
 		}
 		
 		return new Location(Adminify.mainClass.getServer().getWorld(world), x, y, z);
+	}
+	
+	/* HOME */ 
+	public static void addHome(Player player, Location loc) throws Exception {
+		boolean alreadyExists = false;
+		Class.forName("org.sqlite.JDBC");
+		ResultSet r = null;
+		Connection conn = DriverManager.getConnection("jdbc:sqlite:plugins/Adminify/adminify.db");
+		PreparedStatement stat = null;
+		Statement insert = null;
+		try {
+			try {
+			
+				stat = conn.prepareStatement("select * from homes where player = '" + player.getName() + "';");
+				insert = conn.createStatement();
+				r = stat.executeQuery();
+				while(r.next()) {
+					if(r.getString(1).equalsIgnoreCase(player.getName())) {
+						alreadyExists = true;
+					}
+				}
+			} catch (Exception e) {
+				Util.print("Error whilst looking through database.");
+				Util.print(e.getMessage());
+			}
+			
+			if(alreadyExists == true) {
+				try {
+					insert.executeUpdate("update homes set x = '" + loc.getX() + "' where player = '" + player.getName() + "';");
+					insert.executeUpdate("update homes set y = '" + loc.getY() + "' where player = '" + player.getName() + "';");
+					insert.executeUpdate("update homes set z = '" + loc.getZ() + "' where player = '" + player.getName() + "';");
+					insert.executeUpdate("update homes set world='" + player.getWorld().getName() + "' where player = '" + player.getName() + "';");
+				} catch (SQLException e) {
+					Util.print(e.getMessage());
+				}
+			} else {
+			alreadyExists = true;
+			try {
+				insert.executeUpdate("insert into homes(player, x, y, z, world) values"
+									+ "('" + player.getName() + "', '" + loc.getX() + "', "
+									+ "'" + loc.getY() + "', "
+									+ "'" + loc.getZ() + "', "
+									+ "'" + player.getWorld().getName() + "');");
+			} catch (SQLException e) {
+				Util.print(e.getMessage());
+			}
+			}
+		} finally {
+			r.close();
+			stat.close();
+			conn.close();
+		}
+	}
+	
+	public static Location getHome(Player player) throws Exception {
+		Class.forName("org.sqlite.JDBC");
+		ResultSet r = null;
+		Connection conn = DriverManager.getConnection("jdbc:sqlite:plugins/Adminify/adminify.db");
 		
+		double x = 0;
+		double y = 0;
+		double z = 0;
+		String world = "";
+		
+		PreparedStatement stat = null;
+		try {
+			stat = conn.prepareStatement("select * from homes where player = '" + player.getName() + "';");
+			r = stat.executeQuery();
+			while(r.next()) {
+				if(r.getString(1).equalsIgnoreCase(player.getName())) {
+					x = Double.parseDouble(r.getString(2));
+					y = Double.parseDouble(r.getString(3));
+					z = Double.parseDouble(r.getString(4));
+					world = r.getString(5);					
+					}
+			}
+		} catch (Exception e) {
+			Util.print("Error whilst looking through database.");
+			Util.print(e.getMessage());
+		} finally {
+			r.close();
+			stat.close();
+			conn.close();
+		}
+		
+		return new Location(Adminify.mainClass.getServer().getWorld(world), x, y, z);
 	}
 
 }
