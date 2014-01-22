@@ -6,6 +6,8 @@ public class Messages {
 	
 	public static String messagePrefix = ChatColor.BLUE + "Adminify> " + ChatColor.WHITE;
 	public static String errorPrefix = ChatColor.RED + "Error> " + ChatColor.WHITE;
+	public static String msgFromPrefix = ChatColor.GOLD + "from {P}> " + ChatColor.WHITE + "{M}";
+	public static String msgToPrefix = ChatColor.GOLD + "to {P}> " + ChatColor.WHITE + "{M}";
 	
 	// Console Messages
 	public static String noConsole = "No commands work in console right now. They will in future versions.";
@@ -118,4 +120,9 @@ public class Messages {
 	public static String homeSaved = messagePrefix + "Your home location has been saved.";
 	public static String teleHome = messagePrefix + "You have teleported to your home.";
 	public static String noHome = errorPrefix + "You do not have a home. /sethome now.";
+
+	// Msg Command
+	// Handled by Prefixes at top
+	
+	
 }

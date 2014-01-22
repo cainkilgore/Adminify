@@ -224,6 +224,11 @@ public class Util {
 		player.getWorld().strikeLightning(player.getLocation());
 	}
 	
+	public static void sendPrivateMsg(Player one, Player two, String message) {
+		one.sendMessage(Messages.msgToPrefix.replace("{P}", two.getName()).replace("{M}", message));
+		two.sendMessage(Messages.msgFromPrefix.replace("{P}", one.getName()).replace("{M}", message));
+	}
+	
 	/*
 	 * ANY CODES BELOW THIS ARE ENTIRELY FOR DATABASE PURPOSES. 
 	 */

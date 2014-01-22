@@ -31,6 +31,7 @@ public class Sethome implements CommandExecutor {
 				Util.sendMessage(player, Messages.homeError);
 				Util.print(e.getMessage());
 			}
+
 		}
 		return true;
 	}

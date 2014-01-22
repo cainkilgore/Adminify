@@ -3,7 +3,6 @@ package com.cainkilgore.adminify;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -17,27 +16,12 @@ public class SQL {
 		if(!pluginDir.exists()) {
 			pluginDir.mkdirs();
 		}
-		
 		conn = DriverManager.getConnection("jdbc:sqlite:plugins/Adminify/adminify.db");
 		stat = conn.createStatement();
-
 		stat.executeUpdate("create table if not exists lastpos(player, x, y, z, world);");
 		stat.executeUpdate("create table if not exists homes (player, x, y, z, world);");
 		stat.executeUpdate("create table if not exists warps (warp, x, y, z, world);");
-		
-		// stat.executeUpdate("insert into lastpos(player, x, y, z, world) values('kyle0440', 0, 0, 0, 'world');");
 		conn.setAutoCommit(false);
-		
-//		ResultSet result = stat.executeQuery("select * from lastpos");
-//		while(result.next()) {
-//			Util.print("Player: " + result.getString("player"));
-//			Util.print("X: " + result.getString("x"));
-//			Util.print("Y: " + result.getString("y"));
-//			Util.print("Z: " + result.getString("z"));
-//			Util.print("World: " + result.getString("world"));
-//		}
-		
-		// result.close();
 		conn.close();
 		stat.close();
 	}

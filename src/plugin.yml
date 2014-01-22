@@ -57,3 +57,6 @@ commands:
    sethome:
        description: 'Set your home destination'
        usage: /<command>
+   msg:
+       description: 'Send a message to a player privately'
+       usage: /<command> [player] [message]
