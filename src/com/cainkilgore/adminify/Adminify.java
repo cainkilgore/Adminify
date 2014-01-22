@@ -53,6 +53,7 @@ public class Adminify extends JavaPlugin {
 	}
 	
 	public void onDisable() {
+		Util.setAllVanished(false);
 		Util.print("Adminify has been disabled.");
 	}
 }

@@ -175,5 +175,15 @@ public class Util {
 			HashMaps.vanishPlayers.remove(player.getName());
 		}
 	}
+	
+	public static void setAllVanished(boolean vanished) {
+		for(Player players : Adminify.mainClass.getServer().getOnlinePlayers()) {
+			if(vanished) {
+				players.hidePlayer(players);
+			} else {
+				players.showPlayer(players);
+			}
+		}
+	}
 
 }
