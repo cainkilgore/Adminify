@@ -12,7 +12,7 @@ public class evtLastpos implements Listener {
 	@EventHandler
 	public void onPlayerQuit(PlayerQuitEvent e) {
 		try {
-			Util.addLastPos(e.getPlayer());
+			Util.addLastPos(e.getPlayer(), e.getPlayer().getLocation());
 		} catch (Exception e1) {
 			Util.print("There was an error saving " + e.getPlayer().getName() + "'s last location.");
 			Util.print(e1.getMessage());
@@ -22,7 +22,7 @@ public class evtLastpos implements Listener {
 	@EventHandler
 	public void onPlayerTeleport(PlayerTeleportEvent e) {
 		try {
-			Util.addLastPos(e.getPlayer());
+			Util.addLastPos(e.getPlayer(), e.getFrom());
 		} catch (Exception e1) {
 			Util.print("There was an error saving " + e.getPlayer().getName() + "'s last location.");
 			Util.print(e1.getMessage());

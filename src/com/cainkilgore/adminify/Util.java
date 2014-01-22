@@ -225,7 +225,7 @@ public class Util {
 	 */
 	
 	
-	public static void addLastPos(Player player) throws Exception {
+	public static void addLastPos(Player player, Location loc) throws Exception {
 		boolean alreadyExists = false;
 		Class.forName("org.sqlite.JDBC");
 		ResultSet r = null;
@@ -233,74 +233,82 @@ public class Util {
 		PreparedStatement stat = null;
 		Statement insert = null;
 		try {
-			stat = conn.prepareStatement("select * from lastpos where player = '" + player.getName() + "';");
-			insert = conn.createStatement();
-			r = stat.executeQuery();
-			while(r.next()) {
-				if(r.getString(1).equalsIgnoreCase(player.getName())) {
-					alreadyExists = true;
-				}
-			}
-			r.close();
-			stat.close();
-		} catch (Exception e) {
-			Util.print("Error whilst looking through database.");
-			Util.print(e.getMessage());
-		}
-		
-		if(alreadyExists == true) {
 			try {
-			insert.executeUpdate("update lastpos set x = '" + player.getLocation().getX() + "' where player = '" + player.getName() + "';");
-			stat.close();
-			conn.close();
+			
+				stat = conn.prepareStatement("select * from lastpos where player = '" + player.getName() + "';");
+				insert = conn.createStatement();
+				r = stat.executeQuery();
+				while(r.next()) {
+					if(r.getString(1).equalsIgnoreCase(player.getName())) {
+						alreadyExists = true;
+					}
+				}
+			} catch (Exception e) {
+				Util.print("Error whilst looking through database.");
+				Util.print(e.getMessage());
+			}
+			
+			if(alreadyExists == true) {
+				try {
+					insert.executeUpdate("update lastpos set x = '" + loc.getX() + "' where player = '" + player.getName() + "';");
+					insert.executeUpdate("update lastpos set y = '" + loc.getY() + "' where player = '" + player.getName() + "';");
+					insert.executeUpdate("update lastpos set z = '" + loc.getZ() + "' where player = '" + player.getName() + "';");
+					insert.executeUpdate("update lastpos set world='" + player.getWorld().getName() + "' where player = '" + player.getName() + "';");
+				} catch (SQLException e) {
+					Util.print(e.getMessage());
+				}
+			} else {
+			alreadyExists = true;
+			try {
+				insert.executeUpdate("insert into lastpos(player, x, y, z, world) values"
+									+ "('" + player.getName() + "', '" + loc.getX() + "', "
+									+ "'" + loc.getY() + "', "
+									+ "'" + loc.getZ() + "', "
+									+ "'" + player.getWorld().getName() + "');");
 			} catch (SQLException e) {
 				Util.print(e.getMessage());
 			}
-		} else {
-		alreadyExists = true;
-		try {
-			insert.executeUpdate("insert into lastpos(player, x, y, z, world) values"
-								+ "('" + player.getName() + "', '" + player.getLocation().getX() + "', "
-								+ "'" + player.getLocation().getY() + "', "
-								+ "'" + player.getLocation().getZ() + "', "
-								+ "'" + player.getWorld().getName() + "');");
+			}
+		} finally {
+			r.close();
 			stat.close();
 			conn.close();
-			
-		} catch (SQLException e) {
-			Util.print(e.getMessage());
 		}
-		}
-		
-		r.close();
-		conn.close();
-		stat.close();
 	}
 	
 	public static Location getLastPos(Player player) throws Exception {
 		Class.forName("org.sqlite.JDBC");
 		ResultSet r = null;
 		Connection conn = DriverManager.getConnection("jdbc:sqlite:plugins/Adminify/adminify.db");
+		
+		double x = 0;
+		double y = 0;
+		double z = 0;
+		String world = "";
+		
 		PreparedStatement stat = null;
 		try {
 			stat = conn.prepareStatement("select * from lastpos where player = '" + player.getName() + "';");
 			r = stat.executeQuery();
 			while(r.next()) {
 				if(r.getString(1).equalsIgnoreCase(player.getName())) {
-					return new Location(Adminify.mainClass.getServer().getWorld(r.getString(5)), Double.parseDouble(r.getString(2)), Double.parseDouble(r.getString(3)), Double.parseDouble(r.getString(4)));
-				}
+					x = Double.parseDouble(r.getString(2));
+					y = Double.parseDouble(r.getString(3));
+					z = Double.parseDouble(r.getString(4));
+					world = r.getString(5);					
+					}
 			}
-			r.close();
-			stat.close();
 		} catch (Exception e) {
 			Util.print("Error whilst looking through database.");
 			Util.print(e.getMessage());
-		}
+		} finally {
 		r.close();
-		conn.close();
 		stat.close();
+		conn.close();
+		}
 		
-		return null;
+		return new Location(Adminify.mainClass.getServer().getWorld(world), x, y, z);
+		
 	}
 
 }
