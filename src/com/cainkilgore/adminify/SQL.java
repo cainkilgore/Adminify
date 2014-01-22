@@ -24,7 +24,10 @@ public class SQL {
 		stat = conn.createStatement();
 
 		stat.executeUpdate("create table if not exists lastpos(player, x, y, z, world);");
-		stat.executeUpdate("insert into lastpos(player, x, y, z, world) values('kyle0440', 0, 0, 0, 'world');");
+		stat.executeUpdate("create table if not exists homes (player, x, y, z, world);");
+		stat.executeUpdate("create table if not exists warps (warp, x, y, z, world);");
+		
+		// stat.executeUpdate("insert into lastpos(player, x, y, z, world) values('kyle0440', 0, 0, 0, 'world');");
 		conn.setAutoCommit(false);
 		
 		ResultSet result = stat.executeQuery("select * from lastpos");
