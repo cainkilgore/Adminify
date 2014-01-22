@@ -102,4 +102,11 @@ public class Messages {
 	// Vanish Command
 	public static String nowVanished = messagePrefix + "You are now vanished from all players.";
 	public static String noVanished = messagePrefix + "You are no longer vanished from all players.";
+	
+	// Lastpos Command
+	public static String teleLast = messagePrefix + "You teleported to your previous location.";
+	public static String teleError = messagePrefix + "There was an error getting your last location.";
+	
+	public static String playerLast = messagePrefix + "You teleported to {P}'s previous location.";
+	public static String playerError = messagePrefix + "There was an error getting {P}'s previous location.";
 }

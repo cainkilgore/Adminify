@@ -10,6 +10,7 @@ import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Heal;
 import com.cainkilgore.adminify.commands.Hit;
 import com.cainkilgore.adminify.commands.Kill;
+import com.cainkilgore.adminify.commands.Lastpos;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Time;
@@ -52,6 +53,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("kill", new Kill());
 		Util.registerCommand("vanish", new Vanish());
 		Util.registerCommand("alert", new Alert());
+		Util.registerCommand("lastpos", new Lastpos());
 		
 		Timers.vanishTimer();
 		

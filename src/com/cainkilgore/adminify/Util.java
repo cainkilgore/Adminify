@@ -212,6 +212,19 @@ public class Util {
 		Adminify.mainClass.getServer().broadcastMessage(message);
 	}
 	
+	public static void delayChat(int seconds) {
+		evtAlert.r = Adminify.mainClass.getServer().getScheduler().runTaskLater(Adminify.mainClass, new Runnable() {
+			public void run() {
+				evtAlert.r = null;
+			}	
+		}, seconds * 20);
+	}
+	
+	/*
+	 * ANY CODES BELOW THIS ARE ENTIRELY FOR DATABASE PURPOSES. 
+	 */
+	
+	
 	public static void addLastPos(Player player) throws Exception {
 		boolean alreadyExists = false;
 		Class.forName("org.sqlite.JDBC");
@@ -223,8 +236,11 @@ public class Util {
 			stat = conn.prepareStatement("select * from lastpos where player = '" + player.getName() + "';");
 			insert = conn.createStatement();
 			r = stat.executeQuery();
-			Util.print("Players: " + r.next());
-			alreadyExists = r.next();
+			while(r.next()) {
+				if(r.getString(1).equalsIgnoreCase(player.getName())) {
+					alreadyExists = true;
+				}
+			}
 			r.close();
 			stat.close();
 		} catch (Exception e) {
@@ -233,7 +249,6 @@ public class Util {
 		}
 		
 		if(alreadyExists == true) {
-			Util.print("Player already in database.. update code.");
 			try {
 			insert.executeUpdate("update lastpos set x = '" + player.getLocation().getX() + "' where player = '" + player.getName() + "';");
 			stat.close();
@@ -242,7 +257,6 @@ public class Util {
 				Util.print(e.getMessage());
 			}
 		} else {
-		Util.print("Player not in database.. create code.");
 		alreadyExists = true;
 		try {
 			insert.executeUpdate("insert into lastpos(player, x, y, z, world) values"
@@ -260,14 +274,33 @@ public class Util {
 		
 		r.close();
 		conn.close();
+		stat.close();
 	}
 	
-	public static void delayChat(int seconds) {
-		evtAlert.r = Adminify.mainClass.getServer().getScheduler().runTaskLater(Adminify.mainClass, new Runnable() {
-			public void run() {
-				evtAlert.r = null;
-			}	
-		}, seconds * 20);
+	public static Location getLastPos(Player player) throws Exception {
+		Class.forName("org.sqlite.JDBC");
+		ResultSet r = null;
+		Connection conn = DriverManager.getConnection("jdbc:sqlite:plugins/Adminify/adminify.db");
+		PreparedStatement stat = null;
+		try {
+			stat = conn.prepareStatement("select * from lastpos where player = '" + player.getName() + "';");
+			r = stat.executeQuery();
+			while(r.next()) {
+				if(r.getString(1).equalsIgnoreCase(player.getName())) {
+					return new Location(Adminify.mainClass.getServer().getWorld(r.getString(5)), Double.parseDouble(r.getString(2)), Double.parseDouble(r.getString(3)), Double.parseDouble(r.getString(4)));
+				}
+			}
+			r.close();
+			stat.close();
+		} catch (Exception e) {
+			Util.print("Error whilst looking through database.");
+			Util.print(e.getMessage());
+		}
+		r.close();
+		conn.close();
+		stat.close();
+		
+		return null;
 	}
 
 }

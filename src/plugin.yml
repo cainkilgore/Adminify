@@ -45,3 +45,6 @@ commands:
    alert:
        description: 'Send a Chat Alert'
        usage: /<command> <alert>
+   lastpos:
+       description: 'Teleport to yours/another players last location'
+       usage: /<command> <player>
