@@ -37,7 +37,7 @@ public class SQL {
 //			Util.print("World: " + result.getString("world"));
 //		}
 		
-		result.close();
+		// result.close();
 		conn.close();
 	}
 	
