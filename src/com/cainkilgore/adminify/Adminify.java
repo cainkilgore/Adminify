@@ -53,6 +53,13 @@ public class Adminify extends JavaPlugin {
 		
 		Timers.vanishTimer();
 		
+		try {
+			SQL.startConnection();
+		} catch (Exception e) {
+			Util.print("Error whilst attempting to connect to database.");
+			Util.print(e.getMessage());
+		}
+		
 		Util.print("Adminify has been enabled.");
 	}
 	
