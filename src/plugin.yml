@@ -60,3 +60,6 @@ commands:
    msg:
        description: 'Send a message to a player privately'
        usage: /<command> [player] [message]
+   spawnmob:
+       description: 'Spawn a specified amount of entities at your cursor'
+       usage: /<command> [?/entity] [count]

@@ -16,6 +16,7 @@ import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Sethome;
 import com.cainkilgore.adminify.commands.Spawn;
+import com.cainkilgore.adminify.commands.Spawnmob;
 import com.cainkilgore.adminify.commands.Strike;
 import com.cainkilgore.adminify.commands.Time;
 import com.cainkilgore.adminify.commands.Tp;
@@ -62,6 +63,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("home", new Home());
 		Util.registerCommand("sethome", new Sethome());
 		Util.registerCommand("msg", new Msg());
+		Util.registerCommand("spawnmob", new Spawnmob());
 		
 		Timers.vanishTimer();
 		

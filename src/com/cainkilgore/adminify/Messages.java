@@ -124,5 +124,10 @@ public class Messages {
 	// Msg Command
 	// Handled by Prefixes at top
 	
+	// Spawnmob Command
+	public static String invalidMob = errorPrefix + "That entity does not exist.";
+	public static String spawnSuccess = messagePrefix + "{N} of {E} were spawned at your cursor location.";
+	public static String invalidCount = errorPrefix + "You entered an invalid number of entities to spawn.";
+	
 	
 }
