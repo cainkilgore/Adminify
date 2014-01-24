@@ -113,8 +113,8 @@ public class Messages {
 	public static String playerError = errorPrefix + "There was an error getting {P}'s previous location.";
 	
 	// Strike Command
-	public static String strikePlayer = messagePrefix + "You have striked {P} with lightning.";
-	public static String adminStrike = messagePrefix + "{A} has striked you with lightning.";
+	public static String strikePlayer = messagePrefix + "You have struck {P} with lightning.";
+	public static String adminStrike = messagePrefix + "{A} has struck you with lightning.";
 	
 	// Sethome and Home Command
 	public static String homeError = errorPrefix + "There was an error saving your home location.";
