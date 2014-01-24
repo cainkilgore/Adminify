@@ -18,6 +18,7 @@ import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.commands.Sethome;
+import com.cainkilgore.adminify.commands.Setspawn;
 import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Spawnmob;
 import com.cainkilgore.adminify.commands.Strike;
@@ -74,6 +75,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("gm", new Gm());
 		Util.registerCommand("feed", new Feed());
 		Util.registerCommand("ride", new Ride());
+		Util.registerCommand("setspawn", new Setspawn());
 		
 		Timers.vanishTimer();
 		

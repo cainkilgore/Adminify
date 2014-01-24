@@ -146,5 +146,7 @@ public class Messages {
 	public static String selected = messagePrefix + "{E} selected. Please select another.";
 	public static String nowRiding = messagePrefix + "The selected entities are now riding!";
 	
+	// Setspawn Command
+	public static String spawnSet = messagePrefix + "The world '{W}' spawn was set to your position.";
 	
 }

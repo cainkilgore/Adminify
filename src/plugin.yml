@@ -75,3 +75,6 @@ commands:
    ride:
        description: 'Make two entities start riding'
        usage: /<command>
+   setspawn:
+       description: 'Set the current world spawn'
+       usage: /<command>
