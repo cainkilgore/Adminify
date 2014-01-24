@@ -1,11 +1,11 @@
 package com.cainkilgore.adminify.commands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.cainkilgore.adminify.Adminify;
 import com.cainkilgore.adminify.Messages;
 import com.cainkilgore.adminify.Util;
 
@@ -31,7 +31,7 @@ public class Tphere implements CommandExecutor {
 				return true;
 			}
 			
-			Player argPlayer = Bukkit.getServer().getPlayer(args[0]);
+			Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
 			if(argPlayer == null) {
 				Util.sendMessage(player, Messages.invalidPlayer);
 				return true;

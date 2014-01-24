@@ -66,3 +66,6 @@ commands:
    tphere:
        description: 'Teleport a player to you'
        usage: /<command> <player>
+   gm:
+       description: 'Change yours/another players gamemode'
+       usage: /<command> [s/c/a/0/1/2/survival/creative/adventure] <player>

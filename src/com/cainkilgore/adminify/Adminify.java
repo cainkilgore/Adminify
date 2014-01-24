@@ -6,6 +6,7 @@ import com.cainkilgore.adminify.commands.Alert;
 import com.cainkilgore.adminify.commands.Clear;
 import com.cainkilgore.adminify.commands.Fly;
 import com.cainkilgore.adminify.commands.Freeze;
+import com.cainkilgore.adminify.commands.Gm;
 import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Heal;
 import com.cainkilgore.adminify.commands.Hit;
@@ -66,6 +67,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("msg", new Msg());
 		Util.registerCommand("spawnmob", new Spawnmob());
 		Util.registerCommand("tphere", new Tphere());
+		Util.registerCommand("gm", new Gm());
 		
 		Timers.vanishTimer();
 		

@@ -130,5 +130,10 @@ public class Messages {
 	public static String spawnSuccess = messagePrefix + "{N} of {E} were spawned at your cursor location.";
 	public static String invalidCount = errorPrefix + "You entered an invalid number of entities to spawn.";
 	
+	// Gm command
+	public static String gameModeSet = messagePrefix + "Your gamemode has been changed to {G}.";
+	public static String gameModePlayerSet = messagePrefix + "{P}'s gamemode has been changed to {G}.";
+	public static String gameModeAdmin = messagePrefix + "{A} has changed your gamemode to {G}.";
+	
 	
 }
