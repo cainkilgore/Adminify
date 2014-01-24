@@ -40,6 +40,7 @@ public class Messages {
 	
 	public static String TeleXyz = messagePrefix + "You teleported to {X}, {Y}, {Z}";
 	public static String badXyz = errorPrefix + "The co-ordinates you entered were invalid.";
+	public static String tphereAdmin = messagePrefix + "You teleported {P} to you.";
 	
 	// Spawn Command
 	public static String teleportSpawn = messagePrefix + "You have teleported to spawn.";

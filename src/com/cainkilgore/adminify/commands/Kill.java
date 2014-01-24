@@ -1,5 +1,6 @@
 package com.cainkilgore.adminify.commands;
 
+import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -43,6 +44,7 @@ public class Kill implements CommandExecutor {
 					return true;
 				}
 				
+				argPlayer.setGameMode(GameMode.SURVIVAL);
 				Util.killPlayer(argPlayer, player);
 				Util.sendMessage(player, Messages.adminKill.replace("{P}", argPlayer.getName()));
 				Util.sendMessage(argPlayer, Messages.playerKill.replace("{A}", player.getName()));
