@@ -135,5 +135,16 @@ public class Messages {
 	public static String gameModePlayerSet = messagePrefix + "{P}'s gamemode has been changed to {G}.";
 	public static String gameModeAdmin = messagePrefix + "{A} has changed your gamemode to {G}.";
 	
+	// Feed Command
+	public static String selfFed = messagePrefix + "Your hunger bar has been replenished.";
+	public static String adminFed = messagePrefix + "{A} has replenished your hunger.";
+	public static String playerFed = messagePrefix + "You have replenished {P}'s hunger.";
+	
+	// Ride Command
+	public static String selectingOn = messagePrefix + "Now right click two entities with an empty hand..";
+	public static String selectingOff = messagePrefix + "You are no longer selecting.";
+	public static String selected = messagePrefix + "{E} selected. Please select another.";
+	public static String nowRiding = messagePrefix + "The selected entities are now riding!";
+	
 	
 }

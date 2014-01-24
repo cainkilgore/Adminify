@@ -13,6 +13,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
+import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.events.evtAlert;
 
 public class Util {
@@ -227,6 +228,25 @@ public class Util {
 	public static void sendPrivateMsg(Player one, Player two, String message) {
 		one.sendMessage(Messages.msgToPrefix.replace("{P}", two.getName()).replace("{M}", message));
 		two.sendMessage(Messages.msgFromPrefix.replace("{P}", one.getName()).replace("{M}", message));
+	}
+	
+	public static void replenishHunger(Player player) {
+		player.setFoodLevel(20);
+	}
+	
+	public static void setSelecting(Player player, boolean is) {
+		if(is) { 
+			Ride.ridePlayers.add(player.getName());
+		} else {
+			Ride.ridePlayers.remove(player.getName());
+		}
+	}
+	
+	public static boolean isSelecting(Player player) {
+		if(Ride.ridePlayers.contains(player.getName())) {
+			return true;
+		}
+		return false;
 	}
 	
 	/*

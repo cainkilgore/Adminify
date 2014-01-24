@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.cainkilgore.adminify.commands.Alert;
 import com.cainkilgore.adminify.commands.Clear;
+import com.cainkilgore.adminify.commands.Feed;
 import com.cainkilgore.adminify.commands.Fly;
 import com.cainkilgore.adminify.commands.Freeze;
 import com.cainkilgore.adminify.commands.Gm;
@@ -15,6 +16,7 @@ import com.cainkilgore.adminify.commands.Kill;
 import com.cainkilgore.adminify.commands.Lastpos;
 import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
+import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.commands.Sethome;
 import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Spawnmob;
@@ -30,6 +32,7 @@ import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
 import com.cainkilgore.adminify.events.evtLastpos;
 import com.cainkilgore.adminify.events.evtMute;
+import com.cainkilgore.adminify.events.evtRide;
 
 
 public class Adminify extends JavaPlugin {
@@ -45,6 +48,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtEnabled());
 		Util.registerEvent(new evtAlert());
 		Util.registerEvent(new evtLastpos());
+		Util.registerEvent(new evtRide());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
@@ -68,6 +72,8 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("spawnmob", new Spawnmob());
 		Util.registerCommand("tphere", new Tphere());
 		Util.registerCommand("gm", new Gm());
+		Util.registerCommand("feed", new Feed());
+		Util.registerCommand("ride", new Ride());
 		
 		Timers.vanishTimer();
 		

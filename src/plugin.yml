@@ -69,3 +69,9 @@ commands:
    gm:
        description: 'Change yours/another players gamemode'
        usage: /<command> [s/c/a/0/1/2/survival/creative/adventure] <player>
+   feed:
+       description: 'Feed yourself or another'
+       usage: /<command> <player>
+   ride:
+       description: 'Make two entities start riding'
+       usage: /<command>
