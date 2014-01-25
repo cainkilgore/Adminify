@@ -14,6 +14,7 @@ import com.cainkilgore.adminify.commands.Hit;
 import com.cainkilgore.adminify.commands.Home;
 import com.cainkilgore.adminify.commands.Kill;
 import com.cainkilgore.adminify.commands.Lastpos;
+import com.cainkilgore.adminify.commands.MOTD;
 import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Ride;
@@ -32,6 +33,7 @@ import com.cainkilgore.adminify.events.evtEnabled;
 import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
 import com.cainkilgore.adminify.events.evtLastpos;
+import com.cainkilgore.adminify.events.evtMOTD;
 import com.cainkilgore.adminify.events.evtMute;
 import com.cainkilgore.adminify.events.evtRide;
 
@@ -50,6 +52,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtAlert());
 		Util.registerEvent(new evtLastpos());
 		Util.registerEvent(new evtRide());
+		Util.registerEvent(new evtMOTD());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
@@ -76,6 +79,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("feed", new Feed());
 		Util.registerCommand("ride", new Ride());
 		Util.registerCommand("setspawn", new Setspawn());
+		Util.registerCommand("motd", new MOTD());
 		
 		Timers.vanishTimer();
 		

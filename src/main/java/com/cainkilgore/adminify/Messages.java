@@ -149,4 +149,7 @@ public class Messages {
 	// Setspawn Command
 	public static String spawnSet = messagePrefix + "The world '{W}' spawn was set to your position.";
 	
+	// MOTD Command
+	public static String motdError = messagePrefix + "There was an error getting the MOTD.";
+	
 }

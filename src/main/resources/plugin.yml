@@ -78,3 +78,6 @@ commands:
    setspawn:
        description: 'Set the current world spawn'
        usage: /<command>
+   motd:
+       description: 'Get the message of the day (showed on login)'
+       usage: /<command>

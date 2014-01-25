@@ -1,5 +1,7 @@
 package com.cainkilgore.adminify;
 
+import java.io.File;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 
+import org.apache.commons.io.FileUtils;
 import org.bukkit.Location;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
@@ -247,6 +250,28 @@ public class Util {
 			return true;
 		}
 		return false;
+	}
+	
+	public static void broadcastMOTD() throws IOException {
+		File file = new File("plugins/Adminify/motd.txt");
+		if(!file.exists()) {
+			file.createNewFile();
+		}
+		
+		for(Object line : FileUtils.readLines(file)) {
+			Util.broadcastUnformatted(line.toString().replace("&", "§"));
+		}
+	}
+	
+	public static void sendPlayerMOTD(Player player) throws IOException {
+		File file = new File("plugins/Adminify/motd.txt");
+		if(!file.exists()) {
+			file.createNewFile();
+		}
+		
+		for(Object line : FileUtils.readLines(file)) {
+			Util.sendMessage(player, line.toString().replace("&", "§"));
+		}
 	}
 	
 	/*
