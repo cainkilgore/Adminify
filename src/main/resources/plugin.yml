@@ -108,3 +108,6 @@ commands:
    readyup:
        description: 'Set all players to max health and hunger, optionally specify a radius'
        usage: /<command> <radius>
+   flyspeed:
+       description: 'Set your own fly speed'
+       usage: /<command> <speed>

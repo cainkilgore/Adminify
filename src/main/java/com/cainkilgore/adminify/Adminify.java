@@ -9,6 +9,7 @@ import com.cainkilgore.adminify.commands.Craft;
 import com.cainkilgore.adminify.commands.Ender;
 import com.cainkilgore.adminify.commands.Feed;
 import com.cainkilgore.adminify.commands.Fly;
+import com.cainkilgore.adminify.commands.Flyspeed;
 import com.cainkilgore.adminify.commands.Freeze;
 import com.cainkilgore.adminify.commands.Gm;
 import com.cainkilgore.adminify.commands.God;
@@ -102,7 +103,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("maxhealth", new Maxhealth());
 		Util.registerCommand("playerinfo", new Playerinfo());
 		Util.registerCommand("readyup", new Readyup());
-		
+		Util.registerCommand("flyspeed", new Flyspeed());
 		Timers.vanishTimer();
 		
 		try {

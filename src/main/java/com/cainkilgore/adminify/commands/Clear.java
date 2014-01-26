@@ -31,7 +31,7 @@ public class Clear implements CommandExecutor {
 				return true;
 			}
 			
-			if(args.length == 1) {
+			if(args.length >= 1) {
 				if(!Util.hasPermission(player, "clear.others")) {
 					Util.sendMessage(player, Messages.noPermission);
 					return true;
