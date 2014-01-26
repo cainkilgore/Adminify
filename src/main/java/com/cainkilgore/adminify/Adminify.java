@@ -29,6 +29,7 @@ import com.cainkilgore.adminify.commands.Tphere;
 import com.cainkilgore.adminify.commands.Vanish;
 import com.cainkilgore.adminify.commands.cmdAdminify;
 import com.cainkilgore.adminify.events.evtAlert;
+import com.cainkilgore.adminify.events.evtChat;
 import com.cainkilgore.adminify.events.evtEnabled;
 import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
@@ -53,6 +54,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtLastpos());
 		Util.registerEvent(new evtRide());
 		Util.registerEvent(new evtMOTD());
+		Util.registerEvent(new evtChat());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
