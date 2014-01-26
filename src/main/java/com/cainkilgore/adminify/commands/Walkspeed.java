@@ -1,6 +1,5 @@
 package com.cainkilgore.adminify.commands;
 
-import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,10 +8,10 @@ import org.bukkit.entity.Player;
 import com.cainkilgore.adminify.Messages;
 import com.cainkilgore.adminify.Util;
 
-public class Warpspeed implements CommandExecutor {
+public class Walkspeed implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("warpspeed")) {
+		if(l.equalsIgnoreCase("walkspeed")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -20,25 +19,24 @@ public class Warpspeed implements CommandExecutor {
 			
 			Player player = (Player) s;
 			
-			if(!Util.hasPermission(player, "warpspeed")) {
+			if(!Util.hasPermission(player, "walkspeed")) {
 				Util.sendMessage(player, Messages.noPermission);
 				return true;
 			}
-		
-			if(player.getFlySpeed() == 0.1F) {
-				player.setFlySpeed(1.0F);
-				player.setWalkSpeed(1.0F);
-				Util.sendMessage(player, Messages.warpOn);
-				player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 6);
+			
+			if(args.length < 1) {
+				Util.sendMessage(player, Messages.invalidArguments);
+				Util.sendMessage(player, Util.getCommandUsage(l));
 				return true;
 			}
 			
-			player.setWalkSpeed(0.F);
-			player.setFlySpeed(0.1F);
-			Util.sendMessage(player, Messages.warpOff);
-			player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 0.1F);
+			try {
+				player.setWalkSpeed(Float.valueOf(args[0]));
+				Util.sendMessage(player, Messages.walkSet.replace("{F}", args[0]));
+			} catch (Exception e) {
+				Util.sendMessage(player, Messages.walkError);
+			}
 		}
 		return true;
 	}
-
 }
