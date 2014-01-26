@@ -204,4 +204,8 @@ public class Messages {
 	// Put Command
 	public static String putted = messagePrefix + "{P} has been teleported to your cursor.";
 	public static String adminPut = messagePrefix + "{A} has teleported you to their cursor.";
+	
+	// Repair command
+	public static String emptyHand = errorPrefix + "You have to be holding a valid item to repair it.";
+	public static String repaired = messagePrefix + "Your {I} has been repaired.";
 }

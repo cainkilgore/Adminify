@@ -123,3 +123,6 @@ commands:
    put:
        description: 'Teleport a player to your cursor'
        usage: /<command> [player]
+   repair:
+       description: 'Repair the item your holding'
+       usage: /<command>
