@@ -17,7 +17,11 @@ public class evtSnowman implements Listener {
 		final Player player = e.getPlayer();
 		if(!Util.isSnowman(player)) return;
 		
-		if(!player.getLocation().getBlock().getRelative(0, -1, 0).isLiquid() || !(player.getLocation().getBlock().getRelative(0, -1, 0).getType() == Material.AIR)) {
+		if(player.getLocation().getBlock().isLiquid()) return;
+		if(player.getLocation().getBlock().getRelative(0, -1, 0).isLiquid()) return;
+		if(!player.getLocation().getBlock().getType().isSolid()) return;
+		
+		if(player.getLocation().getBlock().getRelative(0, -1, 0).getType() != Material.AIR) {
 			final Location r = player.getLocation().getBlock().getLocation();
 			player.getLocation().getBlock().setType(Material.SNOW);
 			Adminify.mainClass.getServer().getScheduler().runTaskLater(Adminify.mainClass, new Runnable() {
