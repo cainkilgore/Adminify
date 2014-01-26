@@ -98,5 +98,5 @@ public class Adminify extends JavaPlugin {
 		Util.print("Adminify has been disabled.");
 	}
 	
-	// Note: Read Requests, also, Jenkins available!
+	// Note: Read Requests, also, Jenkins available! again..
 }
