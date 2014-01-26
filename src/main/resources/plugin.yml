@@ -81,3 +81,6 @@ commands:
    motd:
        description: 'Get the message of the day (showed on login)'
        usage: /<command>
+   snowman:
+       description: 'Toggle your snowman abilities'
+       usage: /<command>

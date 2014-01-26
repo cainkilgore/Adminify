@@ -11,6 +11,7 @@ public class HashMaps {
 	public static HashSet<String>			mutedPlayers = new HashSet<String>();
 	public static HashSet<String>			godPlayers = new HashSet<String>();
 	public static HashSet<String>			vanishPlayers = new HashSet<String>();
+	public static HashSet<String>			snowPlayers = new HashSet<String>();
 	
 	
 	

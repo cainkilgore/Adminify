@@ -275,6 +275,21 @@ public class Util {
 		}
 	}
 	
+	public static void setSnowman(Player player, boolean snowman) {
+		if(snowman) {
+			HashMaps.snowPlayers.add(player.getName());
+		} else {
+			HashMaps.snowPlayers.remove(player.getName());
+		}
+	}
+	
+	public static boolean isSnowman(Player player) {
+		if(HashMaps.snowPlayers.contains(player.getName())) {
+			return true;
+		}
+		return false;
+	}
+	
 	/*
 	 * ANY CODES BELOW THIS ARE ENTIRELY FOR DATABASE PURPOSES. 
 	 */

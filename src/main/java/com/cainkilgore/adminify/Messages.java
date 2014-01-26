@@ -152,4 +152,8 @@ public class Messages {
 	// MOTD Command
 	public static String motdError = messagePrefix + "There was an error getting the MOTD.";
 	
+	// Snowman Command
+	public static String isSnowman = messagePrefix + "You now have the features of a snowman.";
+	public static String noSnowman = messagePrefix + "You no longer have the features of a snowman.";
+	
 }

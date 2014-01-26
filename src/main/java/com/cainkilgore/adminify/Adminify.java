@@ -20,6 +20,7 @@ import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.commands.Sethome;
 import com.cainkilgore.adminify.commands.Setspawn;
+import com.cainkilgore.adminify.commands.Snowman;
 import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Spawnmob;
 import com.cainkilgore.adminify.commands.Strike;
@@ -37,6 +38,7 @@ import com.cainkilgore.adminify.events.evtLastpos;
 import com.cainkilgore.adminify.events.evtMOTD;
 import com.cainkilgore.adminify.events.evtMute;
 import com.cainkilgore.adminify.events.evtRide;
+import com.cainkilgore.adminify.events.evtSnowman;
 
 
 public class Adminify extends JavaPlugin {
@@ -55,6 +57,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtRide());
 		Util.registerEvent(new evtMOTD());
 		Util.registerEvent(new evtChat());
+		Util.registerEvent(new evtSnowman());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
@@ -82,6 +85,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("ride", new Ride());
 		Util.registerCommand("setspawn", new Setspawn());
 		Util.registerCommand("motd", new MOTD());
+		Util.registerCommand("snowman", new Snowman());
 		
 		Timers.vanishTimer();
 		
