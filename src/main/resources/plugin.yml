@@ -85,7 +85,7 @@ commands:
        description: 'Toggle your snowman abilities'
        usage: /<command>
    bed:
-       description: 'Get the bed location of a player'
+       description: 'Teleport to the bed location of a player'
        usage: /<command> [player]
    craft:
        description: 'Open a crafting inventory anywhere'
