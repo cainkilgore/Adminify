@@ -200,4 +200,8 @@ public class Messages {
 	// Warpspeed Command
 	public static String warpOn = messagePrefix + "Engage!";
 	public static String warpOff = messagePrefix + "Dropping to impulse..";
+	
+	// Put Command
+	public static String putted = messagePrefix + "{P} has been teleported to your cursor.";
+	public static String adminPut = messagePrefix + "{A} has teleported you to their cursor.";
 }

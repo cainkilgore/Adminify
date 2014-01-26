@@ -120,3 +120,6 @@ commands:
    fsay:
        description: 'Force a player to speak/use commands in chat'
        usage: /<command> [player] [message]
+   put:
+       description: 'Teleport a player to your cursor'
+       usage: /<command> [player]

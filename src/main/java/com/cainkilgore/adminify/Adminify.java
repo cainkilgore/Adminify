@@ -26,6 +26,7 @@ import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Openinv;
 import com.cainkilgore.adminify.commands.Playerinfo;
+import com.cainkilgore.adminify.commands.Put;
 import com.cainkilgore.adminify.commands.Readyup;
 import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.commands.Sethome;
@@ -110,6 +111,8 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("warpspeed", new Warpspeed());
 		Util.registerCommand("fsay", new Fsay());
 		Util.registerCommand("walkspeed", new Walkspeed());
+		Util.registerCommand("put", new Put());
+		
 		Timers.vanishTimer();
 		
 		try {
