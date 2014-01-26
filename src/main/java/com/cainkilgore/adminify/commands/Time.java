@@ -30,6 +30,22 @@ public class Time implements CommandExecutor {
 				return true;
 			}
 			
+			if(args[0].equalsIgnoreCase("add")) {
+				if(args.length < 2) {
+					Util.sendMessage(player, Messages.invalidArguments);
+					Util.sendMessage(player, Util.getCommandUsage(l));
+					return true;
+				}
+				
+				try {
+					Integer newTime = Integer.parseInt(args[1]);
+					Util.setWorldTime(player, (int) (player.getWorld().getTime() + newTime));
+					Util.sendMessage(player, Messages.timeChanged.replace("{T}", newTime.toString()));
+				} catch (Exception e) {
+					Util.sendMessage(player, Messages.timeInvalid);
+					return true;
+				}
+			}
 			if(!Util.isTimeValid(args[0])) {
 				Util.sendMessage(player, Messages.timeInvalid);
 				return true;

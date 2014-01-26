@@ -144,6 +144,9 @@ public class Util {
 			return 0;
 		}
 		if(time.equalsIgnoreCase("night")) {
+			return 14400;
+		}
+		if(time.equalsIgnoreCase("sunset")) {
 			return 12200;
 		}
 		return 0;

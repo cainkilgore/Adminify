@@ -82,6 +82,7 @@ public class Messages {
 	// Time Command
 	public static String timeInvalid = errorPrefix + "The time you specified was invalid.";
 	public static String timeUpdate = messagePrefix + "The time of the world you're in changed to {T}.";
+	public static String timeChanged = messagePrefix + "The time has had an additional {T} added.";
 	
 	// Heal Command
 	public static String healthMax = messagePrefix + "Your health has been restored.";
@@ -158,6 +159,10 @@ public class Messages {
 	
 	// Tphere Command
 	public static String allPlayers = messagePrefix + "All players have been teleported to you.";
-	public static String allTped = messagePrefix + "{A} has teleported all players to them.":
+	public static String allTped = messagePrefix + "{A} has teleported all players to them.";
+	
+	// Bed Command
+	public static String noBed = errorPrefix + "{P} doesn't appear to have a bed.";
+	public static String tpBed = messagePrefix + "You have teleported to {P}'s bed.";
 	
 }

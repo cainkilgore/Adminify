@@ -3,6 +3,7 @@ package com.cainkilgore.adminify;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.cainkilgore.adminify.commands.Alert;
+import com.cainkilgore.adminify.commands.Bed;
 import com.cainkilgore.adminify.commands.Clear;
 import com.cainkilgore.adminify.commands.Feed;
 import com.cainkilgore.adminify.commands.Fly;
@@ -86,6 +87,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("setspawn", new Setspawn());
 		Util.registerCommand("motd", new MOTD());
 		Util.registerCommand("snowman", new Snowman());
+		Util.registerCommand("bed", new Bed());
 		
 		Timers.vanishTimer();
 		

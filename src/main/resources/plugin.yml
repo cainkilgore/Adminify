@@ -26,7 +26,7 @@ commands:
        usage: /<command>
    time:
        description: 'Change the time of the world'
-       usage: /<command> <day/night>
+       usage: /<command> [day/night/sunset/add] <time>
    heal:
        description: 'Heal yourself/another player to max health'
        usage: /<command> <player>
@@ -84,3 +84,6 @@ commands:
    snowman:
        description: 'Toggle your snowman abilities'
        usage: /<command>
+   bed:
+       description: 'Get the bed location of a player'
+       usage: /<command> [player]
