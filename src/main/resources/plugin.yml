@@ -87,3 +87,9 @@ commands:
    bed:
        description: 'Get the bed location of a player'
        usage: /<command> [player]
+   craft:
+       description: 'Open a crafting inventory anywhere'
+       usage: /<command>
+   ender:
+       description: 'Open yours or anothers ender chest'
+       usage: /<command> <player>

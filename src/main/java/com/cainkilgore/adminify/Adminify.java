@@ -5,6 +5,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.cainkilgore.adminify.commands.Alert;
 import com.cainkilgore.adminify.commands.Bed;
 import com.cainkilgore.adminify.commands.Clear;
+import com.cainkilgore.adminify.commands.Craft;
+import com.cainkilgore.adminify.commands.Ender;
 import com.cainkilgore.adminify.commands.Feed;
 import com.cainkilgore.adminify.commands.Fly;
 import com.cainkilgore.adminify.commands.Freeze;
@@ -88,6 +90,8 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("motd", new MOTD());
 		Util.registerCommand("snowman", new Snowman());
 		Util.registerCommand("bed", new Bed());
+		Util.registerCommand("craft", new Craft());
+		Util.registerCommand("ender", new Ender());
 		
 		Timers.vanishTimer();
 		
