@@ -174,4 +174,13 @@ public class Messages {
 	public static String badHealth = errorPrefix + "You entered an invalid number.";
 	public static String playerHealthSet = messagePrefix + "{P}'s max health was set to {H}.";
 	public static String adminHealthSet = messagePrefix + "{A} has set your max health to {H}.";
+	
+	// Playerinfo Command
+	public static String playerInfo = messagePrefix + "Player Info for {P}";
+	public static String playerInfoWorld = messagePrefix + "World: {W}";
+	public static String playerInfoX = messagePrefix + "X: {X}";
+	public static String playerInfoY = messagePrefix + "Y: {Y}";
+	public static String playerInfoZ = messagePrefix + "Z: {Z}";
+	public static String playerInfoIP = messagePrefix + "IP: {IP}";
+	
 }

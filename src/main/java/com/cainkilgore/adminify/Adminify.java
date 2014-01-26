@@ -23,6 +23,7 @@ import com.cainkilgore.adminify.commands.Maxhealth;
 import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Openinv;
+import com.cainkilgore.adminify.commands.Playerinfo;
 import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.commands.Sethome;
 import com.cainkilgore.adminify.commands.Setspawn;
@@ -98,6 +99,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("openinv", new Openinv());
 		Util.registerCommand("kmob", new Kmob());
 		Util.registerCommand("maxhealth", new Maxhealth());
+		Util.registerCommand("playerinfo", new Playerinfo());
 		
 		Timers.vanishTimer();
 		

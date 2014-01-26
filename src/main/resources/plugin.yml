@@ -102,3 +102,6 @@ commands:
    maxhealth:
        description: 'Set yours or another players max health'
        usage: /<command> [health/player] <health>
+   playerinfo:
+       description: 'Get detailed information on a player'
+       usage: /<command> [player]
