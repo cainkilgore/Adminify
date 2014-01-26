@@ -156,4 +156,8 @@ public class Messages {
 	public static String isSnowman = messagePrefix + "You now have the features of a snowman.";
 	public static String noSnowman = messagePrefix + "You no longer have the features of a snowman.";
 	
+	// Tphere Command
+	public static String allPlayers = messagePrefix + "All players have been teleported to you.";
+	public static String allTped = messagePrefix + "{A} has teleported all players to them.":
+	
 }

@@ -31,6 +31,19 @@ public class Tphere implements CommandExecutor {
 				return true;
 			}
 			
+			if(args[0].equalsIgnoreCase("*")) {
+				if(!Util.hasPermission(player, "tphere.all")) {
+					Util.sendMessage(player, Messages.noPermission);
+					return true;
+				}
+				for(Player onlinePlayers : Adminify.mainClass.getServer().getOnlinePlayers()) {
+					Util.teleportPlayer(onlinePlayers, player.getLocation());
+					Util.sendMessage(player, Messages.allPlayers);
+					Util.sendMessage(onlinePlayers, Messages.allTped.replace("{A}", player.getName()));
+				}
+				return true;
+			}
+			
 			Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
 			if(argPlayer == null) {
 				Util.sendMessage(player, Messages.invalidPlayer);
