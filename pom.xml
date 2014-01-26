@@ -55,12 +55,6 @@
           <include>plugin.yml</include>
         </includes>
       </resource>
-      <resource>
-        <directory>${basedir}</directory>
-        <excludes>
-          <exclude>bin</exclude>
-        </excludes>
-      </resource>
     </resources>
     <plugins>
       <plugin>
