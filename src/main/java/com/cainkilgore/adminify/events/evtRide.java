@@ -29,7 +29,11 @@ public class evtRide implements Listener {
 		
 		for(Entity entities : player.getWorld().getEntities()) {
 			if(entities.getEntityId() == Ride.entity1.get(player.getName())) {
-				entity.setPassenger(entities);
+				if(entity.getEntityId() != Ride.entity1.get(player.getName())) {
+					entity.setPassenger(entities);
+				} else {
+					return;
+				}
 			}
 		}
 		
