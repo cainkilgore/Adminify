@@ -11,6 +11,7 @@ import java.sql.Statement;
 import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
@@ -259,7 +260,7 @@ public class Util {
 		}
 		
 		for(Object line : FileUtils.readLines(file)) {
-			Util.broadcastUnformatted(line.toString().replace("&", "§"));
+			Util.broadcastUnformatted(ChatColor.translateAlternateColorCodes(ChatColor.COLOR_CHAR, line.toString()));
 		}
 	}
 	
@@ -270,7 +271,7 @@ public class Util {
 		}
 		
 		for(Object line : FileUtils.readLines(file)) {
-			Util.sendMessage(player, line.toString().replace("&", "§"));
+			Util.sendMessage(player, ChatColor.translateAlternateColorCodes(ChatColor.COLOR_CHAR, line.toString()));
 		}
 	}
 	
