@@ -105,3 +105,6 @@ commands:
    playerinfo:
        description: 'Get detailed information on a player'
        usage: /<command> [player]
+   readyup:
+       description: 'Set all players to max health and hunger, optionally specify a radius'
+       usage: /<command> <radius>
