@@ -33,7 +33,7 @@ public class Warpspeed implements CommandExecutor {
 				return true;
 			}
 			
-			player.setWalkSpeed(0.F);
+			player.setWalkSpeed(0.2F);
 			player.setFlySpeed(0.1F);
 			Util.sendMessage(player, Messages.warpOff);
 			player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 0.1F);
