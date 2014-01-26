@@ -20,6 +20,7 @@ import com.cainkilgore.adminify.commands.Lastpos;
 import com.cainkilgore.adminify.commands.MOTD;
 import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
+import com.cainkilgore.adminify.commands.Openinv;
 import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.commands.Sethome;
 import com.cainkilgore.adminify.commands.Setspawn;
@@ -92,6 +93,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("bed", new Bed());
 		Util.registerCommand("craft", new Craft());
 		Util.registerCommand("ender", new Ender());
+		Util.registerCommand("openinv", new Openinv());
 		
 		Timers.vanishTimer();
 		

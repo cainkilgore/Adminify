@@ -93,3 +93,6 @@ commands:
    ender:
        description: 'Open yours or anothers ender chest'
        usage: /<command> <player>
+   openinv:
+       description: 'Open another players inventory'
+       usage: /<command> [player]
