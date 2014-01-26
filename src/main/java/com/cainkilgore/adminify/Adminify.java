@@ -19,6 +19,7 @@ import com.cainkilgore.adminify.commands.Kill;
 import com.cainkilgore.adminify.commands.Kmob;
 import com.cainkilgore.adminify.commands.Lastpos;
 import com.cainkilgore.adminify.commands.MOTD;
+import com.cainkilgore.adminify.commands.Maxhealth;
 import com.cainkilgore.adminify.commands.Msg;
 import com.cainkilgore.adminify.commands.Mute;
 import com.cainkilgore.adminify.commands.Openinv;
@@ -96,6 +97,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("ender", new Ender());
 		Util.registerCommand("openinv", new Openinv());
 		Util.registerCommand("kmob", new Kmob());
+		Util.registerCommand("maxhealth", new Maxhealth());
 		
 		Timers.vanishTimer();
 		

@@ -99,3 +99,6 @@ commands:
    kmob:
        description: 'Kill monsters and creatures in your world'
        usage: /<command>
+   maxhealth:
+       description: 'Set yours or another players max health'
+       usage: /<command> [health/player] <health>

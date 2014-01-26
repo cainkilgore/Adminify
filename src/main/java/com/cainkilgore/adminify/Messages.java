@@ -168,4 +168,10 @@ public class Messages {
 	
 	// Kmob Command
 	public static String kMobKilled = messagePrefix + "{N} monsters and creatures have been removed.";
+	
+	// Maxhealth Command
+	public static String maxHealth = messagePrefix + "Your max health has been changed to {H}.";
+	public static String badHealth = errorPrefix + "You entered an invalid number.";
+	public static String playerHealthSet = messagePrefix + "{P}'s max health was set to {H}.";
+	public static String adminHealthSet = messagePrefix + "{A} has set your max health to {H}.";
 }
