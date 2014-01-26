@@ -6,7 +6,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
-import com.cainkilgore.adminify.Adminify;
 import com.cainkilgore.adminify.Messages;
 import com.cainkilgore.adminify.Util;
 
