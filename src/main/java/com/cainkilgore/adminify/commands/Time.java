@@ -41,6 +41,7 @@ public class Time implements CommandExecutor {
 					Integer newTime = Integer.parseInt(args[1]);
 					Util.setWorldTime(player, (int) (player.getWorld().getTime() + newTime));
 					Util.sendMessage(player, Messages.timeChanged.replace("{T}", newTime.toString()));
+					return true;
 				} catch (Exception e) {
 					Util.sendMessage(player, Messages.timeInvalid);
 					return true;
