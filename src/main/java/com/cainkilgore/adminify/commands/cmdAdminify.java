@@ -25,6 +25,7 @@ public class cmdAdminify implements CommandExecutor {
 			Util.sendMessage(player, Messages.author);
 			Util.sendMessage(player, Messages.version + Adminify.mainClass.getDescription().getVersion());
 			Util.sendMessage(player, Messages.url);
+			Util.sendMessage(player, Messages.supportURL)
 			
 			for(Player online : Adminify.mainClass.getServer().getOnlinePlayers()) {
 				if(online.getName().equalsIgnoreCase("ThatJavaGuy")) {
