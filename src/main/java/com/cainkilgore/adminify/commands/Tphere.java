@@ -38,9 +38,9 @@ public class Tphere implements CommandExecutor {
 				}
 				for(Player onlinePlayers : Adminify.mainClass.getServer().getOnlinePlayers()) {
 					Util.teleportPlayer(onlinePlayers, player.getLocation());
-					Util.sendMessage(player, Messages.allPlayers);
 					Util.sendMessage(onlinePlayers, Messages.allTped.replace("{A}", player.getName()));
 				}
+				Util.sendMessage(player, Messages.allPlayers);
 				return true;
 			}
 			
