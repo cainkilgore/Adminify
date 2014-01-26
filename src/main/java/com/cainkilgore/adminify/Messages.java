@@ -78,6 +78,7 @@ public class Messages {
 	public static String author = messagePrefix + "Author: ThatJavaGuy / CainFoool";
 	public static String version = messagePrefix + "Version: v";
 	public static String url = messagePrefix + "URL: http://dev.bukkit.org/bukkit-plugins/Adminify";
+	public static String supportURL = messagePrefix + "Help & Support: http://cain.im/support";
 	
 	// Time Command
 	public static String timeInvalid = errorPrefix + "The time you specified was invalid.";
