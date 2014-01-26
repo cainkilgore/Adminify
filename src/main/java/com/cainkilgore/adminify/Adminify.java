@@ -11,6 +11,7 @@ import com.cainkilgore.adminify.commands.Feed;
 import com.cainkilgore.adminify.commands.Fly;
 import com.cainkilgore.adminify.commands.Flyspeed;
 import com.cainkilgore.adminify.commands.Freeze;
+import com.cainkilgore.adminify.commands.Fsay;
 import com.cainkilgore.adminify.commands.Gm;
 import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Heal;
@@ -106,6 +107,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("readyup", new Readyup());
 		Util.registerCommand("flyspeed", new Flyspeed());
 		Util.registerCommand("warpspeed", new Warpspeed());
+		Util.registerCommand("fsay", new Fsay());
 		Timers.vanishTimer();
 		
 		try {

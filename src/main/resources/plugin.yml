@@ -114,3 +114,6 @@ commands:
    warpspeed:
        description: 'Toggle on or off your warp speed'
        usage: /<command>
+   fsay:
+       description: 'Force a player to speak/use commands in chat'
+       usage: /<command> [player] [message]
