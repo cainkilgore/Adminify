@@ -185,7 +185,7 @@ public class Messages {
 	
 	// Readyup Command
 	public static String foodHealth = messagePrefix + "All online players have had their food and health levels maxed out.";
-	public static String foodHealthRadius = messagePrefix + "All online players within {X} of you have had their food and health levels maxed out.";
+	public static String foodHealthRadius = messagePrefix + "All online players within {X} blocks of you have had their food and health levels maxed out.";
 	public static String invalidRadius = errorPrefix + "You have entered an invalid radius.";
 	
 }
