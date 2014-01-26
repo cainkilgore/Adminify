@@ -12,7 +12,7 @@ public class evtChat implements Listener {
 	@EventHandler
 	public void onPlayerAsyncChat(AsyncPlayerChatEvent e) {
 		if(Util.hasPermission(e.getPlayer(), "color")) {
-			e.setMessage(ChatColor.translateAlternateColorCodes(ChatColor.COLOR_CHAR, e.getMessage()));
+			e.setMessage(ChatColor.translateAlternateColorCodes('&', e.getMessage()));
 		}
 	}
 

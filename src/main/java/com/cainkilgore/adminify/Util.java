@@ -260,7 +260,7 @@ public class Util {
 		}
 		
 		for(Object line : FileUtils.readLines(file)) {
-			Util.broadcastUnformatted(ChatColor.translateAlternateColorCodes(ChatColor.COLOR_CHAR, line.toString()));
+			Util.broadcastUnformatted(ChatColor.translateAlternateColorCodes('&', line.toString()));
 		}
 	}
 	
@@ -271,7 +271,7 @@ public class Util {
 		}
 		
 		for(Object line : FileUtils.readLines(file)) {
-			Util.sendMessage(player, ChatColor.translateAlternateColorCodes(ChatColor.COLOR_CHAR, line.toString()));
+			Util.sendMessage(player, ChatColor.translateAlternateColorCodes('&', line.toString()));
 		}
 	}
 	
