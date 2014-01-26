@@ -111,3 +111,6 @@ commands:
    flyspeed:
        description: 'Set your own fly speed'
        usage: /<command> <speed>
+   warpspeed:
+       description: 'Toggle on or off your warp speed'
+       usage: /<command>

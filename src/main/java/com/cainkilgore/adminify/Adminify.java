@@ -37,6 +37,7 @@ import com.cainkilgore.adminify.commands.Time;
 import com.cainkilgore.adminify.commands.Tp;
 import com.cainkilgore.adminify.commands.Tphere;
 import com.cainkilgore.adminify.commands.Vanish;
+import com.cainkilgore.adminify.commands.Warpspeed;
 import com.cainkilgore.adminify.commands.cmdAdminify;
 import com.cainkilgore.adminify.events.evtAlert;
 import com.cainkilgore.adminify.events.evtChat;
@@ -104,6 +105,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("playerinfo", new Playerinfo());
 		Util.registerCommand("readyup", new Readyup());
 		Util.registerCommand("flyspeed", new Flyspeed());
+		Util.registerCommand("warpspeed", new Warpspeed());
 		Timers.vanishTimer();
 		
 		try {

@@ -192,4 +192,7 @@ public class Messages {
 	public static String flySet = messagePrefix + "Your flying speed was set to {F}.";
 	public static String flyError = errorPrefix + "You entered an invalid fly speed.";
 	
+	// Warpspeed Command
+	public static String warpOn = messagePrefix + "Engage!";
+	public static String warpOff = messagePrefix + "Dropping to impulse..";
 }
