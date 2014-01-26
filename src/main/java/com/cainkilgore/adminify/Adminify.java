@@ -16,6 +16,7 @@ import com.cainkilgore.adminify.commands.Heal;
 import com.cainkilgore.adminify.commands.Hit;
 import com.cainkilgore.adminify.commands.Home;
 import com.cainkilgore.adminify.commands.Kill;
+import com.cainkilgore.adminify.commands.Kmob;
 import com.cainkilgore.adminify.commands.Lastpos;
 import com.cainkilgore.adminify.commands.MOTD;
 import com.cainkilgore.adminify.commands.Msg;
@@ -94,6 +95,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("craft", new Craft());
 		Util.registerCommand("ender", new Ender());
 		Util.registerCommand("openinv", new Openinv());
+		Util.registerCommand("kmob", new Kmob());
 		
 		Timers.vanishTimer();
 		

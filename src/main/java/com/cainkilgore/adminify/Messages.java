@@ -166,4 +166,6 @@ public class Messages {
 	public static String noBed = errorPrefix + "{P} doesn't appear to have a bed.";
 	public static String tpBed = messagePrefix + "You have teleported to {P}'s bed.";
 	
+	// Kmob Command
+	public static String kMobKilled = messagePrefix + "{N} monsters and creatures have been removed.";
 }

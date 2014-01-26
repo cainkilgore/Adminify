@@ -96,3 +96,6 @@ commands:
    openinv:
        description: 'Open another players inventory'
        usage: /<command> [player]
+   kmob:
+       description: 'Kill monsters and creatures in your world'
+       usage: /<command>
