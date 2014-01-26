@@ -19,7 +19,7 @@ public class evtSnowman implements Listener {
 		
 		if(player.getLocation().getBlock().isLiquid()) return;
 		if(player.getLocation().getBlock().getRelative(0, -1, 0).isLiquid()) return;
-		if(!player.getLocation().getBlock().getType().isSolid()) return;
+		// if(!player.getLocation().getBlock().getType().isSolid()) return;
 		
 		if(player.getLocation().getBlock().getRelative(0, -1, 0).getType() != Material.AIR) {
 			final Location r = player.getLocation().getBlock().getLocation();
