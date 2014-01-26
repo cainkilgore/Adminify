@@ -28,13 +28,13 @@ public class Warpspeed implements CommandExecutor {
 			if(player.getFlySpeed() == 0.1F) {
 				player.setFlySpeed(1.0F);
 				Util.sendMessage(player, Messages.warpOn);
-				player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 6, 6);
+				player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 6);
 				return true;
 			}
 			
 			player.setFlySpeed(0.1F);
 			Util.sendMessage(player, Messages.warpOff);
-			player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 0.1F, 0.1F);
+			player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 0.1F);
 		}
 		return true;
 	}
