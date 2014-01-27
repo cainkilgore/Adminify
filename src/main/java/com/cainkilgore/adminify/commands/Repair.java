@@ -1,5 +1,6 @@
 package com.cainkilgore.adminify.commands;
 
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -24,7 +25,12 @@ public class Repair implements CommandExecutor {
 				return true;
 			}
 			
-			if(player.getItemInHand() == null) {
+			if(player.getItemInHand().getType().getMaxStackSize() != 1) {
+				Util.sendMessage(player, Messages.emptyHand);
+				return true;
+			}
+			
+			if(player.getItemInHand().getType() == Material.AIR) {
 				Util.sendMessage(player, Messages.emptyHand);
 				return true;
 			}
