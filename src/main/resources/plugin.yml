@@ -1,6 +1,6 @@
 name: 'Adminify'
 author: [ThatJavaGuy, CainFoool]
-version: 1.0
+version: 1.0.50
 main: com.cainkilgore.adminify.Adminify
 commands:
    freeze:

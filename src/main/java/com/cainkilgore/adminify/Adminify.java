@@ -1,6 +1,9 @@
 package com.cainkilgore.adminify;
 
+import java.io.IOException;
+
 import org.bukkit.plugin.java.JavaPlugin;
+import org.mcstats.Metrics;
 
 import com.cainkilgore.adminify.commands.Alert;
 import com.cainkilgore.adminify.commands.Bed;
@@ -114,6 +117,13 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("walkspeed", new Walkspeed());
 		Util.registerCommand("put", new Put());
 		Util.registerCommand("repair", new Repair());
+		
+		try {
+		    Metrics metrics = new Metrics(this);
+		    metrics.start();
+		} catch (IOException e) {
+		    // Failed to submit the stats :-(
+		}
 		
 		Timers.vanishTimer();
 		
