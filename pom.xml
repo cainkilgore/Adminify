@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Adminify</groupId>
   <artifactId>Adminify</artifactId>
-  <version>1.0.0-BETA</version>
+  <version>ALPHA</version>
   <name>Adminify</name>
   <description>Adminify is the new alternative to advanced command usage for your server.</description>
   
