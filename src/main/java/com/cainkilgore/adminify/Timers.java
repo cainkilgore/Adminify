@@ -11,7 +11,9 @@ public class Timers {
 				for(Player onlinePlayers : Bukkit.getServer().getOnlinePlayers()) {
 					for(Object vanishPlayers : HashMaps.vanishPlayers.toArray()) {
 						if(Util.isVanished(Adminify.mainClass.getServer().getPlayer(vanishPlayers.toString()))) {
-							onlinePlayers.hidePlayer(Adminify.mainClass.getServer().getPlayer(vanishPlayers.toString()));
+							if(!Util.hasPermission(onlinePlayers, "vanish.exempt")) {
+								onlinePlayers.hidePlayer(Adminify.mainClass.getServer().getPlayer(vanishPlayers.toString()));
+							}
 						} else {
 							onlinePlayers.showPlayer(Adminify.mainClass.getServer().getPlayer(vanishPlayers.toString()));
 						}

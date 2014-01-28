@@ -126,3 +126,12 @@ commands:
    repair:
        description: 'Repair the item your holding'
        usage: /<command>
+   tpa:
+       description: 'Send a teleport request to a player'
+       usage: /<command> [player]
+   confirm:
+       description: 'Confirm a players teleport request'
+       usage: /<command> [player]
+   deny:
+       description: 'Deny a players teleport request'
+       usage: /<command> [player]

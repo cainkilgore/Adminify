@@ -8,7 +8,9 @@ import org.mcstats.Metrics;
 import com.cainkilgore.adminify.commands.Alert;
 import com.cainkilgore.adminify.commands.Bed;
 import com.cainkilgore.adminify.commands.Clear;
+import com.cainkilgore.adminify.commands.Confirm;
 import com.cainkilgore.adminify.commands.Craft;
+import com.cainkilgore.adminify.commands.Deny;
 import com.cainkilgore.adminify.commands.Ender;
 import com.cainkilgore.adminify.commands.Feed;
 import com.cainkilgore.adminify.commands.Fly;
@@ -41,6 +43,7 @@ import com.cainkilgore.adminify.commands.Spawnmob;
 import com.cainkilgore.adminify.commands.Strike;
 import com.cainkilgore.adminify.commands.Time;
 import com.cainkilgore.adminify.commands.Tp;
+import com.cainkilgore.adminify.commands.Tpa;
 import com.cainkilgore.adminify.commands.Tphere;
 import com.cainkilgore.adminify.commands.Vanish;
 import com.cainkilgore.adminify.commands.Walkspeed;
@@ -117,6 +120,9 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("walkspeed", new Walkspeed());
 		Util.registerCommand("put", new Put());
 		Util.registerCommand("repair", new Repair());
+		Util.registerCommand("tpa", new Tpa());
+		Util.registerCommand("confirm", new Confirm());
+		Util.registerCommand("deny", new Deny());
 		
 		try {
 		    Metrics metrics = new Metrics(this);

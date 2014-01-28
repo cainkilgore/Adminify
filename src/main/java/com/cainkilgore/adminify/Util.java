@@ -208,7 +208,9 @@ public class Util {
 	public static void setAllVanished(boolean vanished) {
 		for(Player players : Adminify.mainClass.getServer().getOnlinePlayers()) {
 			if(vanished) {
-				players.hidePlayer(players);
+				if(!hasPermission(players, "vanish.exempt")) {
+					players.hidePlayer(players);
+				}
 			} else {
 				players.showPlayer(players);
 			}
@@ -288,6 +290,29 @@ public class Util {
 	
 	public static boolean isSnowman(Player player) {
 		if(HashMaps.snowPlayers.contains(player.getName())) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static void addTeleportRequest(Player one, Player two) {
+		HashMaps.requestPlayers.put(one.getName(), two.getName());
+	}
+	
+	public static void removeTeleportRequest(Player one, Player two) {
+		HashMaps.requestPlayers.remove(one.getName());
+		HashMaps.alreadySentPlayers.remove(two.getName());
+	}
+	
+	public static boolean isPendingRequest(Player player) {
+		if(HashMaps.requestPlayers.containsKey(player.getName())) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean alreadySentRequest(Player player) {
+		if(HashMaps.alreadySentPlayers.contains(player.getName())) {
 			return true;
 		}
 		return false;

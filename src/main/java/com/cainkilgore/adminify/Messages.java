@@ -208,4 +208,21 @@ public class Messages {
 	// Repair command
 	public static String emptyHand = errorPrefix + "You have to be holding a valid item to repair it.";
 	public static String repaired = messagePrefix + "Your {I} has been repaired.";
+	
+	// Tpa Command
+	public static String alreadySent = errorPrefix + "You have already sent a teleport request. Please wait 1 minute for your request to expire.";
+	public static String alreadySentPlayer = errorPrefix + "{P} already has a teleport request to them from another player. Please wait for this request to expire before trying again.";
+	public static String requestSent = messagePrefix + "Your teleport request has been sent to {P}.";
+	public static String requestReceived = messagePrefix + "{P} wants to teleport to you.";
+	public static String requestUsage = messagePrefix + "/confirm {P} or /deny {P}.";
+	
+	// Confirm Command
+	public static String notSentRequest = errorPrefix + "{P} has not sent a request to you.";
+	public static String noRequest = errorPrefix + "No requests have been sent to you.";
+	public static String confirmedTeleport = messagePrefix + "You have confirmed {P}'s teleport.";
+	public static String confirmedPlayer = messagePrefix + "{P} has accepted your teleport request.";
+	
+	// Deny Command
+	public static String deniedTeleport = messagePrefix + "You have denied {P}'s teleport.";
+	public static String deniedPlayer = messagePrefix + "{P} has denied your teleport request.";
 }
