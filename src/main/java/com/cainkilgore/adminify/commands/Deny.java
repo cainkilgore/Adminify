@@ -42,10 +42,10 @@ public class Deny implements CommandExecutor {
 				return true;
 			}
 			
-			if(!Util.alreadySentRequest(argPlayer)) {
-				Util.sendMessage(player, Messages.notSentRequest);
-				return true;
-			}
+//			if(!Util.alreadySentRequest(argPlayer)) {
+//				Util.sendMessage(player, Messages.notSentRequest);
+//				return true;
+//			}
 			
 			Util.sendMessage(player, Messages.deniedTeleport.replace("{P}", argPlayer.getName()));
 			Util.sendMessage(argPlayer, Messages.deniedPlayer.replace("{P}", player.getName()));

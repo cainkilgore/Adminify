@@ -42,10 +42,10 @@ public class Confirm implements CommandExecutor {
 				return true;
 			}
 			
-			if(!Util.alreadySentRequest(argPlayer)) {
-				Util.sendMessage(player, Messages.notSentRequest);
-				return true;
-			}
+//			if(!Util.alreadySentRequest(argPlayer)) {
+//				Util.sendMessage(player, Messages.notSentRequest);
+//				return true;
+//			}
 			
 			Util.teleportPlayer(argPlayer, player.getLocation());
 			Util.sendMessage(player, Messages.confirmedTeleport.replace("{P}", argPlayer.getName()));
