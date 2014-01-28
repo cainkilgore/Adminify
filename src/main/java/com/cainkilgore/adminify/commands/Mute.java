@@ -65,8 +65,8 @@ public class Mute implements CommandExecutor {
 				try {
 					if(!Util.isMuted(argPlayer)) {
 						Util.setMuted(argPlayer, true);
-						Util.sendMessage(player, Messages.adminTime.replace("{P}", argPlayer.getName()).replace("{M}", args[2]));
-						Util.sendMessage(argPlayer, Messages.timeMuted.replace("{A}", player.getName()).replace("{M}", args[2]));
+						Util.sendMessage(player, Messages.adminTime.replace("{P}", argPlayer.getName()).replace("{M}", args[1]));
+						Util.sendMessage(argPlayer, Messages.timeMuted.replace("{A}", player.getName()).replace("{M}", args[1]));
 						BukkitTask muteTask = Adminify.mainClass.getServer().getScheduler().runTaskLater(Adminify.mainClass, new Runnable() {
 							public void run() {
 								if(argPlayer != null) {
