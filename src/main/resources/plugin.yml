@@ -14,7 +14,7 @@ commands:
        usage: /<command> <player>
    mute:
        description: 'Mute players from using chat'
-       usage: /<command> [player] <minutes>
+       usage: /<command> [player] <seconds>
    fly:
        description: 'Set yours/others ability to fly'
        usage: /<command> <player>

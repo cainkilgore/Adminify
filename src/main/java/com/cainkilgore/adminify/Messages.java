@@ -53,8 +53,8 @@ public class Messages {
 	public static String cantChat = errorPrefix + "You are currently muted from chat.";
 	public static String unmutedPlayer = messagePrefix + "{P} may now talk in chat again.";
 	public static String adminUnmute = messagePrefix + "{A} has unmuted you. You can now chat.";
-	public static String timeMuted = messagePrefix + "You have been muted by {A} for {M} minutes.";
-	public static String adminTime = messagePrefix + "You muted {P} for {M} minutes.";
+	public static String timeMuted = messagePrefix + "You have been muted by {A} for {M} seconds.";
+	public static String adminTime = messagePrefix + "You muted {P} for {M} seconds.";
 	public static String unmuted = messagePrefix + "Your time is up, you are free to talk in chat again.";
 	
 	public static String joinMuted = messagePrefix + "You are still muted from your previous session.";
