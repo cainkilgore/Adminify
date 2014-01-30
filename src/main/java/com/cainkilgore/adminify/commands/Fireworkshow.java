@@ -22,7 +22,35 @@ public class Fireworkshow implements CommandExecutor {
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 		if(l.equalsIgnoreCase("fireworkshow")) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				if(args.length < 5) {
+					Util.print(Messages.invalidArguments);
+					Util.print(Util.getCommandUsage(l));
+					return true;
+				}
+				
+
+				try {
+					new Location(Adminify.mainClass.getServer().getWorld(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
+				} catch (Exception e) {
+					Util.print("Incorrect data.");
+					return true;
+				}
+				
+				final Location fireworkLoc = new Location(Adminify.mainClass.getServer().getWorld(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
+				final BukkitTask getTask = Adminify.mainClass.getServer().getScheduler().runTaskTimer(Adminify.mainClass, new Runnable() {
+					public void run() {
+						if(new Random().nextInt(5) >= 2) {
+							Util.spawnFireworkEntity(fireworkLoc, getRandomColor(), getRandomType(), getRandomPower(), getRandomFlicker(), getRandomTrail());
+						}
+					}
+				}, 5L, 5L);
+				
+				Adminify.mainClass.getServer().getScheduler().runTaskLater(Adminify.mainClass, new Runnable() {
+					public void run() {
+						getTask.cancel();
+					}
+				}, 20 * Integer.parseInt(args[4]));
+				
 				return true;
 			}
 			
@@ -55,7 +83,9 @@ public class Fireworkshow implements CommandExecutor {
 			
 			final BukkitTask getTask = Adminify.mainClass.getServer().getScheduler().runTaskTimer(Adminify.mainClass, new Runnable() {
 				public void run() {
-					Util.spawnFireworkEntity(getEyeTarget, getRandomColor(), getRandomType(), getRandomPower(), getRandomFlicker(), getRandomTrail());
+					if(new Random().nextInt(5) >= 2) {
+						Util.spawnFireworkEntity(getEyeTarget, getRandomColor(), getRandomType(), getRandomPower(), getRandomFlicker(), getRandomTrail());
+					}
 				}
 			}, 5L, 5L);
 			
@@ -106,7 +136,7 @@ public class Fireworkshow implements CommandExecutor {
 	
 	public int getRandomPower() {
 		Random r = new Random();
-		return r.nextInt(4);
+		return 2 + r.nextInt(3);
 	}
 	
 	public boolean getRandomFlicker() {

@@ -137,7 +137,7 @@ commands:
        usage: /<command> [player]
    fireworkshow:
        description: 'Start up a firework show filled with random types and colors'
-       usage: /<command> <seconds>
+       usage: /<command> (player <seconds>) (console <world> <x> <y> <z> <seconds>)
    target:
        description: 'Point your compass towards a player'
        usage: /<command> [player]
