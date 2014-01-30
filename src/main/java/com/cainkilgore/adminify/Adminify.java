@@ -43,6 +43,7 @@ import com.cainkilgore.adminify.commands.Snowman;
 import com.cainkilgore.adminify.commands.Spawn;
 import com.cainkilgore.adminify.commands.Spawnmob;
 import com.cainkilgore.adminify.commands.Strike;
+import com.cainkilgore.adminify.commands.Target;
 import com.cainkilgore.adminify.commands.Time;
 import com.cainkilgore.adminify.commands.Tp;
 import com.cainkilgore.adminify.commands.Tpa;
@@ -126,6 +127,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("confirm", new Confirm());
 		Util.registerCommand("deny", new Deny());
 		Util.registerCommand("fireworkshow", new Fireworkshow());
+		Util.registerCommand("target", new Target());
 		
 		try {
 		    Metrics metrics = new Metrics(this);

@@ -233,4 +233,9 @@ public class Messages {
 	public static String alreadyStarted = errorPrefix + "The firework show has already started. Please wait for it to finish.";
 	public static String showStarted = messagePrefix + "The firework show has been started!";
 	public static String badTime = errorPrefix + "Please enter a valid firework time.";
+	
+	// Target Command
+	public static String compassSet = messagePrefix + "Your compass has been pointed towards {P}.";
+	public static String compassWorld = messagePrefix + "Your compass has been pointed towards your world spawn.";
+	public static String compassBed = messagePrefix + "Your compass has been pointed towards your bed.";
 }
