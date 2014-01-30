@@ -135,3 +135,6 @@ commands:
    deny:
        description: 'Deny a players teleport request'
        usage: /<command> [player]
+   fireworkshow:
+       description: 'Start up a firework show filled with random types and colors'
+       usage: /<command> <seconds>

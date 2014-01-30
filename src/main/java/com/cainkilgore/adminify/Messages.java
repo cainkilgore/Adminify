@@ -228,4 +228,9 @@ public class Messages {
 	// Deny Command
 	public static String deniedTeleport = messagePrefix + "You have denied {P}'s teleport.";
 	public static String deniedPlayer = messagePrefix + "{P} has denied your teleport request.";
+	
+	// Fireworkshow Command
+	public static String alreadyStarted = errorPrefix + "The firework show has already started. Please wait for it to finish.";
+	public static String showStarted = messagePrefix + "The firework show has been started!";
+	public static String badTime = errorPrefix + "Please enter a valid firework time.";
 }

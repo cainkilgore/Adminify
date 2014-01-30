@@ -11,11 +11,17 @@ import java.sql.Statement;
 import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
+import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
+import org.bukkit.FireworkEffect.Type;
 import org.bukkit.command.CommandExecutor;
+import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.meta.FireworkMeta;
 
 import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.events.evtAlert;
@@ -318,6 +324,15 @@ public class Util {
 		return false;
 	}
 	
+	public static void spawnFireworkEntity(Location loc, Color color, Type type, int power, boolean flicker, boolean trail) {
+		Firework fw = Bukkit.getServer().getWorld("world").spawn(loc, Firework.class);
+		FireworkMeta fwm = fw.getFireworkMeta();
+		FireworkEffect effect = FireworkEffect.builder().withColor(color).with(type).flicker(flicker).trail(trail).build();
+		fwm.addEffects(effect);
+		fwm.setPower(power);       
+		fw.setFireworkMeta(fwm);
+	}
+	
 	/*
 	 * ANY CODES BELOW THIS ARE ENTIRELY FOR DATABASE PURPOSES. 
 	 */
@@ -493,5 +508,7 @@ public class Util {
 		
 		return new Location(Adminify.mainClass.getServer().getWorld(world), x, y, z);
 	}
+	
+	
 
 }
