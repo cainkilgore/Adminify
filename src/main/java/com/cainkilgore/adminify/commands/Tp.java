@@ -60,6 +60,7 @@ public class Tp implements CommandExecutor {
 				oneArg.teleport(twoArg.getLocation());
 				Util.sendMessage(player, Messages.player1to2.replace("{P1}", oneArg.getName()).replace("{P2}", twoArg.getName()));
 				Util.sendMessage(oneArg, Messages.adminTele1to2.replace("{A}", player.getName()).replace("{P2}", twoArg.getName()));
+				if(twoArg == player) return true;
 				Util.sendMessage(twoArg, Messages.adminTele2to1.replace("{A}", player.getName()).replace("{P1}", oneArg.getName()));
 			}
 			
