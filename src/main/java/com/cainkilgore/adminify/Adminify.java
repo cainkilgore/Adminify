@@ -2,6 +2,7 @@ package com.cainkilgore.adminify;
 
 import java.io.IOException;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.mcstats.Metrics;
 
@@ -133,12 +134,17 @@ public class Adminify extends JavaPlugin {
 		
 		Timers.vanishTimer();
 		
-		try {
-			SQL.startConnection();
-		} catch (Exception e) {
-			Util.print("Error whilst attempting to connect to database.");
-			Util.print(e.getMessage());
-		}
+		Bukkit.getServer().getScheduler().runTaskAsynchronously(this, new Runnable() {
+			public void run() {
+				try {
+					SQL.startConnection();
+				} catch (Exception e) {
+					Util.print("Error whilst attempting to connect to database.");
+					Util.print(e.getMessage());
+				}
+			}
+		});
+
 		
 		Util.print("Adminify has been enabled.");
 	}
