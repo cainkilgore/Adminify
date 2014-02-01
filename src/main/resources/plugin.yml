@@ -141,3 +141,6 @@ commands:
    target:
        description: 'Point your compass towards a player'
        usage: /<command> [player]
+   kickstick:
+       description: 'Kick a player using the kick stick'
+       usage: /<command>

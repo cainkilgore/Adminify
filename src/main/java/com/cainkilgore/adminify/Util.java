@@ -333,6 +333,13 @@ public class Util {
 		fw.setFireworkMeta(fwm);
 	}
 	
+	public static boolean isHoldingKickstick(Player player) {
+		if(player.getInventory().getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "Kick Stick")) {
+			return true;
+		}
+		return false;
+	}
+	
 	/*
 	 * ANY CODES BELOW THIS ARE ENTIRELY FOR DATABASE PURPOSES. 
 	 */

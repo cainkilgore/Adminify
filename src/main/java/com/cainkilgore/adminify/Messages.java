@@ -238,4 +238,10 @@ public class Messages {
 	public static String compassSet = messagePrefix + "Your compass has been pointed towards {P}.";
 	public static String compassWorld = messagePrefix + "Your compass has been pointed towards your world spawn.";
 	public static String compassBed = messagePrefix + "Your compass has been pointed towards your bed.";
+	
+	// Kickstick Command
+	public static String kickStick = messagePrefix + "You have received the kick stick. Right click on players who you want to kick.";
+	public static String adminKickStick = messagePrefix + "You have kicked {P} using the kick stick.";
+	public static String kickedByStick = "You were kicked by {A} using the Kick Stick.";
+	
 }

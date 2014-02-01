@@ -24,6 +24,7 @@ import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Heal;
 import com.cainkilgore.adminify.commands.Hit;
 import com.cainkilgore.adminify.commands.Home;
+import com.cainkilgore.adminify.commands.Kickstick;
 import com.cainkilgore.adminify.commands.Kill;
 import com.cainkilgore.adminify.commands.Kmob;
 import com.cainkilgore.adminify.commands.Lastpos;
@@ -57,6 +58,7 @@ import com.cainkilgore.adminify.events.evtChat;
 import com.cainkilgore.adminify.events.evtEnabled;
 import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
+import com.cainkilgore.adminify.events.evtKickstick;
 import com.cainkilgore.adminify.events.evtLastpos;
 import com.cainkilgore.adminify.events.evtMOTD;
 import com.cainkilgore.adminify.events.evtMute;
@@ -81,6 +83,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtMOTD());
 		Util.registerEvent(new evtChat());
 		Util.registerEvent(new evtSnowman());
+		Util.registerEvent(new evtKickstick());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
@@ -128,6 +131,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("deny", new Deny());
 		Util.registerCommand("fireworkshow", new Fireworkshow());
 		Util.registerCommand("target", new Target());
+		Util.registerCommand("kickstick", new Kickstick());
 		
 		try {
 		    Metrics metrics = new Metrics(this);
