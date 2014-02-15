@@ -80,8 +80,8 @@ public class Messages {
 	public static String coderOnline = messagePrefix + "The creator of Adminify is currently on your server.";
 	public static String author = messagePrefix + "Author: ThatJavaGuy / CainFoool";
 	public static String version = messagePrefix + "Version: v";
-	public static String url = messagePrefix + "URL: http://bukkit.adminify.co.uk/";
-	public static String supportURL = messagePrefix + "Help & Support: http://support.adminify.co.uk/";
+	public static String url = messagePrefix + "URL: http://dev.bukkit.org/bukkit-plugins/adminify/";
+	public static String supportURL = messagePrefix + "Help & Support: http://cain.im/support";
 	
 	// Time Command
 	public static String timeInvalid = errorPrefix + "The time you specified was invalid.";
