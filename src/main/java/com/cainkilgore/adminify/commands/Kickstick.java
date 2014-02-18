@@ -35,6 +35,7 @@ public class Kickstick implements CommandExecutor {
 			kickStick.setItemMeta(stickMeta);
 			
 			player.getInventory().addItem(kickStick);
+			Util.sendMessage(player, Messages.kickStick);
 		}
 		return true;
 	}

@@ -15,6 +15,7 @@ public class evtKickstick implements Listener {
 		Player clicker = e.getPlayer();
 		if(!Util.isHoldingKickstick(clicker)) return;
 		if(!Util.hasPermission(clicker, "kickstick")) return;
+		if(e.getRightClicked() == null) return;
 		
 		if(e.getRightClicked() instanceof Player) {
 			Player clicked = (Player) e.getRightClicked();

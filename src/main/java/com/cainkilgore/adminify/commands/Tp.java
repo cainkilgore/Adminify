@@ -15,7 +15,13 @@ public class Tp implements CommandExecutor {
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 		if(l.equalsIgnoreCase("tp")) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				if(args.length < 4) return false;
+				
+				try {
+					Util.teleportPlayer(Adminify.mainClass.getServer().getPlayer(args[0]), new Location(Adminify.mainClass.getServer().getPlayer(args[0]).getWorld(), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3])));
+				} catch (Exception e) {
+				// Unable to teleport.
+				}
 				return true;
 			}
 			
