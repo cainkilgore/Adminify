@@ -72,6 +72,8 @@ public class Adminify extends JavaPlugin {
 	public static Adminify mainClass;
 	public void onEnable() {
 		
+		setupConfig();
+		
 		mainClass = this;
 		
 		Util.registerEvent(new evtFreeze());
