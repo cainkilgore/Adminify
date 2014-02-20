@@ -244,4 +244,7 @@ public class Messages {
 	public static String adminKickStick = messagePrefix + "You have kicked {P} using the kick stick.";
 	public static String kickedByStick = "You were kicked by {A} using the Kick Stick.";
 	
+	// Adminify Reload Command
+	public static String reloaded = messagePrefix + "Adminify's config was reloaded.";
+	
 }

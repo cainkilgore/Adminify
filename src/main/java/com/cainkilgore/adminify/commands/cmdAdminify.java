@@ -36,6 +36,18 @@ public class cmdAdminify implements CommandExecutor {
 			if(ownerOnline) {
 				Util.sendMessage(player, Messages.coderOnline);
 			}
+			
+			if(args.length > 0) {
+				if(args[0].equalsIgnoreCase("reload")) {
+					if(!Util.hasPermission(player, "reload")) {
+						Util.sendMessage(player, Messages.noPermission);
+						return true;
+					}
+					Adminify.mainClass.reloadConfig();
+					Util.sendMessage(player, Messages.reloaded);
+				}
+				return true;
+			}
 		}
 		return true;
 	}
