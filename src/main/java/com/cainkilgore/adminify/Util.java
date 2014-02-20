@@ -48,7 +48,7 @@ public class Util {
 	}
 	
 	public static void sendMessage(Player player, String message) {
-		player.sendMessage(message);
+		player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
 	}
 	
 	public static String getCommandUsage(String command) {

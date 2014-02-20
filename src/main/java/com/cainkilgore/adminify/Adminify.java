@@ -62,6 +62,7 @@ import com.cainkilgore.adminify.events.evtKickstick;
 import com.cainkilgore.adminify.events.evtLastpos;
 import com.cainkilgore.adminify.events.evtMOTD;
 import com.cainkilgore.adminify.events.evtMute;
+import com.cainkilgore.adminify.events.evtPing;
 import com.cainkilgore.adminify.events.evtRide;
 import com.cainkilgore.adminify.events.evtSnowman;
 
@@ -84,6 +85,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtChat());
 		Util.registerEvent(new evtSnowman());
 		Util.registerEvent(new evtKickstick());
+		Util.registerEvent(new evtPing());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());
@@ -160,6 +162,17 @@ public class Adminify extends JavaPlugin {
 	public void onDisable() {
 		Util.setAllVanished(false);
 		Util.print("Adminify has been disabled.");
+	}
+	
+	public void setupConfig() {
+		if(getConfig().get("settings.chat-ping") == null) {
+			getConfig().set("settings.chat-ping", false);
+		}
+		if(getConfig().get("settings.adminify-prefix") == null) {
+			getConfig().set("settings.adminify-prefix", "&9Adminify> ");
+		}
+		saveConfig();
+		Messages.messagePrefix = getConfig().getString("settings.adminify-prefix");
 	}
 	
 	// Note: Read Requests, also, Jenkins available! again..
