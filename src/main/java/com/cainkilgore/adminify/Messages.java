@@ -4,7 +4,7 @@ import org.bukkit.ChatColor;
 
 public class Messages {
 	
-	public static String messagePrefix = ChatColor.BLUE + "Adminify> " + ChatColor.WHITE;
+	public static String messagePrefix = Adminify.prefix + "Adminify> " + ChatColor.WHITE;
 	public static String errorPrefix = ChatColor.RED + "Error> " + ChatColor.WHITE;
 	public static String msgFromPrefix = ChatColor.GOLD + "from {P}> " + ChatColor.WHITE + "{M}";
 	public static String msgToPrefix = ChatColor.GOLD + "to {P}> " + ChatColor.WHITE + "{M}";

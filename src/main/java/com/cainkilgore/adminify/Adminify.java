@@ -69,6 +69,8 @@ import com.cainkilgore.adminify.events.evtSnowman;
 
 public class Adminify extends JavaPlugin {
 	
+	public static String prefix;
+	
 	public static Adminify mainClass;
 	public void onEnable() {
 		
@@ -171,10 +173,10 @@ public class Adminify extends JavaPlugin {
 			getConfig().set("settings.chat-ping", false);
 		}
 		if(getConfig().get("settings.adminify-prefix") == null) {
-			getConfig().set("settings.adminify-prefix", "&9Adminify> ");
+			getConfig().set("settings.adminify-prefix", "&9");
 		}
 		saveConfig();
-		Messages.messagePrefix = getConfig().getString("settings.adminify-prefix");
+		prefix = getConfig().getString("settings.adminify-prefix");
 	}
 	
 	// Note: Read Requests, also, Jenkins available! again..
