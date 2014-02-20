@@ -162,8 +162,8 @@ public class Adminify extends JavaPlugin {
 	}
 	
 	public void onDisable() {
-		Util.setAllVanished(false);
-		Util.print("Adminify has been disabled.");
+		// Util.setAllVanished(false);
+		System.out.println("Adminify has been disabled.");
 	}
 	
 	public void setupConfig() {
