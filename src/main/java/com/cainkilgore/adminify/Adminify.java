@@ -176,7 +176,6 @@ public class Adminify extends JavaPlugin {
 			getConfig().set("settings.adminify-prefix", "&9");
 		}
 		saveConfig();
-		prefix = getConfig().getString("settings.adminify-prefix");
 	}
 	
 	// Note: Read Requests, also, Jenkins available! again..
