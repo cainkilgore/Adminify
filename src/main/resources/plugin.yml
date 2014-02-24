@@ -147,3 +147,6 @@ commands:
    iprop:
        description: 'Change an items properties, like displayname and lore'
        usage: /<command> [displayname/lore] <value>
+   countdown:
+       description: 'Count down from a number..'
+       usage: /<command> <count>

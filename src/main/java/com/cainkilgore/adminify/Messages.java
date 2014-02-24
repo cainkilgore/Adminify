@@ -253,4 +253,7 @@ public class Messages {
 	public static String displaySet = messagePrefix + "The item held had it's display name changed to: ";
 	public static String loreSet = messagePrefix + "The item held has it's lore changed to: ";
 	
+	// Countdown Command
+	public static String invalidCountdown = errorPrefix + "You entered an invalid countdown.";
+	
 }

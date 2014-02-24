@@ -10,6 +10,7 @@ import com.cainkilgore.adminify.commands.Alert;
 import com.cainkilgore.adminify.commands.Bed;
 import com.cainkilgore.adminify.commands.Clear;
 import com.cainkilgore.adminify.commands.Confirm;
+import com.cainkilgore.adminify.commands.CountdownCommand;
 import com.cainkilgore.adminify.commands.Craft;
 import com.cainkilgore.adminify.commands.Deny;
 import com.cainkilgore.adminify.commands.Ender;
@@ -140,6 +141,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("target", new Target());
 		Util.registerCommand("kickstick", new Kickstick());
 		Util.registerCommand("iprop", new IpropCommand());
+		Util.registerCommand("countdown", new CountdownCommand());
 		
 		try {
 		    Metrics metrics = new Metrics(this);
