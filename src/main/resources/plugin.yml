@@ -144,3 +144,6 @@ commands:
    kickstick:
        description: 'Kick a player using the kick stick'
        usage: /<command>
+   iprop:
+       description: 'Change an items properties, like displayname and lore'
+       usage: /<command> [displayname/lore] <value>

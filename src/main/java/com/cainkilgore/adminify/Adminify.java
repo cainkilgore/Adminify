@@ -24,6 +24,7 @@ import com.cainkilgore.adminify.commands.God;
 import com.cainkilgore.adminify.commands.Heal;
 import com.cainkilgore.adminify.commands.Hit;
 import com.cainkilgore.adminify.commands.Home;
+import com.cainkilgore.adminify.commands.IpropCommand;
 import com.cainkilgore.adminify.commands.Kickstick;
 import com.cainkilgore.adminify.commands.Kill;
 import com.cainkilgore.adminify.commands.Kmob;
@@ -138,6 +139,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerCommand("fireworkshow", new Fireworkshow());
 		Util.registerCommand("target", new Target());
 		Util.registerCommand("kickstick", new Kickstick());
+		Util.registerCommand("iprop", new IpropCommand());
 		
 		try {
 		    Metrics metrics = new Metrics(this);

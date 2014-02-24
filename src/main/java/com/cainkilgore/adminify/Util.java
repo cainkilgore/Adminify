@@ -8,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
@@ -15,13 +17,15 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
-import org.bukkit.Location;
 import org.bukkit.FireworkEffect.Type;
+import org.bukkit.Location;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import com.cainkilgore.adminify.commands.Ride;
 import com.cainkilgore.adminify.events.evtAlert;
@@ -338,6 +342,20 @@ public class Util {
 			return true;
 		}
 		return false;
+	}
+	
+	public static void setDisplayName(ItemStack type, String name) {
+		ItemMeta meta = type.getItemMeta();
+		meta.setDisplayName(name);
+		type.setItemMeta(meta);
+	}
+	
+	public static void setLore(ItemStack type, String name) {
+		ItemMeta meta = type.getItemMeta();
+		ArrayList<String> list = new ArrayList<String>();
+		list.add(name);
+		meta.setLore(list);
+		type.setItemMeta(meta);
 	}
 	
 	/*

@@ -247,4 +247,10 @@ public class Messages {
 	// Adminify Reload Command
 	public static String reloaded = messagePrefix + "Adminify's config was reloaded.";
 	
+	// iProp Command
+	public static String invalidName = errorPrefix + "You entered an invalid display name.";
+	public static String mustbeHolding = errorPrefix + "You must be holding an item to change it's properties.";
+	public static String displaySet = messagePrefix + "The item held had it's display name changed to: ";
+	public static String loreSet = messagePrefix + "The item held has it's lore changed to: ";
+	
 }
