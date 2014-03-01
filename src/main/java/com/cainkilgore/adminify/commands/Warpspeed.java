@@ -30,8 +30,8 @@ public class Warpspeed implements CommandExecutor {
 			if(player.getFlySpeed() == 0.1F) {
 				player.setFlySpeed(1.0F);
 				player.setWalkSpeed(1.0F);
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 9999, 7));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 9999, 4));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 999999, 7));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 999999, 4));
 				
 				Util.sendMessage(player, Messages.warpOn);
 				player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 6);
