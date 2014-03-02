@@ -18,7 +18,7 @@ public class Tp implements CommandExecutor {
 				if(args.length < 4) return false;
 				
 				try {
-					Util.teleportPlayer(Adminify.mainClass.getServer().getPlayer(args[0]), new Location(Adminify.mainClass.getServer().getPlayer(args[1]).getWorld(), Integer.parseInt(args[2]), Integer.parseInt(args[3]), Integer.parseInt(args[4])));
+					Util.teleportPlayer(Adminify.mainClass.getServer().getPlayer(args[0]), new Location(Adminify.mainClass.getServer().getPlayer(args[0]).getWorld(), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3])));
 				} catch (Exception e) {
 				// Unable to teleport.
 				}

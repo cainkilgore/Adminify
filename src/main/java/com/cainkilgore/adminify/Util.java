@@ -37,7 +37,9 @@ public class Util {
 	}
 	
 	public static void registerCommand(String command, CommandExecutor executor) {
-		Adminify.mainClass.getServer().getPluginCommand(command).setExecutor(executor);
+		if(Adminify.mainClass.getDescription().getCommands().containsKey(command)) {
+			Adminify.mainClass.getServer().getPluginCommand(command).setExecutor(executor);
+		}
 	}
 	
 	public static void registerEvent(Listener listener) {
