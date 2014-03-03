@@ -174,13 +174,16 @@ public class Adminify extends JavaPlugin {
 	}
 	
 	public void setupConfig() {
+		boolean needsSaved = false;
 		if(getConfig().get("settings.chat-ping") == null) {
 			getConfig().set("settings.chat-ping", false);
+			needsSaved = true;
 		}
 		if(getConfig().get("settings.adminify-prefix") == null) {
 			getConfig().set("settings.adminify-prefix", "&9");
+			needsSaved = true;
 		}
-		saveConfig();
+		if(needsSaved)  saveConfig();
 	}
 	
 	// Note: Read Requests, also, Jenkins available! again..

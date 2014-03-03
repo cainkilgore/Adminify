@@ -38,6 +38,10 @@ public class Util {
 	}
 	
 	public static void registerCommand(String command, CommandExecutor executor) {
+		if(Adminify.mainClass.getConfig().options().header() == null) {
+			Adminify.mainClass.getConfig().options().header("Welcome to the Adminify Configuration!\nHere you can customize some things, including toggling on and off commands.\nPlease make sure to follow the same format, as one mistake could end up\nresetting your configuration file. ~ Cain\n");
+			Adminify.mainClass.saveConfig();
+		}
 		if(Adminify.mainClass.getConfig().get("commands." + command) == null) {
 			Adminify.mainClass.getConfig().set("commands." + command, true);
 			Adminify.mainClass.saveConfig();
