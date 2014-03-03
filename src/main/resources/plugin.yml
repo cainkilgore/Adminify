@@ -2,6 +2,7 @@ name: 'Adminify'
 author: [ThatJavaGuy, CainFoool]
 version: 1.0.54
 main: com.cainkilgore.adminify.Adminify
+load: STARTUP
 commands:
    freeze:
        description: 'Freeze/Unfreeze a player in their spot'
