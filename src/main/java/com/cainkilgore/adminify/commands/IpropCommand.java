@@ -45,7 +45,7 @@ public class IpropCommand implements CommandExecutor {
 				Util.setDisplayName(player.getItemInHand(), ChatColor.translateAlternateColorCodes('&', x.toString().trim()));
 				Util.sendMessage(player, Messages.displaySet);
 				
-				if(args[0].equalsIgnoreCase("blank")) {
+				if(args[1].equalsIgnoreCase("blank")) {
 					Util.setDisplayName(player.getItemInHand(), ChatColor.RED + "");
 					return true;
 				}
@@ -61,7 +61,7 @@ public class IpropCommand implements CommandExecutor {
 				
 				Util.setLore(player.getItemInHand(), ChatColor.translateAlternateColorCodes('&', x.toString().trim()));
 				Util.sendMessage(player, Messages.loreSet);
-				if(args[0].equalsIgnoreCase("blank")) {
+				if(args[1].equalsIgnoreCase("blank")) {
 					Util.setLore(player.getItemInHand(), ChatColor.RED + "");
 					return true;
 				}
