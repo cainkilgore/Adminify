@@ -14,7 +14,7 @@ public class cmdAdminify implements CommandExecutor {
 	boolean ownerOnline = false;
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("adminify")) {
+//		if(l.equalsIgnoreCase("adminify")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -48,7 +48,7 @@ public class cmdAdminify implements CommandExecutor {
 				}
 				return true;
 			}
-		}
+//		}
 		return true;
 	}
 

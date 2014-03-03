@@ -13,7 +13,7 @@ public class Spawnmob implements CommandExecutor {
 	
 	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("spawnmob")) {
+//		if(l.equalsIgnoreCase("spawnmob")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -70,7 +70,7 @@ public class Spawnmob implements CommandExecutor {
 			}
 			
 			Util.sendMessage(player, Messages.spawnSuccess.replace("{N}", args[1]).replace("{E}", EntityType.valueOf(args[0].toUpperCase()).getName()));
-		}
+//		}
 		return true;
 	}
 

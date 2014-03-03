@@ -15,44 +15,42 @@ import com.cainkilgore.adminify.Util;
 public class Alert implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("alert")) {
-			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
-				return true;
-			}
-			
-			Player player = (Player) s;
-			
-			if(!Util.hasPermission(player, "alert")) {
-				Util.sendMessage(player, Messages.noPermission);
-				return true;
-			}
-			
-			if(args.length < 1) {
-				Util.sendMessage(player, Messages.invalidArguments);
-				Util.sendMessage(player, Util.getCommandUsage(l));
-				return true;
-			}
-			
-			StringBuilder x = new StringBuilder();
-			for(int i = 0; i < args.length; i++) {
-				x.append(args[i] + " ");
-			}
-			
-			for(int i = 0; i < 12; i++) {
-				Util.broadcastUnformatted("");
-			}
-			
-			Util.broadcastUnformatted(ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "=========================");
-			Util.broadcastUnformatted(ChatColor.RED + "" + ChatColor.RED + 								   "                 ALERT          ");
-			Util.broadcastUnformatted(x.toString());
-			Util.broadcastUnformatted(ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "=========================");
-			
-			Util.delayChat(4);
-			
-			for(Player online : Adminify.mainClass.getServer().getOnlinePlayers()) {
-				online.playSound(online.getLocation(), Sound.WITHER_SPAWN, 5, 5);
-			}
+		if(!(s instanceof Player)) {
+			Util.print(Messages.noConsole);
+			return true;
+		}
+		
+		Player player = (Player) s;
+		
+		if(!Util.hasPermission(player, "alert")) {
+			Util.sendMessage(player, Messages.noPermission);
+			return true;
+		}
+		
+		if(args.length < 1) {
+			Util.sendMessage(player, Messages.invalidArguments);
+			Util.sendMessage(player, Util.getCommandUsage(l));
+			return true;
+		}
+		
+		StringBuilder x = new StringBuilder();
+		for(int i = 0; i < args.length; i++) {
+			x.append(args[i] + " ");
+		}
+		
+		for(int i = 0; i < 12; i++) {
+			Util.broadcastUnformatted("");
+		}
+		
+		Util.broadcastUnformatted(ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "=========================");
+		Util.broadcastUnformatted(ChatColor.RED + "" + ChatColor.RED + 								   "                 ALERT          ");
+		Util.broadcastUnformatted(x.toString());
+		Util.broadcastUnformatted(ChatColor.RED + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "=========================");
+		
+		Util.delayChat(4);
+		
+		for(Player online : Adminify.mainClass.getServer().getOnlinePlayers()) {
+			online.playSound(online.getLocation(), Sound.WITHER_SPAWN, 5, 5);
 		}
 		return true;
 	}

@@ -11,7 +11,7 @@ import com.cainkilgore.adminify.Util;
 public class Craft implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("craft")) {
+//		if(l.equalsIgnoreCase("craft")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -25,7 +25,7 @@ public class Craft implements CommandExecutor {
 			}
 			
 			player.openWorkbench(player.getLocation(), true);
-		}
+//		}
 		return true;
 	}
 

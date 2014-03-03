@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Lastpos implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("lastpos")) {
+//		if(l.equalsIgnoreCase("lastpos")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -55,7 +55,7 @@ public class Lastpos implements CommandExecutor {
 					Util.print(e.getMessage());
 				}
 			}
-		}
+//		}
 		return true;
 	}
 

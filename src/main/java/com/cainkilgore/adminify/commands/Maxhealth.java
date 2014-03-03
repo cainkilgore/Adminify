@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Maxhealth implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("maxhealth")) {
+//		if(l.equalsIgnoreCase("maxhealth")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -53,7 +53,7 @@ public class Maxhealth implements CommandExecutor {
 					Util.sendMessage(player, Messages.badHealth);
 				}
 			}
-		}
+//		}
 		return true;
 	}
 

@@ -20,7 +20,7 @@ public class Fireworkshow implements CommandExecutor {
 	BukkitTask fireworkShow = null;
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("fireworkshow")) {
+//		if(l.equalsIgnoreCase("fireworkshow")) {
 			if(!(s instanceof Player)) {
 				if(args.length < 5) {
 					Util.print(Messages.invalidArguments);
@@ -94,7 +94,7 @@ public class Fireworkshow implements CommandExecutor {
 					getTask.cancel();
 				}
 			}, 20 * r);
-		}
+//		}
 		return true;
 	}
 	

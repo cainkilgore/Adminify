@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Confirm implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("confirm")) {
+//		if(l.equalsIgnoreCase("confirm")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -51,7 +51,7 @@ public class Confirm implements CommandExecutor {
 			Util.sendMessage(player, Messages.confirmedTeleport.replace("{P}", argPlayer.getName()));
 			Util.sendMessage(argPlayer, Messages.confirmedPlayer.replace("{P}", player.getName()));
 			Util.removeTeleportRequest(argPlayer, player);
-		}
+//		}
 		return true;
 	}
 

@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Deny implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("deny")) {
+//		if(l.equalsIgnoreCase("deny")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -51,7 +51,7 @@ public class Deny implements CommandExecutor {
 			Util.sendMessage(argPlayer, Messages.deniedPlayer.replace("{P}", player.getName()));
 			
 			Util.removeTeleportRequest(argPlayer, player);
-		}
+//		}
 		return true;
 	}
 

@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Strike implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("strike")) {
+//		if(l.equalsIgnoreCase("strike")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -40,7 +40,7 @@ public class Strike implements CommandExecutor {
 			Util.strikePlayer(argPlayer);
 			Util.sendMessage(player, Messages.strikePlayer.replace("{P}", argPlayer.getName()));
 			Util.sendMessage(argPlayer, Messages.adminStrike.replace("{A}", player.getName()));
-		}
+//		}
 		return true;
 	}
 

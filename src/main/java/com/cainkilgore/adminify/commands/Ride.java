@@ -18,7 +18,7 @@ public class Ride implements CommandExecutor {
 	
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("ride")) {
+//		if(l.equalsIgnoreCase("ride")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -40,7 +40,7 @@ public class Ride implements CommandExecutor {
 			Util.setSelecting(player, false);
 			entity1.remove(player.getName());
 			Util.sendMessage(player, Messages.selectingOff);
-		}
+//		}
 		return true;
 	}
 

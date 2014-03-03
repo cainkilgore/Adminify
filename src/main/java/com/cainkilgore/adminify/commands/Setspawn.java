@@ -11,7 +11,7 @@ import com.cainkilgore.adminify.Util;
 public class Setspawn implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("setspawn")) {
+//		if(l.equalsIgnoreCase("setspawn")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -26,7 +26,7 @@ public class Setspawn implements CommandExecutor {
 			
 			player.getWorld().setSpawnLocation((int) player.getLocation().getX(), (int) player.getLocation().getY(), (int) player.getLocation().getZ());
 			Util.sendMessage(player, Messages.spawnSet.replace("{W}", player.getWorld().getName()));
-		}
+//		}
 		return true;
 	}
 

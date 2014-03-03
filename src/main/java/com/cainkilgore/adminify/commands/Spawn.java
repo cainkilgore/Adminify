@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Spawn implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("spawn")) {
+//		if(l.equalsIgnoreCase("spawn")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -54,7 +54,7 @@ public class Spawn implements CommandExecutor {
 				Util.sendMessage(argPlayer, Messages.playerTeleportSpawn.replace("{A}", player.getName()));
 				return true;
 			}
-		}
+//		}
 		return true;
 	}
 

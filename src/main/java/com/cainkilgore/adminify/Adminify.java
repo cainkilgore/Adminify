@@ -57,6 +57,7 @@ import com.cainkilgore.adminify.commands.Warpspeed;
 import com.cainkilgore.adminify.commands.cmdAdminify;
 import com.cainkilgore.adminify.events.evtAlert;
 import com.cainkilgore.adminify.events.evtChat;
+import com.cainkilgore.adminify.events.evtCommand;
 import com.cainkilgore.adminify.events.evtEnabled;
 import com.cainkilgore.adminify.events.evtFreeze;
 import com.cainkilgore.adminify.events.evtGod;
@@ -77,7 +78,6 @@ public class Adminify extends JavaPlugin {
 	public void onEnable() {
 		
 		setupConfig();
-		
 		mainClass = this;
 		
 		Util.registerEvent(new evtFreeze());
@@ -92,6 +92,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtSnowman());
 		Util.registerEvent(new evtKickstick());
 		Util.registerEvent(new evtPing());
+		Util.registerEvent(new evtCommand());
 		
 		Util.registerCommand("freeze", new Freeze());
 		Util.registerCommand("tp", new Tp());

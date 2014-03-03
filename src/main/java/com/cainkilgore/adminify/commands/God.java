@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class God implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("god")) {
+//		if(l.equalsIgnoreCase("god")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -59,7 +59,7 @@ public class God implements CommandExecutor {
 				Util.sendMessage(argPlayer, Messages.adminNotGod.replace("{A}", player.getName()));
 				return true;
 			}
-		}
+//		}
 		return true;
 	}
 

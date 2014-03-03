@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class IpropCommand implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("iprop")) {
+//		if(l.equalsIgnoreCase("iprop")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -68,7 +68,7 @@ public class IpropCommand implements CommandExecutor {
 				Util.sendMessage(player, Messages.messagePrefix + ChatColor.translateAlternateColorCodes('&', x.toString().trim()));
 				return true;
 			}
-		}
+//		}
 		return true;
 	}
 

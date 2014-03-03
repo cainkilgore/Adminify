@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Tpa implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("tpa")) {
+//		if(l.equalsIgnoreCase("tpa")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -57,7 +57,7 @@ public class Tpa implements CommandExecutor {
 					Util.removeTeleportRequest(player, argPlayer);
 				}
 			}, 20 * 60);
-		}
+//		}
 		return true;
 	}
 

@@ -11,7 +11,7 @@ import com.cainkilgore.adminify.Util;
 public class Snowman implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("snowman")) {
+//		if(l.equalsIgnoreCase("snowman")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -32,7 +32,7 @@ public class Snowman implements CommandExecutor {
 			
 			Util.setSnowman(player, false);
 			Util.sendMessage(player, Messages.noSnowman);
-		}
+//		}
 		return true;
 	}
 

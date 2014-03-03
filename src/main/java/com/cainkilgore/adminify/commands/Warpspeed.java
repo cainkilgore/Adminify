@@ -14,7 +14,7 @@ import com.cainkilgore.adminify.Util;
 public class Warpspeed implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("warpspeed")) {
+//		if(l.equalsIgnoreCase("warpspeed")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -44,7 +44,7 @@ public class Warpspeed implements CommandExecutor {
 			player.removePotionEffect(PotionEffectType.JUMP);
 			Util.sendMessage(player, Messages.warpOff);
 			player.playSound(player.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 0.1F);
-		}
+//		}
 		return true;
 	}
 

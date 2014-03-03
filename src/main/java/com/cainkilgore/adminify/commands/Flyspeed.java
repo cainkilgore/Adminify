@@ -11,7 +11,7 @@ import com.cainkilgore.adminify.Util;
 public class Flyspeed implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("flyspeed")) {
+//		if(l.equalsIgnoreCase("flyspeed")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -36,7 +36,7 @@ public class Flyspeed implements CommandExecutor {
 			} catch (Exception e) {
 				Util.sendMessage(player, Messages.flyError);
 			}
-		}
+//		}
 		return true;
 	}
 }

@@ -13,38 +13,36 @@ import com.cainkilgore.adminify.Util;
 public class Bed implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("bed")) {
-			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
-				return true;
-			}
-			
-			Player player = (Player) s;
-			
-			if(!Util.hasPermission(player, "bed")) {
-				Util.sendMessage(player, Messages.noPermission);
-				return true;
-			}
-			
-			if(args.length < 1) {
-				Util.sendMessage(player, Messages.invalidArguments);
-				Util.sendMessage(player, Util.getCommandUsage(l));
-				return true;
-			}
-			
-			Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
-			if(argPlayer == null) {
-				Util.sendMessage(player, Messages.invalidPlayer);
-				return true;
-			}
-			
-			try {
-				Location bedLoc = argPlayer.getBedSpawnLocation();
-				Util.teleportPlayer(player, bedLoc);
-				Util.sendMessage(player, Messages.tpBed.replace("{P}", argPlayer.getName()));
-			} catch (NullPointerException e) {
-				Util.sendMessage(player, Messages.noBed.replace("{P}", argPlayer.getName()));
-			}
+		if(!(s instanceof Player)) {
+			Util.print(Messages.noConsole);
+			return true;
+		}
+		
+		Player player = (Player) s;
+		
+		if(!Util.hasPermission(player, "bed")) {
+			Util.sendMessage(player, Messages.noPermission);
+			return true;
+		}
+		
+		if(args.length < 1) {
+			Util.sendMessage(player, Messages.invalidArguments);
+			Util.sendMessage(player, Util.getCommandUsage(l));
+			return true;
+		}
+		
+		Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
+		if(argPlayer == null) {
+			Util.sendMessage(player, Messages.invalidPlayer);
+			return true;
+		}
+		
+		try {
+			Location bedLoc = argPlayer.getBedSpawnLocation();
+			Util.teleportPlayer(player, bedLoc);
+			Util.sendMessage(player, Messages.tpBed.replace("{P}", argPlayer.getName()));
+		} catch (NullPointerException e) {
+			Util.sendMessage(player, Messages.noBed.replace("{P}", argPlayer.getName()));
 		}
 		return true;
 	}

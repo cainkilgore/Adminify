@@ -4,150 +4,150 @@ version: 1.0.54
 main: com.cainkilgore.adminify.Adminify
 load: STARTUP
 commands:
-   adminify_freeze:
+   freeze:
        description: 'Freeze/Unfreeze a player in their spot'
        usage: /<command> <player>
-   adminify_tp:
+   tp:
        description: 'Teleport you/another player to another'
        usage: /<command> <[player] <player>> <[x] [y] [z]>
-   adminify_spawn:
+   spawn:
        description: 'Teleport you/another player to world spawn'
        usage: /<command> <player>
-   adminify_mute:
+   mute:
        description: 'Mute players from using chat'
        usage: /<command> [player] <seconds>
-   adminify_fly:
+   fly:
        description: 'Set yours/others ability to fly'
        usage: /<command> <player>
-   adminify_god:
+   god:
        description: 'Enable yours/others god mode'
        usage: /<command> <player>
-   adminify_adminify:
+   adminify:
        description: 'Basic Information'
        usage: /<command>
-   adminify_time:
+   time:
        description: 'Change the time of the world'
        usage: /<command> [day/night/sunset/add] <time>
-   adminify_heal:
+   heal:
        description: 'Heal yourself/another player to max health'
        usage: /<command> <player>
-   adminify_hit:
+   hit:
        description: 'Damage a player with a random value'
        usage: /<command> [player]
-   adminify_clear:
+   clear:
        description: 'Clear yours/anothers inventory'
        usage: /<command> <player>
-   adminify_kill:
+   kill:
        description: 'Kill yourself or another'
        usage: /<command> <player>
-   adminify_vanish:
+   vanish:
        description: 'Hide/show yourself to all players'
        usage: /<command>
-   adminify_alert:
+   alert:
        description: 'Send a Chat Alert'
        usage: /<command> <alert>
-   adminify_lastpos:
+   lastpos:
        description: 'Teleport to yours/another players last location'
        usage: /<command> <player>
-   adminify_strike:
+   strike:
        description: 'Strike a player with lightning'
        usage: /<command> [player]
-   adminify_home:
+   home:
        description: 'Teleport to your home'
        usage: /<command>
-   adminify_sethome:
+   sethome:
        description: 'Set your home destination'
        usage: /<command>
-   adminify_msg:
+   msg:
        description: 'Send a message to a player privately'
        usage: /<command> [player] [message]
-   adminify_spawnmob:
+   spawnmob:
        description: 'Spawn a specified amount of entities at your cursor'
        usage: /<command> [?/entity] [count]
-   adminify_tphere:
+   tphere:
        description: 'Teleport a player to you'
        usage: /<command> [player/*]
-   adminify_gm:
+   gm:
        description: 'Change yours/another players gamemode'
        usage: /<command> [s/c/a/0/1/2/survival/creative/adventure] <player>
-   adminify_feed:
+   feed:
        description: 'Feed yourself or another'
        usage: /<command> <player>
-   adminify_ride:
+   ride:
        description: 'Make two entities start riding'
        usage: /<command>
-   adminify_setspawn:
+   setspawn:
        description: 'Set the current world spawn'
        usage: /<command>
-   adminify_motd:
+   motd:
        description: 'Get the message of the day (showed on login)'
        usage: /<command>
-   adminify_snowman:
+   snowman:
        description: 'Toggle your snowman abilities'
        usage: /<command>
-   adminify_bed:
+   bed:
        description: 'Teleport to the bed location of a player'
        usage: /<command> [player]
-   adminify_craft:
+   craft:
        description: 'Open a crafting inventory anywhere'
        usage: /<command>
-   adminify_ender:
+   ender:
        description: 'Open yours or anothers ender chest'
        usage: /<command> <player>
-   adminify_openinv:
+   openinv:
        description: 'Open another players inventory'
        usage: /<command> [player]
-   adminify_kmob:
+   kmob:
        description: 'Kill monsters and creatures in your world'
        usage: /<command>
-   adminify_maxhealth:
+   maxhealth:
        description: 'Set yours or another players max health'
        usage: /<command> [health/player] <health>
-   adminify_playerinfo:
+   playerinfo:
        description: 'Get detailed information on a player'
        usage: /<command> [player]
-   adminify_readyup:
+   readyup:
        description: 'Set all players to max health and hunger, optionally specify a radius'
        usage: /<command> <radius>
-   adminify_flyspeed:
+   flyspeed:
        description: 'Set your own fly speed'
        usage: /<command> <speed>
-   adminify_walkspeed:
+   walkspeed:
        description: 'Set your own walk speed'
        usage: /<command> <speed>
-   adminify_warpspeed:
+   warpspeed:
        description: 'Toggle on or off your warp speed'
        usage: /<command>
-   adminify_fsay:
+   fsay:
        description: 'Force a player to speak/use commands in chat'
        usage: /<command> [player] [message]
-   adminify_put:
+   put:
        description: 'Teleport a player to your cursor'
        usage: /<command> [player]
-   adminify_repair:
+   repair:
        description: 'Repair the item your holding'
        usage: /<command>
-   adminify_tpa:
+   tpa:
        description: 'Send a teleport request to a player'
        usage: /<command> [player]
-   adminify_confirm:
+   confirm:
        description: 'Confirm a players teleport request'
        usage: /<command> [player]
-   adminify_deny:
+   deny:
        description: 'Deny a players teleport request'
        usage: /<command> [player]
-   adminify_fireworkshow:
+   fireworkshow:
        description: 'Start up a firework show filled with random types and colors'
        usage: /<command> (player <seconds>) (console <world> <x> <y> <z> <seconds>)
-   adminify_target:
+   target:
        description: 'Point your compass towards a player'
        usage: /<command> [player]
-   adminify_kickstick:
+   kickstick:
        description: 'Kick a player using the kick stick'
        usage: /<command>
-   adminify_iprop:
+   iprop:
        description: 'Change an items properties, like displayname and lore'
        usage: /<command> [displayname/lore] <value>
-   adminify_countdown:
+   countdown:
        description: 'Count down from a number..'
        usage: /<command> <count>

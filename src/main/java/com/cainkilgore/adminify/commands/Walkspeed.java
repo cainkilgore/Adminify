@@ -11,7 +11,7 @@ import com.cainkilgore.adminify.Util;
 public class Walkspeed implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("walkspeed")) {
+//		if(l.equalsIgnoreCase("walkspeed")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -36,7 +36,7 @@ public class Walkspeed implements CommandExecutor {
 			} catch (Exception e) {
 				Util.sendMessage(player, Messages.walkError);
 			}
-		}
+//		}
 		return true;
 	}
 }

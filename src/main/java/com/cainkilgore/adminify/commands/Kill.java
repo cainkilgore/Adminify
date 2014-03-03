@@ -13,7 +13,7 @@ import com.cainkilgore.adminify.Util;
 public class Kill implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("kill")) {
+//		if(l.equalsIgnoreCase("kill")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -49,7 +49,7 @@ public class Kill implements CommandExecutor {
 				Util.sendMessage(player, Messages.adminKill.replace("{P}", argPlayer.getName()));
 				Util.sendMessage(argPlayer, Messages.playerKill.replace("{A}", player.getName()));
 			}
-		}
+//		}
 		return true;
 	}
 

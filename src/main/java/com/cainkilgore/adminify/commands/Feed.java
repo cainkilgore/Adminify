@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Feed implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("feed")) {
+//		if(l.equalsIgnoreCase("feed")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -46,7 +46,7 @@ public class Feed implements CommandExecutor {
 				Util.sendMessage(player, Messages.playerFed.replace("{P}", argPlayer.getName()));
 				Util.sendMessage(argPlayer, Messages.adminFed.replace("{A}", player.getName()));
 			}
-		}
+//		}
 		return true;
 	}
 

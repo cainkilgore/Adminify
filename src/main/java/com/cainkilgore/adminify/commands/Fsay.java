@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Fsay implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("fsay")) {
+//		if(l.equalsIgnoreCase("fsay")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -43,7 +43,7 @@ public class Fsay implements CommandExecutor {
 			}
 			
 			argPlayer.chat(x.toString());
-		}
+//		}
 		return true;
 	}
 

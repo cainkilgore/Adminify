@@ -11,7 +11,7 @@ import com.cainkilgore.adminify.Util;
 public class Time implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("time")) {
+//		if(l.equalsIgnoreCase("time")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -54,7 +54,7 @@ public class Time implements CommandExecutor {
 			
 			Util.setWorldTime(player, Util.getTimeFromString(args[0]));
 			Util.sendMessage(player, Messages.timeUpdate.replace("{T}", args[0].toLowerCase()));
-		}
+//		}
 		return true;
 	}
 

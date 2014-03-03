@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
@@ -32,13 +31,22 @@ import com.cainkilgore.adminify.events.evtAlert;
 
 public class Util {
 	
+	public static ArrayList<String> pluginCommands = new ArrayList<String>();
+	
 	public static void print(String message) {
 		System.out.println("Adminify > " + message);
 	}
 	
 	public static void registerCommand(String command, CommandExecutor executor) {
-		if(Adminify.mainClass.getDescription().getCommands().containsKey(command)) {
-			Adminify.mainClass.getServer().getPluginCommand(command).setExecutor(executor);
+		if(Adminify.mainClass.getConfig().get("commands." + command) == null) {
+			Adminify.mainClass.getConfig().set("commands." + command, true);
+			Adminify.mainClass.saveConfig();
+		}
+		
+		if(Adminify.mainClass.getConfig().getBoolean("commands." + command)) {
+			Adminify.mainClass.getServer().getPluginCommand("adminify_" + command).setExecutor(executor);
+			pluginCommands.add(command);
+			print("Successfully registered command /" + command);
 		}
 	}
 	
@@ -58,7 +66,7 @@ public class Util {
 	}
 	
 	public static String getCommandUsage(String command) {
-		return Messages.errorPrefix + "Usage: " + Adminify.mainClass.getServer().getPluginCommand(command).getUsage().replace("<command>", command);
+		return Messages.errorPrefix + "Usage: " + Adminify.mainClass.getServer().getPluginCommand(command).getUsage().replace("<command>", command).replace("adminify_", "");
 	}
 	
 	// Frozen Usage

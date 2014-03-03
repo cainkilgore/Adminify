@@ -11,7 +11,7 @@ import com.cainkilgore.adminify.Util;
 public class MOTD implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("motd")) {
+//		if(l.equalsIgnoreCase("motd")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -30,7 +30,7 @@ public class MOTD implements CommandExecutor {
 				Util.sendMessage(player, Messages.motdError);
 				Util.print(e.getMessage());
 			}
-		}
+//		}
 		return true;
 	}
 

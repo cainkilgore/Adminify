@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Target implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("target")) {
+//		if(l.equalsIgnoreCase("target")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -44,7 +44,7 @@ public class Target implements CommandExecutor {
 			
 			player.setCompassTarget(argPlayer.getLocation());
 			Util.sendMessage(player, Messages.compassSet.replace("{P}", argPlayer.getName()));
-		}
+//		}
 		return true;
 	}
 

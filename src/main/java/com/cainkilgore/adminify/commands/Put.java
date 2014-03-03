@@ -13,7 +13,7 @@ public class Put implements CommandExecutor {
 	
 	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("put")) {
+//		if(l.equalsIgnoreCase("put")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -41,7 +41,7 @@ public class Put implements CommandExecutor {
 			Util.teleportPlayer(argPlayer, player.getTargetBlock(null, 0).getRelative(0, 1, 0).getLocation());
 			Util.sendMessage(player, Messages.putted.replace("{P}", argPlayer.getName()));
 			Util.sendMessage(argPlayer, Messages.adminPut.replace("{A}", player.getName()));
-		}
+//		}
 		return true;
 	}
 

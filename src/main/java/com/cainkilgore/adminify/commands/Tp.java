@@ -13,7 +13,7 @@ import com.cainkilgore.adminify.Util;
 public class Tp implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("tp")) {
+//		if(l.equalsIgnoreCase("tp")) {
 			if(!(s instanceof Player)) {
 				if(args.length < 4) return false;
 				
@@ -89,7 +89,7 @@ public class Tp implements CommandExecutor {
 					Util.sendMessage(player, Messages.badXyz);
 				}
 			}
-		}
+//		}
 		
 		return true;
 	}

@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Playerinfo implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("playerinfo")) {
+//		if(l.equalsIgnoreCase("playerinfo")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -43,7 +43,7 @@ public class Playerinfo implements CommandExecutor {
 			Util.sendMessage(player, Messages.playerInfoY.replace("{Y}", Double.toString(argPlayer.getLocation().getY())));
 			Util.sendMessage(player, Messages.playerInfoZ.replace("{Z}", Double.toString(argPlayer.getLocation().getZ())));
 			Util.sendMessage(player, Messages.playerInfoIP.replace("{IP}", argPlayer.getAddress().getAddress().toString()));
-		}
+//		}
 		return true;
 	}
 

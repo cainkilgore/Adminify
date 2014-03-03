@@ -13,7 +13,7 @@ import com.cainkilgore.adminify.Util;
 public class Readyup implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("readyup")) {
+//		if(l.equalsIgnoreCase("readyup")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -50,7 +50,7 @@ public class Readyup implements CommandExecutor {
 					Util.sendMessage(player, Messages.invalidRadius);
 				}
 			}
-		}
+//		}
 		return true;
 	}
 

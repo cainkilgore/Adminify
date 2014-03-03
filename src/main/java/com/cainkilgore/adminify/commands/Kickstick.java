@@ -18,7 +18,7 @@ public class Kickstick implements CommandExecutor {
 	ItemMeta stickMeta = kickStick.getItemMeta();
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("kickstick")) {
+//		if(l.equalsIgnoreCase("kickstick")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -36,7 +36,7 @@ public class Kickstick implements CommandExecutor {
 			
 			player.getInventory().addItem(kickStick);
 			Util.sendMessage(player, Messages.kickStick);
-		}
+//		}
 		return true;
 	}
 

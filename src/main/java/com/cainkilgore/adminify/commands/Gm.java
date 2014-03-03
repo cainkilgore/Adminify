@@ -13,7 +13,7 @@ import com.cainkilgore.adminify.Util;
 public class Gm implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("gm")) {
+//		if(l.equalsIgnoreCase("gm")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -112,7 +112,7 @@ public class Gm implements CommandExecutor {
 					}
 				}
 			}
-		}
+//		}
 		return true;
 	}
 

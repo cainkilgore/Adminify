@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Tphere implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("tphere")) {
+//		if(l.equalsIgnoreCase("tphere")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -53,7 +53,7 @@ public class Tphere implements CommandExecutor {
 			Util.teleportPlayer(argPlayer, player.getLocation());
 			Util.sendMessage(player, Messages.tphereAdmin.replace("{P}", argPlayer.getName()));
 			Util.sendMessage(argPlayer, Messages.argToPlayer.replace("{P}", player.getName()));
-		}
+//		}
 		return true;
 	}
 

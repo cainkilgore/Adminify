@@ -17,7 +17,7 @@ public class CountdownCommand implements CommandExecutor {
 	BukkitTask countdown = null;
 	
 	public boolean onCommand(CommandSender s, Command c, String l, final String [] args) {
-		if(l.equalsIgnoreCase("countdown")) {
+//		if(l.equalsIgnoreCase("countdown")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -59,7 +59,7 @@ public class CountdownCommand implements CommandExecutor {
 					}
 				}
 			}, 20L, 20L);
-		}
+//		}
 		return true;
 	}
 	

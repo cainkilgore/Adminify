@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Repair implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("repair")) {
+//		if(l.equalsIgnoreCase("repair")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -37,7 +37,7 @@ public class Repair implements CommandExecutor {
 			
 			player.getItemInHand().setDurability((short) 0);
 			Util.sendMessage(player, Messages.repaired.replace("{I}", player.getItemInHand().getType().name()));
-		}
+//		}
 		return true;
 	}
 

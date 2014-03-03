@@ -14,7 +14,7 @@ import com.cainkilgore.adminify.Util;
 public class Kmob implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("kmob")) {
+//		if(l.equalsIgnoreCase("kmob")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -37,7 +37,7 @@ public class Kmob implements CommandExecutor {
 			}
 			
 			Util.sendMessage(player, Messages.kMobKilled.replace("{N}", Integer.toString(entityCount)));
-		}
+//		}
 		return true;
 	}
 

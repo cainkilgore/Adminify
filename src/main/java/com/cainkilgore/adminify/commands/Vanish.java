@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Vanish implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("vanish")) {
+//		if(l.equalsIgnoreCase("vanish")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -43,7 +43,7 @@ public class Vanish implements CommandExecutor {
 			}
 			
 			Util.sendMessage(player, Messages.noVanished);
-		}
+//		}
 		return true;
 	}
 

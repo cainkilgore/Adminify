@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Util;
 public class Home implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("home")) {
+//		if(l.equalsIgnoreCase("home")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -37,7 +37,7 @@ public class Home implements CommandExecutor {
 				}
 			});
 
-		}
+//		}
 		return true;
 	}
 

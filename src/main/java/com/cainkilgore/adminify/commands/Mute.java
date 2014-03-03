@@ -17,7 +17,7 @@ public class Mute implements CommandExecutor {
 	public static HashMap<String, Integer> mutedTaskID = new HashMap<String, Integer>();
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
-		if(l.equalsIgnoreCase("mute")) {
+//		if(l.equalsIgnoreCase("mute")) {
 			if(!(s instanceof Player)) {
 				Util.print(Messages.noConsole);
 				return true;
@@ -89,7 +89,7 @@ public class Mute implements CommandExecutor {
 				}
 			}
 			
-		}
+//		}
 		return true;
 	}
 
