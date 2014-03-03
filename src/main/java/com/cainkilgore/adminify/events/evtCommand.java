@@ -13,7 +13,7 @@ public class evtCommand implements Listener {
 		for(String pluginCommands : Util.pluginCommands) {
 		//	System.out.println(pluginCommands);
 			if(e.getMessage().split(" ")[0].equalsIgnoreCase("/" + pluginCommands)) {
-				e.setMessage("/adminify_" + pluginCommands);
+				e.setMessage(e.getMessage().replace(e.getMessage().split(" ")[0], "/adminify_" + pluginCommands));
 				return;
 			}
 		}

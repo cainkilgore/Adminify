@@ -352,6 +352,10 @@ public class Util {
 	}
 	
 	public static boolean isHoldingKickstick(Player player) {
+		if(player.getInventory().getItemInHand() == null) return false;
+		if(player.getInventory().getItemInHand().getItemMeta() == null) return false;
+		if(player.getInventory().getItemInHand().getItemMeta().getDisplayName() == null) return false;
+		
 		if(player.getInventory().getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "Kick Stick")) {
 			return true;
 		}
