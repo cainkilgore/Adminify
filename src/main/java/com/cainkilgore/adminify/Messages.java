@@ -11,6 +11,7 @@ public class Messages {
 	
 	// Console Messages
 	public static String noConsole = "No commands work in console right now. They will in future versions.";
+	public static String error = "Something in this command went wrong.";
 	
 	// Player Messages
 	public static String invalidPlayer = errorPrefix + "The player you specified does not exist.";

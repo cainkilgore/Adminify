@@ -261,6 +261,7 @@ public class Util {
 	public static void sendPrivateMsg(Player one, Player two, String message) {
 		one.sendMessage(Messages.msgToPrefix.replace("{P}", two.getName()).replace("{M}", message));
 		two.sendMessage(Messages.msgFromPrefix.replace("{P}", one.getName()).replace("{M}", message));
+		print(one.getName() + " to " + two.getName() + "> " + message);
 	}
 	
 	public static void replenishHunger(Player player) {

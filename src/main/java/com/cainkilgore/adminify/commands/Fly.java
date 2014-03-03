@@ -14,7 +14,26 @@ public class Fly implements CommandExecutor {
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 //		if(l.equalsIgnoreCase("fly")) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				try {
+					Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
+					if(argPlayer == null) {
+						Util.print(Messages.invalidPlayer);
+						return true;
+					}
+					
+					if(!Util.canFly(argPlayer)) {
+						Util.setFlying(argPlayer, true);
+						Util.print(Messages.adminIsFlying.replace("{P}", argPlayer.getName()));
+						Util.sendMessage(argPlayer, Messages.playerIsFlying.replace("{A}", "console"));
+						return true;
+					}
+					
+					Util.setFlying(argPlayer, false);
+					Util.print(Messages.adminNotFlying.replace("{P}", argPlayer.getName()));
+					Util.sendMessage(argPlayer, Messages.playerNotFlying.replace("{A}", "console"));
+				} catch (Exception e) {
+					Util.print(Messages.error);
+				}
 				return true;
 			}
 			

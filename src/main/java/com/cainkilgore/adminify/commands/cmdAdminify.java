@@ -16,7 +16,24 @@ public class cmdAdminify implements CommandExecutor {
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 //		if(l.equalsIgnoreCase("adminify")) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				try {
+					Util.print(Messages.author);
+					Util.print(Messages.version + Adminify.mainClass.getDescription().getVersion());
+					Util.print(Messages.url);
+					Util.print(Messages.supportURL);
+					
+					for(Player online : Adminify.mainClass.getServer().getOnlinePlayers()) {
+						if(online.getName().equalsIgnoreCase("ThatJavaGuy")) {
+							ownerOnline = true;
+						}
+					}
+					
+					if(ownerOnline) {
+						Util.print(Messages.coderOnline);
+					}
+				} catch (Exception e) {
+					Util.print(Messages.error);
+				}
 				return true;
 			}
 			

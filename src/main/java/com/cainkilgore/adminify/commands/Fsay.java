@@ -14,7 +14,22 @@ public class Fsay implements CommandExecutor {
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 //		if(l.equalsIgnoreCase("fsay")) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				try {
+					Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
+					if(argPlayer == null) {
+						Util.print(Messages.invalidPlayer);
+						return true;
+					}
+					
+					StringBuilder x = new StringBuilder();
+					for(int i = 1; i < args.length; i++) {
+						x.append(args[i] + " ");
+					}
+					
+					argPlayer.chat(x.toString());
+				} catch (Exception e) {
+					Util.print(Messages.error);
+				}
 				return true;
 			}
 			

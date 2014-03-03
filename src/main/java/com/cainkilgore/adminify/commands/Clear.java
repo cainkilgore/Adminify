@@ -13,7 +13,17 @@ public class Clear implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				try {
+				Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
+				if(argPlayer == null) {
+					return true;
+				}
+				
+				Util.clearInventory(argPlayer);
+				Util.print("Inventory cleared");
+				} catch (Exception e) {
+					Util.print(Messages.error);
+				}
 				return true;
 			}
 			

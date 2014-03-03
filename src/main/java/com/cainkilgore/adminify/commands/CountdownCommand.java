@@ -19,7 +19,26 @@ public class CountdownCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender s, Command c, String l, final String [] args) {
 //		if(l.equalsIgnoreCase("countdown")) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				try {
+					Adminify.mainClass.getServer().broadcastMessage(ChatColor.RED + "=========== " + Integer.parseInt(args[0]) + " ===========");
+					playDing(false);
+					
+					Util.delayChat(Integer.parseInt(args[0]));
+					
+					countdown = Adminify.mainClass.getServer().getScheduler().runTaskTimer(Adminify.mainClass, new Runnable() {
+						int count = Integer.parseInt(args[0]);
+						public void run() {
+							count--;
+							playDing(true);
+							Adminify.mainClass.getServer().broadcastMessage(ChatColor.RED + "=========== " + count + " ===========");
+							if(count <= 0) {
+								countdown.cancel();
+							}
+						}
+					}, 20L, 20L);
+				} catch (Exception e) {
+					Util.print(Messages.error);
+				}
 				return true;
 			}
 			

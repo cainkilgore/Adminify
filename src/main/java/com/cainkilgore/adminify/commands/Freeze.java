@@ -14,7 +14,26 @@ public class Freeze implements CommandExecutor {
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 //		if(l.equalsIgnoreCase("freeze")) {
 			if(!(s instanceof Player)) {
-				Util.print(Messages.noConsole);
+				try {
+					Player argPlayer = Adminify.mainClass.getServer().getPlayer(args[0]);
+					if(argPlayer == null) {
+						Util.print(Messages.invalidPlayer);
+						return true;
+					}
+					
+					if(!Util.isFrozen(argPlayer)) {
+						Util.setFrozen(argPlayer, true);
+						Util.print(Messages.nowFrozen.replace("{U}", argPlayer.getName()));
+						Util.sendMessage(argPlayer, Messages.selfFroze.replace("{A}", "console"));
+						return true;
+					}
+					
+					Util.setFrozen(argPlayer, false);
+					Util.print(Messages.unFrozen.replace("{U}", argPlayer.getName()));
+					Util.sendMessage(argPlayer, Messages.selfUnfrozen.replace("{A}", "console"));
+				} catch (Exception e) {
+					Util.print(Messages.error);
+				}
 				return true;
 			}
 			
