@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 import com.cainkilgore.adminify.Messages;
 import com.cainkilgore.adminify.Util;
 
-public class IpropCommand implements CommandExecutor {
+public class Iprop implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 //		if(l.equalsIgnoreCase("iprop")) {

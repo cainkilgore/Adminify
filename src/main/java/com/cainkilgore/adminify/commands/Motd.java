@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import com.cainkilgore.adminify.Messages;
 import com.cainkilgore.adminify.Util;
 
-public class MOTD implements CommandExecutor {
+public class Motd implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 //		if(l.equalsIgnoreCase("motd")) {

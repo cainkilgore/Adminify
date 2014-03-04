@@ -9,7 +9,7 @@ import com.cainkilgore.adminify.Adminify;
 import com.cainkilgore.adminify.Messages;
 import com.cainkilgore.adminify.Util;
 
-public class cmdAdminify implements CommandExecutor {
+public class Adm implements CommandExecutor {
 	
 	boolean ownerOnline = false;
 	

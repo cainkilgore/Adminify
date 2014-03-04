@@ -12,7 +12,7 @@ import com.cainkilgore.adminify.Adminify;
 import com.cainkilgore.adminify.Messages;
 import com.cainkilgore.adminify.Util;
 
-public class CountdownCommand implements CommandExecutor {
+public class Countdown implements CommandExecutor {
 	
 	BukkitTask countdown = null;
 	

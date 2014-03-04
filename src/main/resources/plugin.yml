@@ -22,7 +22,7 @@ commands:
    adminify_god:
        description: 'Enable yours/others god mode'
        usage: /<command> <player>
-   adminify_adminify:
+   adminify_adm:
        description: 'Basic Information'
        usage: /<command>
    adminify_time:

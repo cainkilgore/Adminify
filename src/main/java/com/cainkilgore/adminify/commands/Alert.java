@@ -14,6 +14,10 @@ import com.cainkilgore.adminify.Util;
 
 public class Alert implements CommandExecutor {
 	
+	public Alert() {
+		// return "alert";
+	}
+	
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 		if(!(s instanceof Player)) {
 			try {
