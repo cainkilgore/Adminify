@@ -54,6 +54,16 @@ public class Util {
 		}
 	}
 	
+	public static void sendAdminMessage(Player player, String message) {
+		player.sendMessage(ChatColor.translateAlternateColorCodes('&', Adminify.mainClass.getConfig().getString("settings.adminify-prefix")) + "Alert> " + ChatColor.RESET + message);
+	}
+	
+	public static void sendAdminMessage(Player player, Player sender, String message) {
+		player.sendMessage(ChatColor.translateAlternateColorCodes('&', Adminify.mainClass.getConfig().getString("settings.adminify-prefix")) + "Alert from " + sender.getName() + "> " + ChatColor.RESET + message);
+	}
+	
+	
+	
 	public static void registerEvent(Listener listener) {
 		Adminify.mainClass.getServer().getPluginManager().registerEvents(listener, Adminify.mainClass);
 	}

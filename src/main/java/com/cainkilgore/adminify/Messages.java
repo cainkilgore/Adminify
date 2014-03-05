@@ -257,4 +257,7 @@ public class Messages {
 	// Countdown Command
 	public static String invalidCountdown = errorPrefix + "You entered an invalid countdown.";
 	
+	// Admin command
+	public static String alertSent = messagePrefix + "Your admin alert has been sent to all online staff.";
+	
 }
