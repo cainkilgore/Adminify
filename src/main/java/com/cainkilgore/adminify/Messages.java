@@ -260,4 +260,11 @@ public class Messages {
 	// Admin command
 	public static String alertSent = messagePrefix + "Your admin alert has been sent to all online staff.";
 	
+	// Give Command
+	public static String badMaterial = errorPrefix + "That type of item does not exist.";
+	
+	public static String gaveMaterial = messagePrefix + "Successfully gave yourself {Q} of {M}.";
+	public static String gavePlayerMaterial = messagePrefix + "Successfully gave {P} {Q} of {M}.";
+	public static String invalidQuantity = errorPrefix + "You entered an invalid quantity.";
+	
 }
