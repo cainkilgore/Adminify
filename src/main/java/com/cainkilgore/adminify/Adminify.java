@@ -24,6 +24,7 @@ import com.cainkilgore.adminify.events.evtMute;
 import com.cainkilgore.adminify.events.evtPing;
 import com.cainkilgore.adminify.events.evtRide;
 import com.cainkilgore.adminify.events.evtSnowman;
+import com.cainkilgore.adminify.events.evtWeather;
 
 
 public class Adminify extends JavaPlugin {
@@ -49,6 +50,7 @@ public class Adminify extends JavaPlugin {
 		Util.registerEvent(new evtKickstick());
 		Util.registerEvent(new evtPing());
 		Util.registerEvent(new evtCommand());
+		Util.registerEvent(new evtWeather());
 		
 		for(Entry<String, Map<String, Object>> i : this.getDescription().getCommands().entrySet()) {
 			String formatCommand = i.getKey().replace("adminify_", "");
