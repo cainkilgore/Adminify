@@ -26,8 +26,7 @@ public class Strike implements CommandExecutor {
 			}
 			
 			if(args.length < 1) {
-				Util.sendMessage(player, Messages.invalidArguments);
-				Util.sendMessage(player, Util.getCommandUsage(l));
+				player.getWorld().strikeLightning(player.getTargetBlock(null, 0).getLocation());
 				return true;
 			}
 			
