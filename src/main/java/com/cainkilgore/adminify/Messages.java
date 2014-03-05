@@ -267,4 +267,12 @@ public class Messages {
 	public static String gavePlayerMaterial = messagePrefix + "Successfully gave {P} {Q} of {M}.";
 	public static String invalidQuantity = errorPrefix + "You entered an invalid quantity.";
 	
+	// Hat Command
+	public static String mustBeHoldingItem = errorPrefix + "You must be holding an item to wear it as a hat.";
+	public static String nowWearingItem = messagePrefix + "You are now wearing {I} as a hat.";
+	public static String itemHelmet = errorPrefix + "Please take off your helmet first.";
+	
+	// Changerp Command
+	public static String resourcePack = messagePrefix + "Resource Pack Change request sent.";
+	
 }
