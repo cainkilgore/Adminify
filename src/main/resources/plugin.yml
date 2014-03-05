@@ -151,3 +151,24 @@ commands:
    adminify_countdown:
        description: 'Count down from a number..'
        usage: /<command> <count>
+   adminify_admin:
+       description: 'Send all online staff a message'
+       usage: /<command> <message>
+   adminify_give:
+       description: 'Give yourself/players items'
+       usage: /<command> <item/player> <quantity/item> <quantity>
+   adminify_hat:
+       description: 'Set the item your holding as a hat'
+       usage: /<command>
+   adminify_changerp:
+       description: 'Change you or anothers texture pack'
+       usage: /<command> <url/player> <url>
+   adminify_fireball:
+       description: 'Shoot a large fireball where you are looking'
+       usage: /<command>
+   adminify_nuke:
+       description: 'Nuke a player with TNT'
+       usage: /<command>
+   adminify_stopweather:
+       description: 'Toggle on and off the state of the weather'
+       usage: /<command>

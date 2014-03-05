@@ -10,6 +10,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.mcstats.Metrics;
 
+import com.cainkilgore.adminify.commands.Stopweather;
 import com.cainkilgore.adminify.events.evtAlert;
 import com.cainkilgore.adminify.events.evtChat;
 import com.cainkilgore.adminify.events.evtCommand;
@@ -99,6 +100,13 @@ public class Adminify extends JavaPlugin {
 			getConfig().set("settings.adminify-prefix", "&9");
 			needsSaved = true;
 		}
+		if(getConfig().get("settings.do-weather") == null) {
+			getConfig().set("settings.do-weather", true);
+			needsSaved = true;
+		}
+		
+		Stopweather.stopWeather = getConfig().getBoolean("settings.do-weather");
+		
 		if(needsSaved)  saveConfig();
 	}
 	

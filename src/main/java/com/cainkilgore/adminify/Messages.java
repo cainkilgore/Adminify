@@ -275,4 +275,11 @@ public class Messages {
 	// Changerp Command
 	public static String resourcePack = messagePrefix + "Resource Pack Change request sent.";
 	
+	// Nuke Command
+	public static String nukeTarget = messagePrefix + "A crapload of TNT has been spawned above {P}.";
+	
+	// Stopweather Command
+	public static String weatherStopped = messagePrefix + "The weather has been cleared and stopped from changing.";
+	public static String weatherContinued = messagePrefix + "The weather will now continue normally.";
+	
 }
