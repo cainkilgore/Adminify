@@ -1,6 +1,6 @@
 name: 'Adminify'
 author: [ThatJavaGuy, CainFoool]
-version: 1.0.54
+version: 1.0.60
 main: com.cainkilgore.adminify.Adminify
 load: STARTUP
 commands:
