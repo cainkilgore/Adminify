@@ -79,6 +79,7 @@ public class Fireworkshow implements CommandExecutor {
 				Util.sendMessage(player, Messages.badTime);
 			}
 			
+			@SuppressWarnings("deprecation")
 			final Location getEyeTarget = player.getTargetBlock(null, 50).getLocation();
 			
 			final BukkitTask getTask = Adminify.mainClass.getServer().getScheduler().runTaskTimer(Adminify.mainClass, new Runnable() {

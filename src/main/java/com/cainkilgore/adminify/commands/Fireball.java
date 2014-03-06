@@ -31,6 +31,7 @@ public class Fireball implements CommandExecutor {
 		}
 		
 		if(args[0].equalsIgnoreCase("-a")) {
+			@SuppressWarnings("deprecation")
 			LargeFireball fireball = player.getWorld().spawn(player.getTargetBlock(null, 0).getRelative(0, 30, 0).getLocation(), LargeFireball.class);
 			fireball.setVelocity(new Vector(0, -4, 0));
 		}

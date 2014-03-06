@@ -156,7 +156,8 @@ commands:
        usage: /<command> <message>
    adminify_give:
        description: 'Give yourself/players items'
-       usage: /<command> <item/player> <quantity/item> <quantity>
+       usage: /<command> <item:data/player> <quantity/item:data> <quantity> <name:MetaName>
+       aliases: i
    adminify_hat:
        description: 'Set the item your holding as a hat'
        usage: /<command>
@@ -165,10 +166,10 @@ commands:
        usage: /<command> <url/player> <url>
    adminify_fireball:
        description: 'Shoot a large fireball where you are looking'
-       usage: /<command>
+       usage: /<command> <-a>
    adminify_nuke:
        description: 'Nuke a player with TNT'
-       usage: /<command>
+       usage: /<command> <player>
    adminify_stopweather:
        description: 'Toggle on and off the state of the weather'
        usage: /<command>

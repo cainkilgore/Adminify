@@ -11,6 +11,7 @@ import com.cainkilgore.adminify.Util;
 
 public class Strike implements CommandExecutor {
 	
+	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 //		if(l.equalsIgnoreCase("strike")) {
 			if(!(s instanceof Player)) {

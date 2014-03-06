@@ -34,7 +34,7 @@ public class Util {
 	public static ArrayList<String> pluginCommands = new ArrayList<String>();
 	
 	public static void print(String message) {
-		System.out.println("Adminify > " + message);
+		System.out.println("Adminify> " + message);
 	}
 	
 	public static void registerCommand(String command, CommandExecutor executor) {

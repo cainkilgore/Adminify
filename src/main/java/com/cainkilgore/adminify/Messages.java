@@ -266,6 +266,7 @@ public class Messages {
 	public static String gaveMaterial = messagePrefix + "Successfully gave yourself {Q} of {M}.";
 	public static String gavePlayerMaterial = messagePrefix + "Successfully gave {P} {Q} of {M}.";
 	public static String invalidQuantity = errorPrefix + "You entered an invalid quantity.";
+	public static String invalidDataValue = errorPrefix + "You entered an invalid item data value.";
 	
 	// Hat Command
 	public static String mustBeHoldingItem = errorPrefix + "You must be holding an item to wear it as a hat.";

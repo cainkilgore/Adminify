@@ -12,6 +12,7 @@ import com.cainkilgore.adminify.Util;
 
 public class Nuke implements CommandExecutor {
 	
+	@SuppressWarnings("unused")
 	public boolean onCommand(CommandSender s, Command c, String l, String [] args) {
 		if(!(s instanceof Player)) {
 			Util.print(Messages.noPermission);
