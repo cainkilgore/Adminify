@@ -156,11 +156,13 @@ public class Give implements CommandExecutor {
 					return true;
 				}
 			}
-			
+
 			String itemName = "";
-			if(args[3].split(":").length == 2) {
-				if(args[3].split(":")[0].equalsIgnoreCase("name")) {
-					itemName = args[3].split(":")[1];
+			if(args.length == 4) {
+				if(args[3].split(":").length == 2) {
+					if(args[3].split(":")[0].equalsIgnoreCase("name")) {
+						itemName = args[3].split(":")[1];
+					}
 				}
 			}
 			

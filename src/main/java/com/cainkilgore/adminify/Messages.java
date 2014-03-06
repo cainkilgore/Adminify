@@ -10,72 +10,72 @@ public class Messages {
 	public static String msgToPrefix = ChatColor.GOLD + "to {P}> " + ChatColor.WHITE + "{M}";
 	
 	// Console Messages
-	public static String noConsole = "No commands work in console right now. They will in future versions.";
-	public static String error = "Something in this command went wrong.";
+	public static String noConsole = Language.getStringFromFile("noConsole");
+	public static String error = Language.getStringFromFile("error");
 	
 	// Player Messages
-	public static String invalidPlayer = errorPrefix + "The player you specified does not exist.";
-	public static String noPermission = errorPrefix + "You do not have permission to run this command.";
-	public static String invalidArguments = errorPrefix + "You have specified invalid arguments for this command.";
+	public static String invalidPlayer = errorPrefix + Language.getStringFromFile("invalidPlayer");
+	public static String noPermission = errorPrefix + Language.getStringFromFile("noPermission");
+	public static String invalidArguments = errorPrefix + Language.getStringFromFile("invalidArguments");
 	
 	// Frozen Command
-	public static String nowFrozen = messagePrefix + "{U} has now been frozen in their spot.";
-	public static String selfFroze = messagePrefix + "{A} has frozen you.";
-	public static String unFrozen = messagePrefix + "{U} has now been freed.";
-	public static String selfUnfrozen = messagePrefix + "{A} has freed you.";
+	public static String nowFrozen = messagePrefix + Language.getStringFromFile("nowFrozen");
+	public static String selfFroze = messagePrefix + Language.getStringFromFile("selfFroze");
+	public static String unFrozen = messagePrefix + Language.getStringFromFile("unFrozen");
+	public static String selfUnfrozen = messagePrefix + Language.getStringFromFile("selfUnfrozen");
 	
-	public static String breakBlocks = errorPrefix + "You can not break blocks whilst frozen.";
-	public static String placeBlocks = errorPrefix + "You can not place blocks whilst frozen.";
-	public static String interactBlocks = errorPrefix + "You can not interact with {B} whilst frozen.";
+	public static String breakBlocks = errorPrefix + Language.getStringFromFile("breakBlocks");
+	public static String placeBlocks = errorPrefix + Language.getStringFromFile("placeBlocks");
+	public static String interactBlocks = errorPrefix + Language.getStringFromFile("interactBlocks");
 	
 	
-	public static String joinFrozen = messagePrefix + "You are still frozen from your previous session.";
+	public static String joinFrozen = messagePrefix + Language.getStringFromFile("joinFrozen");
 	
 	// Teleport Command
-	public static String playerToArg = messagePrefix + "You teleported to {P}.";
-	public static String argToPlayer = messagePrefix + "{P} teleported you to them.";
+	public static String playerToArg = messagePrefix + Language.getStringFromFile("playerToArg");
+	public static String argToPlayer = messagePrefix + Language.getStringFromFile("argToPlayer");
 	
-	public static String player1to2 = messagePrefix + "You have teleported {P1} to {P2}.";
-	public static String adminTele1to2 = messagePrefix + "{A} teleported you to {P2}.";
-	public static String adminTele2to1 = messagePrefix + "{A} teleported {P1} to you.";
+	public static String player1to2 = messagePrefix + Language.getStringFromFile("player1to2");
+	public static String adminTele1to2 = messagePrefix + Language.getStringFromFile("adminTele1to2");
+	public static String adminTele2to1 = messagePrefix + Language.getStringFromFile("adminTele2to1");
 	
-	public static String TeleXyz = messagePrefix + "You teleported to {X}, {Y}, {Z}";
-	public static String badXyz = errorPrefix + "The co-ordinates you entered were invalid.";
-	public static String tphereAdmin = messagePrefix + "You teleported {P} to you.";
+	public static String TeleXyz = messagePrefix + Language.getStringFromFile("TeleXyz");
+	public static String badXyz = errorPrefix + Language.getStringFromFile("badXyz");
+	public static String tphereAdmin = messagePrefix + Language.getStringFromFile("tphereAdmin");
 	
 	// Spawn Command
-	public static String teleportSpawn = messagePrefix + "You have teleported to spawn.";
-	public static String adminTeleportSpawn = messagePrefix + "You have teleported {P} to their spawn.";
-	public static String playerTeleportSpawn = messagePrefix + "{A} teleported you to your spawn.";
+	public static String teleportSpawn = messagePrefix + Language.getStringFromFile("teleportSpawn");
+	public static String adminTeleportSpawn = messagePrefix + Language.getStringFromFile("adminTeleportSpawn");
+	public static String playerTeleportSpawn = messagePrefix + Language.getStringFromFile("playerTeleportSpawn");
 	
 	// Muted Command
-	public static String mutedPlayer = messagePrefix  + "{P} has been muted in chat.";
-	public static String adminMute = messagePrefix + "{A} has muted you. You can no longer chat.";
-	public static String cantChat = errorPrefix + "You are currently muted from chat.";
-	public static String unmutedPlayer = messagePrefix + "{P} may now talk in chat again.";
-	public static String adminUnmute = messagePrefix + "{A} has unmuted you. You can now chat.";
-	public static String timeMuted = messagePrefix + "You have been muted by {A} for {M} seconds.";
-	public static String adminTime = messagePrefix + "You muted {P} for {M} seconds.";
-	public static String unmuted = messagePrefix + "Your time is up, you are free to talk in chat again.";
+	public static String mutedPlayer = messagePrefix  + Language.getStringFromFile("mutedPlayer");
+	public static String adminMute = messagePrefix + Language.getStringFromFile("adminMute");
+	public static String cantChat = errorPrefix + Language.getStringFromFile("cantChat");
+	public static String unmutedPlayer = messagePrefix + Language.getStringFromFile("unmutedPlayer");
+	public static String adminUnmute = messagePrefix + Language.getStringFromFile("adminUnmute");
+	public static String timeMuted = messagePrefix + Language.getStringFromFile("timeMuted");
+	public static String adminTime = messagePrefix + Language.getStringFromFile("adminTime");
+	public static String unmuted = messagePrefix + Language.getStringFromFile("unmuted");
 	
-	public static String joinMuted = messagePrefix + "You are still muted from your previous session.";
+	public static String joinMuted = messagePrefix + Language.getStringFromFile("joinMuted");
 	
 	// Fly Command
-	public static String isFlying = messagePrefix + "You now have the ability to fly.";
-	public static String notFlying = messagePrefix + "You no longer have the ability to fly.";
-	public static String adminIsFlying = messagePrefix + "{P} now has the ability to fly.";
-	public static String adminNotFlying = messagePrefix + "{P} no longer has the ability to fly.";
-	public static String playerIsFlying = messagePrefix + "{A} gave you the ability to fly.";
-	public static String playerNotFlying = messagePrefix + "{A} took away your ability to fly.";
-	public static String needFlyEnabled = errorPrefix + "Please set allow-flight=true in your server.properties.";
+	public static String isFlying = messagePrefix + Language.getStringFromFile("isFlying");
+	public static String notFlying = messagePrefix + Language.getStringFromFile("notFlying");
+	public static String adminIsFlying = messagePrefix + Language.getStringFromFile("adminIsFlying");
+	public static String adminNotFlying = messagePrefix + Language.getStringFromFile("adminNotFlying");
+	public static String playerIsFlying = messagePrefix + Language.getStringFromFile("playerIsFlying");
+	public static String playerNotFlying = messagePrefix + Language.getStringFromFile("playerNotFlying");
+	public static String needFlyEnabled = errorPrefix + Language.getStringFromFile("needFlyEnabled");
 	
 	// God Command
-	public static String isGod = messagePrefix + "You now have god-mode enabled. Go nuts.";
-	public static String notGod = messagePrefix + "You no longer have god-mode.";
-	public static String playerGod = messagePrefix + "{P} now has god-mode enabled.";
-	public static String playerNotGod = messagePrefix + "{P} no longer has god-mode enabled.";
-	public static String adminGod = messagePrefix + "{A} has given you god-mode.";
-	public static String adminNotGod = messagePrefix + "{A} has removed your god-mode.";
+	public static String isGod = messagePrefix + Language.getStringFromFile("isGod");
+	public static String notGod = messagePrefix + Language.getStringFromFile("notGod");
+	public static String playerGod = messagePrefix + Language.getStringFromFile("playerGod");
+	public static String playerNotGod = messagePrefix + Language.getStringFromFile("playerNotGod");
+	public static String adminGod = messagePrefix + Language.getStringFromFile("adminGod");
+	public static String adminNotGod = messagePrefix + Language.getStringFromFile("adminNotGod");
 	
 	// Adminify Command
 	public static String coderOnline = messagePrefix + "The creator of Adminify is currently on your server.";
@@ -85,202 +85,202 @@ public class Messages {
 	public static String supportURL = messagePrefix + "Help & Support: http://cain.im/support";
 	
 	// Time Command
-	public static String timeInvalid = errorPrefix + "The time you specified was invalid.";
-	public static String timeUpdate = messagePrefix + "The time of the world you're in changed to {T}.";
-	public static String timeChanged = messagePrefix + "The time has had an additional {T} added.";
+	public static String timeInvalid = errorPrefix + Language.getStringFromFile("timeInvalid");
+	public static String timeUpdate = messagePrefix + Language.getStringFromFile("timeUpdate");
+	public static String timeChanged = messagePrefix + Language.getStringFromFile("timeChanged");
 	
 	// Heal Command
-	public static String healthMax = messagePrefix + "Your health has been restored.";
-	public static String adminHealth = messagePrefix + "{P}'s health has been restored.";
-	public static String playerHealth = messagePrefix + "{A} has restored your health.";
+	public static String healthMax = messagePrefix + Language.getStringFromFile("healthMax");
+	public static String adminHealth = messagePrefix + Language.getStringFromFile("adminHealth");
+	public static String playerHealth = messagePrefix + Language.getStringFromFile("playerHealth");
 	
 	// Hit Command
-	public static String hitPlayer = messagePrefix + "You smacked {P}.";
-	public static String adminHit = messagePrefix + "{A} smacked you.";
+	public static String hitPlayer = messagePrefix + Language.getStringFromFile("hitPlayer");
+	public static String adminHit = messagePrefix + Language.getStringFromFile("adminHit");
 	
 	// Clear Command
-	public static String clearInv = messagePrefix + "Your inventory has been wiped.";
-	public static String adminClear = messagePrefix + "{A} has wiped your inventory.";
-	public static String playerClear = messagePrefix + "You have wiped {P}'s inventory.";
+	public static String clearInv = messagePrefix + Language.getStringFromFile("clearInv");
+	public static String adminClear = messagePrefix + Language.getStringFromFile("adminClear");
+	public static String playerClear = messagePrefix + Language.getStringFromFile("playerClear");
 	
 	// Kill Command
-	public static String killSelf = messagePrefix + "You have killed yourself.";
-	public static String adminKill = messagePrefix + "You killed {P}.";
-	public static String playerKill = messagePrefix + "{A} killed you.";
+	public static String killSelf = messagePrefix + Language.getStringFromFile("killSelf");
+	public static String adminKill = messagePrefix + Language.getStringFromFile("adminKill");
+	public static String playerKill = messagePrefix + Language.getStringFromFile("playerKill");
 	
 	// Vanish Command
-	public static String nowVanished = messagePrefix + "You are now vanished from all players.";
-	public static String noVanished = messagePrefix + "You are no longer vanished from all players.";
+	public static String nowVanished = messagePrefix + Language.getStringFromFile("nowVanished");
+	public static String noVanished = messagePrefix + Language.getStringFromFile("noVanished");
 	
 	// Lastpos Command
-	public static String teleLast = messagePrefix + "You teleported to your previous location.";
-	public static String teleError = errorPrefix + "There was an error getting your last location.";
-	public static String playerLast = messagePrefix + "You teleported to {P}'s previous location.";
-	public static String playerError = errorPrefix + "There was an error getting {P}'s previous location.";
+	public static String teleLast = messagePrefix + Language.getStringFromFile("teleLast");
+	public static String teleError = errorPrefix + Language.getStringFromFile("teleError");
+	public static String playerLast = messagePrefix + Language.getStringFromFile("playerLast");
+	public static String playerError = errorPrefix + Language.getStringFromFile("playerError");
 	
 	// Strike Command
-	public static String strikePlayer = messagePrefix + "You have struck {P} with lightning.";
-	public static String adminStrike = messagePrefix + "{A} has struck you with lightning.";
+	public static String strikePlayer = messagePrefix + Language.getStringFromFile("strikePlayer");
+	public static String adminStrike = messagePrefix + Language.getStringFromFile("adminStrike");
 	
 	// Sethome and Home Command
-	public static String homeError = errorPrefix + "There was an error saving your home location.";
-	public static String homeSaved = messagePrefix + "Your home location has been saved.";
-	public static String teleHome = messagePrefix + "You have teleported to your home.";
-	public static String noHome = errorPrefix + "You do not have a home. /sethome now.";
+	public static String homeError = errorPrefix + Language.getStringFromFile("homeError");
+	public static String homeSaved = messagePrefix + Language.getStringFromFile("homeSaved");
+	public static String teleHome = messagePrefix + Language.getStringFromFile("teleHome");
+	public static String noHome = errorPrefix + Language.getStringFromFile("noHome");
 
 	// Msg Command
 	// Handled by Prefixes at top
 	
 	// Spawnmob Command
-	public static String invalidMob = errorPrefix + "That entity does not exist.";
-	public static String spawnSuccess = messagePrefix + "{N} of {E} were spawned at your cursor location.";
-	public static String invalidCount = errorPrefix + "You entered an invalid number of entities to spawn.";
+	public static String invalidMob = errorPrefix + Language.getStringFromFile("invalidMob");
+	public static String spawnSuccess = messagePrefix + Language.getStringFromFile("spawnSuccess");
+	public static String invalidCount = errorPrefix + Language.getStringFromFile("invalidCount");
 	
 	// Gm command
-	public static String gameModeSet = messagePrefix + "Your gamemode has been changed to {G}.";
-	public static String gameModePlayerSet = messagePrefix + "{P}'s gamemode has been changed to {G}.";
-	public static String gameModeAdmin = messagePrefix + "{A} has changed your gamemode to {G}.";
+	public static String gameModeSet = messagePrefix + Language.getStringFromFile("gameModeSet");
+	public static String gameModePlayerSet = messagePrefix + Language.getStringFromFile("gameModePlayerSet");
+	public static String gameModeAdmin = messagePrefix + Language.getStringFromFile("gameModeAdmin");
 	
 	// Feed Command
-	public static String selfFed = messagePrefix + "Your hunger bar has been replenished.";
-	public static String adminFed = messagePrefix + "{A} has replenished your hunger.";
-	public static String playerFed = messagePrefix + "You have replenished {P}'s hunger.";
+	public static String selfFed = messagePrefix + Language.getStringFromFile("selfFed");
+	public static String adminFed = messagePrefix + Language.getStringFromFile("adminFed");
+	public static String playerFed = messagePrefix + Language.getStringFromFile("playerFed");
 	
 	// Ride Command
-	public static String selectingOn = messagePrefix + "Now right click two entities with an empty hand..";
-	public static String selectingOff = messagePrefix + "You are no longer selecting.";
-	public static String selected = messagePrefix + "{E} selected. Please select another.";
-	public static String nowRiding = messagePrefix + "The selected entities are now riding!";
+	public static String selectingOn = messagePrefix + Language.getStringFromFile("selectingOn");
+	public static String selectingOff = messagePrefix + Language.getStringFromFile("selectingOff");
+	public static String selected = messagePrefix + Language.getStringFromFile("selected");
+	public static String nowRiding = messagePrefix + Language.getStringFromFile("nowRiding");
 	
 	// Setspawn Command
-	public static String spawnSet = messagePrefix + "The world '{W}' spawn was set to your position.";
+	public static String spawnSet = messagePrefix + Language.getStringFromFile("spawnSet");
 	
 	// MOTD Command
-	public static String motdError = messagePrefix + "There was an error getting the MOTD.";
+	public static String motdError = messagePrefix + Language.getStringFromFile("motdError");
 	
 	// Snowman Command
-	public static String isSnowman = messagePrefix + "You now have the features of a snowman.";
-	public static String noSnowman = messagePrefix + "You no longer have the features of a snowman.";
+	public static String isSnowman = messagePrefix + Language.getStringFromFile("isSnowman");
+	public static String noSnowman = messagePrefix + Language.getStringFromFile("noSnowman");
 	
 	// Tphere Command
-	public static String allPlayers = messagePrefix + "All players have been teleported to you.";
-	public static String allTped = messagePrefix + "{A} has teleported all players to them.";
+	public static String allPlayers = messagePrefix + Language.getStringFromFile("allPlayers");
+	public static String allTped = messagePrefix + Language.getStringFromFile("allTped");
 	
 	// Bed Command
-	public static String noBed = errorPrefix + "{P} doesn't appear to have a bed.";
-	public static String tpBed = messagePrefix + "You have teleported to {P}'s bed.";
+	public static String noBed = errorPrefix + Language.getStringFromFile("noBed");
+	public static String tpBed = messagePrefix + Language.getStringFromFile("tpBed");
 	
 	// Kmob Command
-	public static String kMobKilled = messagePrefix + "{N} monsters and creatures have been removed.";
+	public static String kMobKilled = messagePrefix + Language.getStringFromFile("kMobKilled");
 	
 	// Maxhealth Command
-	public static String maxHealth = messagePrefix + "Your max health has been changed to {H}.";
-	public static String badHealth = errorPrefix + "You entered an invalid number.";
-	public static String playerHealthSet = messagePrefix + "{P}'s max health was set to {H}.";
-	public static String adminHealthSet = messagePrefix + "{A} has set your max health to {H}.";
+	public static String maxHealth = messagePrefix + Language.getStringFromFile("maxHealth");
+	public static String badHealth = errorPrefix + Language.getStringFromFile("badHealth");
+	public static String playerHealthSet = messagePrefix + Language.getStringFromFile("playerHealthSet");
+	public static String adminHealthSet = messagePrefix + Language.getStringFromFile("adminHealthSet");
 	
 	// Playerinfo Command
-	public static String playerInfo = messagePrefix + "Player Info for {P}";
-	public static String playerInfoWorld = messagePrefix + "World: {W}";
-	public static String playerInfoX = messagePrefix + "X: {X}";
-	public static String playerInfoY = messagePrefix + "Y: {Y}";
-	public static String playerInfoZ = messagePrefix + "Z: {Z}";
-	public static String playerInfoIP = messagePrefix + "IP: {IP}";
+	public static String playerInfo = messagePrefix + Language.getStringFromFile("playerInfo");
+	public static String playerInfoWorld = messagePrefix + Language.getStringFromFile("playerInfoWorld");
+	public static String playerInfoX = messagePrefix + Language.getStringFromFile("playerInfoX");
+	public static String playerInfoY = messagePrefix + Language.getStringFromFile("playerInfoY");
+	public static String playerInfoZ = messagePrefix + Language.getStringFromFile("playerInfoZ");
+	public static String playerInfoIP = messagePrefix + Language.getStringFromFile("playerInfoIP");
 	
 	// Readyup Command
-	public static String foodHealth = messagePrefix + "All online players have had their food and health levels maxed out.";
-	public static String foodHealthRadius = messagePrefix + "All online players within {X} blocks of you have had their food and health levels maxed out.";
-	public static String invalidRadius = errorPrefix + "You have entered an invalid radius.";
+	public static String foodHealth = messagePrefix + Language.getStringFromFile("foodHealth");
+	public static String foodHealthRadius = messagePrefix + Language.getStringFromFile("foodHealthRadius");
+	public static String invalidRadius = errorPrefix + Language.getStringFromFile("invalidRadius");
 	
 	// Flyspeed Command
-	public static String flySet = messagePrefix + "Your flying speed was set to {F}.";
-	public static String flyError = errorPrefix + "You entered an invalid fly speed.";
+	public static String flySet = messagePrefix + Language.getStringFromFile("flySet");
+	public static String flyError = errorPrefix + Language.getStringFromFile("flyError");
 	
 	// Walkspeed Command
-	public static String walkSet = messagePrefix + "Your walking speed was set to {F}.";
-	public static String walkError = errorPrefix + "You entered an invalid walk speed.";
+	public static String walkSet = messagePrefix + Language.getStringFromFile("walkSet");
+	public static String walkError = errorPrefix + Language.getStringFromFile("walkError");
 	
 	
 	// Warpspeed Command
-	public static String warpOn = messagePrefix + "Engage!";
-	public static String warpOff = messagePrefix + "Dropping to impulse..";
+	public static String warpOn = messagePrefix + Language.getStringFromFile("warpOn");
+	public static String warpOff = messagePrefix + Language.getStringFromFile("warpOff");
 	
 	// Put Command
-	public static String putted = messagePrefix + "{P} has been teleported to your cursor.";
-	public static String adminPut = messagePrefix + "{A} has teleported you to their cursor.";
+	public static String putted = messagePrefix + Language.getStringFromFile("putted");
+	public static String adminPut = messagePrefix + Language.getStringFromFile("adminPut");
 	
 	// Repair command
-	public static String emptyHand = errorPrefix + "You have to be holding a valid item to repair it.";
-	public static String repaired = messagePrefix + "Your {I} has been repaired.";
+	public static String emptyHand = errorPrefix + Language.getStringFromFile("emptyHand");
+	public static String repaired = messagePrefix + Language.getStringFromFile("repaired");
 	
 	// Tpa Command
-	public static String alreadySent = errorPrefix + "You have already sent a teleport request. Please wait 1 minute for your request to expire.";
-	public static String alreadySentPlayer = errorPrefix + "{P} already has a teleport request to them from another player. Please wait for this request to expire before trying again.";
-	public static String requestSent = messagePrefix + "Your teleport request has been sent to {P}.";
-	public static String requestReceived = messagePrefix + "{P} wants to teleport to you.";
-	public static String requestUsage = messagePrefix + "/confirm {P} or /deny {P}.";
+	public static String alreadySent = errorPrefix + Language.getStringFromFile("alreadySent");
+	public static String alreadySentPlayer = errorPrefix + Language.getStringFromFile("alreadySentPlayer");
+	public static String requestSent = messagePrefix + Language.getStringFromFile("requestSent");
+	public static String requestReceived = messagePrefix + Language.getStringFromFile("requestReceived");
+	public static String requestUsage = messagePrefix + Language.getStringFromFile("requestUsage");
 	
 	// Confirm Command
-	public static String notSentRequest = errorPrefix + "{P} has not sent a request to you.";
-	public static String noRequest = errorPrefix + "No requests have been sent to you.";
-	public static String confirmedTeleport = messagePrefix + "You have confirmed {P}'s teleport.";
-	public static String confirmedPlayer = messagePrefix + "{P} has accepted your teleport request.";
+	public static String notSentRequest = errorPrefix + Language.getStringFromFile("notSentRequest");
+	public static String noRequest = errorPrefix + Language.getStringFromFile("noRequest");
+	public static String confirmedTeleport = messagePrefix + Language.getStringFromFile("confirmedTeleport");
+	public static String confirmedPlayer = messagePrefix + Language.getStringFromFile("confirmedPlayer");
 	
 	// Deny Command
-	public static String deniedTeleport = messagePrefix + "You have denied {P}'s teleport.";
-	public static String deniedPlayer = messagePrefix + "{P} has denied your teleport request.";
+	public static String deniedTeleport = messagePrefix + Language.getStringFromFile("deniedTeleport");
+	public static String deniedPlayer = messagePrefix + Language.getStringFromFile("deniedPlayer");
 	
 	// Fireworkshow Command
-	public static String alreadyStarted = errorPrefix + "The firework show has already started. Please wait for it to finish.";
-	public static String showStarted = messagePrefix + "The firework show has been started!";
-	public static String badTime = errorPrefix + "Please enter a valid firework time.";
+	public static String alreadyStarted = errorPrefix + Language.getStringFromFile("alreadyStarted");
+	public static String showStarted = messagePrefix + Language.getStringFromFile("showStarted");
+	public static String badTime = errorPrefix + Language.getStringFromFile("badTime");
 	
 	// Target Command
-	public static String compassSet = messagePrefix + "Your compass has been pointed towards {P}.";
-	public static String compassWorld = messagePrefix + "Your compass has been pointed towards your world spawn.";
-	public static String compassBed = messagePrefix + "Your compass has been pointed towards your bed.";
+	public static String compassSet = messagePrefix + Language.getStringFromFile("compassSet");
+	public static String compassWorld = messagePrefix + Language.getStringFromFile("compassWorld");
+	public static String compassBed = messagePrefix + Language.getStringFromFile("compassBed");
 	
 	// Kickstick Command
-	public static String kickStick = messagePrefix + "You have received the kick stick. Right click on players who you want to kick.";
-	public static String adminKickStick = messagePrefix + "You have kicked {P} using the kick stick.";
-	public static String kickedByStick = "You were kicked by {A} using the Kick Stick.";
+	public static String kickStick = messagePrefix + Language.getStringFromFile("kickStick");
+	public static String adminKickStick = messagePrefix + Language.getStringFromFile("adminKickStick");
+	public static String kickedByStick = Language.getStringFromFile("kickedByStick");
 	
 	// Adminify Reload Command
-	public static String reloaded = messagePrefix + "Adminify's config was reloaded.";
+	public static String reloaded = messagePrefix + Language.getStringFromFile("reloaded");
 	
 	// iProp Command
-	public static String invalidName = errorPrefix + "You entered an invalid display name.";
-	public static String mustbeHolding = errorPrefix + "You must be holding an item to change it's properties.";
-	public static String displaySet = messagePrefix + "The item held had it's display name changed to: ";
-	public static String loreSet = messagePrefix + "The item held has it's lore changed to: ";
+	public static String invalidName = errorPrefix + Language.getStringFromFile("invalidName");
+	public static String mustbeHolding = errorPrefix + Language.getStringFromFile("mustBeHolding");
+	public static String displaySet = messagePrefix + Language.getStringFromFile("displaySet");
+	public static String loreSet = messagePrefix + Language.getStringFromFile("loreSet");
 	
 	// Countdown Command
-	public static String invalidCountdown = errorPrefix + "You entered an invalid countdown.";
+	public static String invalidCountdown = errorPrefix + Language.getStringFromFile("invalidCountdown");
 	
 	// Admin command
-	public static String alertSent = messagePrefix + "Your admin alert has been sent to all online staff.";
+	public static String alertSent = messagePrefix + Language.getStringFromFile("alertSent");
 	
 	// Give Command
-	public static String badMaterial = errorPrefix + "That type of item does not exist.";
+	public static String badMaterial = errorPrefix + Language.getStringFromFile("badMaterial");
 	
-	public static String gaveMaterial = messagePrefix + "Successfully gave yourself {Q} of {M}.";
-	public static String gavePlayerMaterial = messagePrefix + "Successfully gave {P} {Q} of {M}.";
-	public static String invalidQuantity = errorPrefix + "You entered an invalid quantity.";
-	public static String invalidDataValue = errorPrefix + "You entered an invalid item data value.";
+	public static String gaveMaterial = messagePrefix + Language.getStringFromFile("gaveMaterial");
+	public static String gavePlayerMaterial = messagePrefix + Language.getStringFromFile("gamePlayerMaterial");
+	public static String invalidQuantity = errorPrefix + Language.getStringFromFile("invalidQuantity");
+	public static String invalidDataValue = errorPrefix + Language.getStringFromFile("invalidDataValue");
 	
 	// Hat Command
-	public static String mustBeHoldingItem = errorPrefix + "You must be holding an item to wear it as a hat.";
-	public static String nowWearingItem = messagePrefix + "You are now wearing {I} as a hat.";
-	public static String itemHelmet = errorPrefix + "Please take off your helmet first.";
+	public static String mustBeHoldingItem = errorPrefix + Language.getStringFromFile("mustBeHoldingItem");
+	public static String nowWearingItem = messagePrefix + Language.getStringFromFile("nowWearingItem");
+	public static String itemHelmet = errorPrefix + Language.getStringFromFile("itemHelmet");
 	
 	// Changerp Command
-	public static String resourcePack = messagePrefix + "Resource Pack Change request sent.";
+	public static String resourcePack = messagePrefix + Language.getStringFromFile("resourcePack");
 	
 	// Nuke Command
-	public static String nukeTarget = messagePrefix + "A crapload of TNT has been spawned above {P}.";
+	public static String nukeTarget = messagePrefix + Language.getStringFromFile("nukeTarget");
 	
 	// Stopweather Command
-	public static String weatherStopped = messagePrefix + "The weather has been cleared and stopped from changing.";
-	public static String weatherContinued = messagePrefix + "The weather will now continue normally.";
+	public static String weatherStopped = messagePrefix + Language.getStringFromFile("weatherStopped");
+	public static String weatherContinued = messagePrefix + Language.getStringFromFile("weatherContinued");
 	
 }

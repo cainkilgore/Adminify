@@ -1,6 +1,10 @@
 package com.cainkilgore.adminify;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -36,6 +40,8 @@ public class Adminify extends JavaPlugin {
 		
 		setupConfig();
 		mainClass = this;
+		
+		setupLanguage();
 		
 		Util.registerEvent(new evtFreeze());
 		Util.registerEvent(new evtMute());
@@ -91,6 +97,75 @@ public class Adminify extends JavaPlugin {
 		// Util.setAllVanished(false);
 		System.out.println("Adminify has been disabled.");
 	}
+	
+	public void setupLanguage() {
+		boolean newInstall = false;
+		boolean needsUpdated = false;
+		if(getConfig().get("version") == null) {
+			getConfig().set("version", this.getDescription().getVersion());
+			saveConfig();
+			newInstall = true;
+		}
+		
+		if(newInstall) {
+			try {
+				copy(this.getResource("en-US.xml"), new File("plugins/Adminify/en-US.xml"));
+				Util.print("New version of Adminify installed, copying en-US.xml.");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		if(!getConfig().get("version").toString().equalsIgnoreCase(this.getDescription().getVersion())) {
+			needsUpdated = true;
+		}
+		
+		if(needsUpdated) {
+			getConfig().set("version", this.getDescription().getVersion());
+			saveConfig();
+			File file = new File("plugins/Adminify/en-US.xml");
+			file.delete();
+			try {
+				copy(this.getResource("en-US.xml"), new File("plugins/Adminify/en-US.xml"));
+				Util.print("Updated version detected, updating en-US.xml.");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	// Thanks to p000ison for this on bukkit.org
+	public static void copy(InputStream input, File target) throws IOException
+    {
+        if (target.exists()) {
+            throw new IOException("File already exists!");
+        }
+ 
+        File parentDir = target.getParentFile();
+ 
+        if (!parentDir.isDirectory()) {
+            throw new IOException("The parent of this file is no directory!?");
+        }
+ 
+        if (!target.createNewFile()) {
+            throw new IOException("Failed at creating new empty file!");
+        }
+ 
+        byte[] buffer = new byte[1024];
+ 
+        OutputStream output = new FileOutputStream(target);
+ 
+        int realLength;
+ 
+        while ((realLength = input.read(buffer)) > 0) {
+            output.write(buffer, 0, realLength);
+        }
+ 
+        output.flush();
+        output.close();
+    }
+	
 	
 	public void setupConfig() {
 		boolean needsSaved = false;
