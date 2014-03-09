@@ -147,7 +147,7 @@ commands:
        usage: /<command>
    adminify_iprop:
        description: 'Change an items properties, like displayname and lore'
-       usage: /<command> [displayname/lore] <value>
+       usage: /<command> [name/lore] <value>
    adminify_countdown:
        description: 'Count down from a number..'
        usage: /<command> <count>
