@@ -61,7 +61,7 @@ public class Iprop implements CommandExecutor {
 				
 				Util.setLore(player.getItemInHand(), ChatColor.translateAlternateColorCodes('&', x.toString().trim()));
 				Util.sendMessage(player, Messages.loreSet);
-				if(args[1].equalsIgnoreCase("blank")) {
+				if(args[1].equalsIgnoreCase("<blank>")) {
 					Util.setLore(player.getItemInHand(), ChatColor.RED + "");
 					return true;
 				}
