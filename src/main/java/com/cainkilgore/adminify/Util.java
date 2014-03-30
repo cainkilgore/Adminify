@@ -275,7 +275,9 @@ public class Util {
 	}
 	
 	public static void replenishHunger(Player player) {
+		player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 5, 20));
 		player.setFoodLevel(20);
+ 
 	}
 	
 	public static void setSelecting(Player player, boolean is) {
