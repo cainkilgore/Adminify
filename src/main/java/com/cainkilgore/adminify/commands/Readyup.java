@@ -29,9 +29,9 @@ public class Readyup implements CommandExecutor {
 			if(args.length < 1) {
 				for(Player onlinePlayers : Adminify.mainClass.getServer().getOnlinePlayers()) {
 					onlinePlayers.setHealth(onlinePlayers.getMaxHealth());
-					onlinePlayers.setFoodLevel(20);
+					Util.replenishHunger(onlinePlayers);
 					player.setHealth(player.getMaxHealth());
-					player.setFoodLevel(20);
+					Util.replenishHunger(player);
 				}
 				
 				Util.sendMessage(player, Messages.foodHealth);
@@ -43,9 +43,9 @@ public class Readyup implements CommandExecutor {
 						if(entity instanceof Player) {
 							Player entityPlayer = (Player) entity;
 							entityPlayer.setHealth(entityPlayer.getMaxHealth());
-							entityPlayer.setFoodLevel(20);
+							Util.replenishHunger(entityPlayer);
 							player.setHealth(player.getMaxHealth());
-							player.setFoodLevel(20);
+							Util.replenishHunger(player);
 						}
 					}
 					
